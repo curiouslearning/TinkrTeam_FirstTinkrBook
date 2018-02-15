@@ -314,7 +314,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e174fc7779c6d354aa5c4752007fba2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 0}
 --- !u!1 &427614378
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +391,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865187571}
+      - m_Target: {fileID: 0}
         m_MethodName: right
         m_Mode: 1
         m_Arguments:
@@ -967,7 +967,13 @@ Prefab:
       propertyPath: R1button
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &753862365
@@ -1251,7 +1257,7 @@ Prefab:
         type: 2}
       propertyPath: sceneManager
       value: 
-      objectReference: {fileID: 1865187571}
+      objectReference: {fileID: 0}
     - target: {fileID: 114400468832251464, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: stanzas.Array.data[0]
@@ -1417,7 +1423,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0.4, b: 1, a: 1}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1591,6 +1597,30 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 644afff2e714ee041a2f569ceb9bd8bd, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1192907915 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1010704905742394, guid: 897aa8198a2395a45828861284c51093,
+    type: 2}
+  m_PrefabInternal: {fileID: 725212346}
+--- !u!114 &1192907916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1192907915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 913cff32b999efb428f3a254d94b677f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  stanzaManager: {fileID: 1026469799}
+  stanzas: []
+  Lbutton: {fileID: 0}
+  Rbutton: {fileID: 0}
+  L1button: {fileID: 0}
+  R1button: {fileID: 0}
+  disableAutoplay: 0
 --- !u!1 &1236446606
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a145c40c09f06674797d330c9a51c3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 0}
   currentScene: 0
 --- !u!4 &1236446608
 Transform:
@@ -2260,7 +2290,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865187571}
+      - m_Target: {fileID: 0}
         m_MethodName: left
         m_Mode: 1
         m_Arguments:
@@ -2488,12 +2518,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224915065477950012, guid: 897aa8198a2395a45828861284c51093,
     type: 2}
   m_PrefabInternal: {fileID: 725212346}
---- !u!114 &1865187571 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
-    type: 2}
-  m_PrefabInternal: {fileID: 725212346}
-  m_Script: {fileID: 11500000, guid: b6a0b23f99cd33a4eb16a872217d1988, type: 3}
 --- !u!1001 &1942559852
 Prefab:
   m_ObjectHideFlags: 0
