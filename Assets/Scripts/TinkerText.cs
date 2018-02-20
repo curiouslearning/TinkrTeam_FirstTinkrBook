@@ -70,7 +70,9 @@ public class TinkerText : MonoBehaviour {
     {
         Debug.Log("on mouse down00");
         clipPlay();
+        
         iconanimPlay();
+       Debug.Log("gururocks");
         //if(tinkerGraphic!=null)
         graphicPlay();
     }
