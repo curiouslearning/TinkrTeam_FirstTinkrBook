@@ -2238,7 +2238,7 @@ Prefab:
         type: 2}
       propertyPath: xmlStanzaData
       value: 
-      objectReference: {fileID: 4900000, guid: 304b9961890a9cd41b99fab3218c2b3e, type: 3}
+      objectReference: {fileID: 4900000, guid: 08f248a575cf7fe42ac9075cec313394, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b6c3c69fcd525a844adc609c7a36630f, type: 2}
   m_IsPrefabParent: 0
@@ -3815,7 +3815,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 045ea3c20b814cf439c8c2956603f73d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e91b56b8b007a4949960c1606c0fe3dc, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
