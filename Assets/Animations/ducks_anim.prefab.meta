@@ -1,6 +1,10 @@
 fileFormatVersion: 2
-guid: d7ad4915a32b0744bbbf696566a385b7
+ HEAD:Assets/Animations/crack3.anim.meta
+
+guid: a401ae455b494ee47ba3fafc802c3789
+
 timeCreated: 1518609028
+Assets/Animations/ducks_anim.prefab.meta
 licenseType: Free
 NativeFormatImporter:
   externalObjects: {}
