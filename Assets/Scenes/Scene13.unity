@@ -1748,6 +1748,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 412370063}
     m_Modifications:
+    - target: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
+        type: 2}
+      propertyPath: stanzas.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 224915065477950012, guid: 897aa8198a2395a45828861284c51093,
         type: 2}
       propertyPath: m_LocalPosition.x
@@ -1868,6 +1873,16 @@ Prefab:
       propertyPath: R1button
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
+        type: 2}
+      propertyPath: stanzas.Array.data[0]
+      value: 
+      objectReference: {fileID: 1219002820}
+    - target: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
+        type: 2}
+      propertyPath: stanzas.Array.data[1]
+      value: 
+      objectReference: {fileID: 440529482}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_IsPrefabParent: 0
@@ -2228,12 +2243,12 @@ Prefab:
         type: 2}
       propertyPath: stanzas.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1219002820}
     - target: {fileID: 114400468832251464, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: stanzas.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 440529482}
     - target: {fileID: 114400468832251464, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: xmlStanzaData
@@ -2611,12 +2626,12 @@ Prefab:
         type: 2}
       propertyPath: tinkerTexts.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 247559851}
     - target: {fileID: 114745750294994386, guid: 644afff2e714ee041a2f569ceb9bd8bd,
         type: 2}
       propertyPath: tinkerTexts.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2097029249}
     - target: {fileID: 114745750294994386, guid: 644afff2e714ee041a2f569ceb9bd8bd,
         type: 2}
       propertyPath: tinkerTexts.Array.data[2]
