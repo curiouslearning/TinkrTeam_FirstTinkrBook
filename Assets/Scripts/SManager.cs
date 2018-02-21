@@ -6,7 +6,7 @@ public class SManager : MonoBehaviour {
     [HideInInspector]
     public GameManager gameManager;
 
-    // Manager for all things TinkerText
+    // Manager for all TinkerTexts and stanza
     public StanzaManager stanzaManager;
     public List<Stanza> stanzas;
     public GameObject Lbutton;
@@ -15,7 +15,6 @@ public class SManager : MonoBehaviour {
     public GameObject R1button;
 
     public bool disableAutoplay;
-    //public TinkerText tinkerText;
 
     // Use this for initialization
     void Start () {
@@ -66,19 +65,16 @@ public class SManager : MonoBehaviour {
 
 
 	}
+
     public virtual void OnPointerClick(GameObject cl)
     {
-		Debug.Log ("on pointer click smanager");
         if (cl.name == "Duck")
         {
-            Debug.Log("duck called");
             gameManager.LoadNextScene();
         }
 
         if (cl.name == "yellow")
         {
-			
-            Debug.Log("yellow called");
             R1button.SetActive(true);
         }
 
@@ -127,15 +123,17 @@ public class SManager : MonoBehaviour {
         }
 
     }
-    public void right()
-    {
-        Debug.Log("right clicked");
-        gameManager.LoadNextScene();
-    }
-    public void left()
-    {
-        gameManager.LoadPreviousScene();
-    }
+    
+
+	public void NextScene()
+	{
+		gameManager.LoadNextScene();
+	}
+
+	public void PreviousScene()
+	{
+		gameManager.LoadPreviousScene();
+	}
 
     // Here we have a superclass intercept for catching global TinkerGraphic mouse down events
     public virtual void OnMouseDown(TinkerGraphic tinkerGraphic)
@@ -143,4 +141,12 @@ public class SManager : MonoBehaviour {
 
     }
 
+
+
+	public bool CalculateDistance(Vector2 start, Vector2 end, float requiredDistance){
+		if (requiredDistance <= Vector2.Distance (start, end)) {
+			return true;
+		}
+		return false;
+	}
 }

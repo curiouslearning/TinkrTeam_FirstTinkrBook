@@ -14,11 +14,11 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public enum Scenes                                      // Place all scene names here in order
     {
-        Init,
-        Scene00,
-        Scene01,
-        Scene02,
-        Scene03,
+       		Init,
+      		Scene00,
+     	 	Scene01,
+       		Scene02,
+       		Scene03,
 		    Scene04,
 		    Scene05,
 		    Scene06,
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour
 	    	Scene22,
 	    	Scene23,
 	    	Scene24,
-        END
+            END
     }
     public Scenes currentScene;
     public static GameManager Instance

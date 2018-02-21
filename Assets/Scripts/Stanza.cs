@@ -58,8 +58,6 @@ public class Stanza : MonoBehaviour {
             }
             else // Delay before next stanza
             {
-               // anim.SetTrigger("tapme");
-               // anim.SetTrigger("resume");
                 anim.Play("textzoomout");
                 yield return new WaitForSeconds(t.delayTime / 2);
 

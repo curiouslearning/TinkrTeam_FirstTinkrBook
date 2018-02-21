@@ -46,8 +46,6 @@ IBeginDragHandler, IDragHandler, IEndDragHandler
     public void OnPointerDown(PointerEventData eventData)
     {
         sceneManager.OnMouseDown(eventData.pointerCurrentRaycast.gameObject);
-        Debug.Log("Mouse Down: " + eventData.pointerCurrentRaycast.gameObject.name);
-       // sceneManager.OnMouseDown(eventData.pointerCurrentRaycast.gameObject);
     }
    
 

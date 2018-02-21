@@ -67,16 +67,11 @@ public class TinkerText : MonoBehaviour {
     // Mouse Down Event
     public void OnMouseDown()
     {
-        Debug.Log("on mouse down00");
         clipPlay();
-        
         iconanimPlay();
-       Debug.Log("gururocks");
-        //if(tinkerGraphic!=null)
         graphicPlay();
     }
    
-
 
     public void OnMouseUp()
     {
@@ -91,41 +86,30 @@ public class TinkerText : MonoBehaviour {
    
     public void clipResume()
     {
-        Debug.Log("resumed word");
         wordanimator.SetTrigger("resume");
         
     }
     public void clipPlay()
     {
 
-		//if (nooftaps < 2||check)
-  //      {
-  //          check = false;
-            Debug.Log("entered clip play");
             AudioSource source = gameObject.GetComponent<AudioSource>();
             delayTime = 0.21f;
             wordanimator.speed = 1 / (delayTime);
             Debug.Log("source play");
             source.Play();
             wordanimator.SetTrigger("tapme");
-            //Debug.Log("clip play " + pairedgraphic);
-            Debug.Log("tapcounttext: " + nooftaps);
     
 
     }
     public void iconanimPlay()
     {
-        Debug.Log("icon anim");
-        //if (nooftaps < 2)
-        //{
-        // Debug.Log("icon anim 2 ");
         if (iconanimator != null)
         {
             anim.SetActive(true);
             iconanimator.SetTrigger("tap");
         }
-    //    }
     }
+
     public void iconanimResume()
     {
         if (iconanimator != null)
@@ -159,9 +143,7 @@ public class TinkerText : MonoBehaviour {
         }
     void graphicResume()
     {
-        //if (tinkerGraphic != null)
-        //    tinkerGraphic.OnMouseUp();
-
+        
     }
 
 }
