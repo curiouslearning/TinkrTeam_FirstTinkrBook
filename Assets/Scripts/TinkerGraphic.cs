@@ -37,7 +37,7 @@ public class TinkerGraphic : MonoBehaviour {
        // graphicResume();
         //TinkerText.pairedgraphic = false;
     }
-   /* public void graphicPlay()
+    public void graphicPlay()
     {
         if (anim != null)
         {
@@ -79,14 +79,14 @@ public class TinkerGraphic : MonoBehaviour {
             TinkerText.nooftaps = 0;
         }
     }
-*/
+
 	public void MoveObject(){
 		Vector2 pos;
 		RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
 		transform.position = myCanvas.transform.TransformPoint(pos);
 	}
 
-	public Vector3 GetCoordinates(){
+	public Vector2 GetCoordinates(){
 		return transform.position;
 	}
 }
