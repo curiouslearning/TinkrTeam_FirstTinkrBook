@@ -7,32 +7,37 @@ public class TinkerGraphic : MonoBehaviour {
     private Animator anim;
     public TinkerText pairedtext1;
     public TinkerText pairedtext2;
-
+	private bool  draggable=false;
+	public Canvas myCanvas;
     // Use this for initialization
     void Start () {
         anim = GetComponent<Animator>();
-        
     }
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
    
+	public void SetDraggable(bool value){
+		draggable = value;
+	}
+
+	public bool GetDraggable(){
+		return draggable;
+	}
+
+
     public void OnMouseDown()
     {
         //if (pairedTinkerText != null)
         //    TinkerText.pairedgraphic = true;
 
-        //Debug.Log("tinker graphic paired "+TinkerText.pairedgraphic);
-        graphicPlay();
+      //  graphicPlay();
      
     }
     public void OnMouseUp()
     {
-        graphicResume();
+       // graphicResume();
         //TinkerText.pairedgraphic = false;
     }
-    public void graphicPlay()
+   /* public void graphicPlay()
     {
         if (anim != null)
         {
@@ -74,28 +79,14 @@ public class TinkerGraphic : MonoBehaviour {
             TinkerText.nooftaps = 0;
         }
     }
-    //public void clipPlay() {
+*/
+	public void MoveObject(){
+		Vector2 pos;
+		RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
+		transform.position = myCanvas.transform.TransformPoint(pos);
+	}
 
-    //if (anim != null)
-    //{
-    //    //if (TinkerText.nooftaps < 2)
-    //    //{
-    //    //    int i = TinkerText.nooftaps + 1;
-    //        anim.SetTrigger("crack" + i);
-    //        //TinkerText.nooftaps++;
-    //        Debug.Log("tapcountgraphic: " + TinkerText.nooftaps);
-
-    //    //}
-    //    else
-    //    {
-    //        anim.SetTrigger("crack3");
-    //        SceneManager.LoadScene("Scene02");
-    //    }
-    //}
-
-
-    //  }
-
-
-
+	public Vector3 GetCoordinates(){
+		return transform.position;
+	}
 }

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -19,25 +19,27 @@ public class GameManager : MonoBehaviour
         Scene01,
         Scene02,
         Scene03,
-		Scene04,
-		Scene05,
-		Scene06,
-		Scene08,
-		Scene09,
-		Scene10,
-		Scene11,
-		Scene12,
-		Scene13,
-		Scene14,
-		Scene15,
-		Scene16,
-		Scene17,
-		Scene18,
-		Scene19,
-		Scene20,
-		Scene21,
-		Scene23,
-		Scene24,
+		    Scene04,
+		    Scene05,
+		    Scene06,
+		    Scene07,
+		    Scene08,
+		    Scene09,
+		    Scene10,
+	    	Scene11,
+	    	Scene12,
+	    	Scene13,
+	    	Scene14,
+	    	Scene15,
+	    	Scene16,
+    		Scene17,
+    		Scene18,
+	    	Scene19,
+	    	Scene20,
+	    	Scene21,
+	    	Scene22,
+	    	Scene23,
+	    	Scene24,
         END
     }
     public Scenes currentScene;
@@ -52,7 +54,6 @@ public class GameManager : MonoBehaviour
     {
         // Assign our current scene on one-time init so we can support starting game from any scene during testing
         currentScene = (Scenes)Enum.Parse(typeof(Scenes), SceneManager.GetActiveScene().name);
-        Debug.Log("rere scene" + currentScene);
     }
 
     protected virtual void OnEnable()
