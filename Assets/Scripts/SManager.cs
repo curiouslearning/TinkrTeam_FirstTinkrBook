@@ -45,20 +45,27 @@ public class SManager : MonoBehaviour {
     }
     public virtual void OnDragBegin(GameObject go)
     {
-
-        if (go.tag == "text")
-        {
-            stanzaManager.LoadStanzaXML();
-            if (stanzaManager == null)
-            {
-                stanzaManager = GameObject.Find("StanzaManager").GetComponent<StanzaManager>();
-            }
-            if (stanzaManager != null)
-                stanzaManager.OnDragBegin(go.GetComponent<TinkerText>());
-
-        }
-
+		if (go.tag == "text") {
+			stanzaManager.LoadStanzaXML ();
+			if (stanzaManager == null) {
+				stanzaManager = GameObject.Find ("StanzaManager").GetComponent<StanzaManager> ();
+			}
+			if (stanzaManager != null)
+				stanzaManager.OnDragBegin (go.GetComponent<TinkerText> ());
+		} 
+			
     }
+
+	//override me
+	public virtual void OnDrag(TinkerGraphic graphic){
+	     
+	    
+	}
+	//override me
+	public virtual void OnDragEnd(TinkerGraphic graphic){
+
+
+	}
     public virtual void OnPointerClick(GameObject cl)
     {
 		Debug.Log ("on pointer click smanager");
@@ -66,10 +73,6 @@ public class SManager : MonoBehaviour {
         {
             Debug.Log("duck called");
             gameManager.LoadNextScene();
-            //Rbutton = GameObject.Find ("right");
-            //if (Rbutton != null) {
-            //	Rbutton.SetActive (true);
-            //}
         }
 
         if (cl.name == "yellow")
@@ -89,8 +92,6 @@ public class SManager : MonoBehaviour {
 
     }
 
-
-    // Update is called once per frame
    
     public virtual void OnMouseDown(GameObject go)
     {
@@ -109,10 +110,6 @@ public class SManager : MonoBehaviour {
     }
     public virtual void OnMouseUp(GameObject go)
     {
-        //if (go.tag == "text")
-        //{
-        //    stanzaManager.OnMouseUp(go.GetComponent<TinkerText>());
-        //}
          if(go.tag=="graphic"){
             stanzaManager.OnMouseUp(go.GetComponent<TinkerGraphic>());
         }
@@ -144,11 +141,6 @@ public class SManager : MonoBehaviour {
     public virtual void OnMouseDown(TinkerGraphic tinkerGraphic)
     {
 
-
-        //if (tinkerGraphic.pairedText != null)
-        //{
-        //    stanzaManager.OnPairedMouseDown(tinkerGraphic.pairedText);
-        //}
     }
 
 }

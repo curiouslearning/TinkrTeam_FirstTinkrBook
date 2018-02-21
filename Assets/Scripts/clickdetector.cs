@@ -9,32 +9,43 @@ IPointerExitHandler, IPointerEnterHandler,
 IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public SManager sceneManager;
+
     public void OnDrag(PointerEventData eventData)
     {
+		GameObject go = GameObject.Find(eventData.pointerCurrentRaycast.gameObject.name);
+		if (go!=null && go.tag == "graphic") {
+			TinkerGraphic tinkerGraphic = go.GetComponent<TinkerGraphic> ();
+			sceneManager.OnDrag (tinkerGraphic);
+		}
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        Debug.Log("Drag end");
-        sceneManager.OnDragEnd();
+		GameObject go = GameObject.Find(eventData.pointerCurrentRaycast.gameObject.name);
+		if (go != null) {
+			if (go.tag == "graphic") {
+				TinkerGraphic tinkerGraphic = go.GetComponent<TinkerGraphic> ();
+				sceneManager.OnDragEnd (tinkerGraphic);
+			} else {
+				sceneManager.OnDragEnd ();
+			}
+		}
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("Clicked: " + eventData.pointerCurrentRaycast.gameObject.name);
-
-        GameObject cl = eventData.pointerCurrentRaycast.gameObject;
-        Debug.Log(cl);
-        if (cl != null)
+        GameObject obj = eventData.pointerCurrentRaycast.gameObject;
+        Debug.Log(obj);
+        if (obj != null)
         {
-            sceneManager.OnPointerClick(cl);
+            sceneManager.OnPointerClick(obj);
         }
 
     }
+
     public void OnPointerDown(PointerEventData eventData)
     {
         sceneManager.OnMouseDown(eventData.pointerCurrentRaycast.gameObject);
-        Debug.Log("click detector on mouse down");
         Debug.Log("Mouse Down: " + eventData.pointerCurrentRaycast.gameObject.name);
        // sceneManager.OnMouseDown(eventData.pointerCurrentRaycast.gameObject);
     }
@@ -43,7 +54,6 @@ IBeginDragHandler, IDragHandler, IEndDragHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
-        Debug.Log("pointer up");
         GameObject go = eventData.pointerCurrentRaycast.gameObject;
         if (go != null)
         {

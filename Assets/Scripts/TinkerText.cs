@@ -20,7 +20,6 @@ public class TinkerText : MonoBehaviour {
     private Animator wordanimator;
     private Animator iconanimator;
     private Animator graphicanimator;
-    // private Animator animshit;
     public GameObject anim;
     //egg crack
     public GameObject anim2;
@@ -79,12 +78,7 @@ public class TinkerText : MonoBehaviour {
 
     public void OnMouseUp()
     {
-        // a.speed = 1 / delayTime;
-        //clipPlay1();
-        //      Debug.Log("on mouse up");
-        //      //if(!pairedgraphic)
-            clipResume();
-        //if (nooftaps < 2)
+        clipResume();
         iconanimResume();
         
         //wordanimator.SetTrigger("resume");
@@ -93,26 +87,10 @@ public class TinkerText : MonoBehaviour {
 
     }
    
-    //public void clipResume() {
-    //    StartCoroutine(clipResu());
-    //}
     public void clipResume()
     {
-
-
-        //if (nooftaps > 2)
-        //{
-
-        //    if (pairedTinkerText != null)
-        //    {
-        //        pairedTinkerText.clipPlay();
-        //        pairedTinkerText.clipResume();
-        //    }
-        //}
-        //else {
         Debug.Log("resumed word");
-            wordanimator.SetTrigger("resume");
-        //}
+        wordanimator.SetTrigger("resume");
         
     }
     public void clipPlay()
@@ -130,21 +108,7 @@ public class TinkerText : MonoBehaviour {
             wordanimator.SetTrigger("tapme");
             //Debug.Log("clip play " + pairedgraphic);
             Debug.Log("tapcounttext: " + nooftaps);
-    //    }
-        //else {
-			
-        //    //Debug.Log("else clip play");
-        //    if (pairedTinkerText != null)
-        //    {
-        //        Debug.Log("else clip play");
-        //        check = true;
-        //        pairedTinkerText.clipPlay();
-        //        pairedTinkerText.clipResume();
-        //        //animshit.SetTrigger("crack3");
-
-        //    }
-        //}
-
+    
 
     }
     public void iconanimPlay()
@@ -168,11 +132,8 @@ public class TinkerText : MonoBehaviour {
             anim.SetActive(false);
         }
     }
-    //public void graphicPlay()
-    //{
+    
 
-    //    StartCoroutine(graphicPla());
-    //}
     public void graphicPlay()
     {
         if (anim2 != null)

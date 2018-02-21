@@ -277,7 +277,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 67941d1db8e47644d85727e3182f7d81, type: 3}
+      objectReference: {fileID: 8300000, guid: 9ffec6c13f5105f4abf49f1cdf4b6d9c, type: 3}
     - target: {fileID: 82257216930296010, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
       propertyPath: m_PlayOnAwake
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e174fc7779c6d354aa5c4752007fba2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 1799680330}
 --- !u!1 &427614378
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865187571}
+      - m_Target: {fileID: 0}
         m_MethodName: right
         m_Mode: 1
         m_Arguments:
@@ -1071,7 +1071,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5b223566d5895b247b70cb181f037a1a, type: 3}
+      objectReference: {fileID: 8300000, guid: 17cb711c56deef84f90c7fa68079c6c2, type: 3}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
       propertyPath: m_FontData.m_FontSize
@@ -1267,7 +1267,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 67941d1db8e47644d85727e3182f7d81, type: 3}
+      objectReference: {fileID: 8300000, guid: 1cd9f597b470b64409e455f0451b1466, type: 3}
     - target: {fileID: 82257216930296010, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
       propertyPath: m_PlayOnAwake
@@ -1634,7 +1634,13 @@ Prefab:
       propertyPath: R1button
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &753862365
@@ -1663,7 +1669,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 753862365}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.26992798, y: 59.17997, z: 0}
+  m_LocalPosition: {x: -1.9, y: 49.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1988521916}
@@ -2083,7 +2089,7 @@ Prefab:
         type: 2}
       propertyPath: sceneManager
       value: 
-      objectReference: {fileID: 1865187571}
+      objectReference: {fileID: 1799680330}
     - target: {fileID: 114400468832251464, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: stanzas.Array.data[0]
@@ -2450,7 +2456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a145c40c09f06674797d330c9a51c3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 0}
   currentScene: 0
 --- !u!4 &1236446608
 Transform:
@@ -2674,7 +2680,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5b223566d5895b247b70cb181f037a1a, type: 3}
+      objectReference: {fileID: 8300000, guid: 41d7baa3e2c52904fb932b59ef82558e, type: 3}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
       propertyPath: m_FontData.m_FontSize
@@ -3100,7 +3106,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 5b223566d5895b247b70cb181f037a1a, type: 3}
+      objectReference: {fileID: 8300000, guid: b04399361f9362745bf2b9b8f761e1d1, type: 3}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
       propertyPath: m_FontData.m_FontSize
@@ -3301,7 +3307,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1547279655
 Transform:
   m_ObjectHideFlags: 0
@@ -3800,7 +3806,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865187571}
+      - m_Target: {fileID: 0}
         m_MethodName: left
         m_Mode: 1
         m_Arguments:
@@ -3846,6 +3852,31 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1751614411}
+--- !u!1 &1799680329 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1010704905742394, guid: 897aa8198a2395a45828861284c51093,
+    type: 2}
+  m_PrefabInternal: {fileID: 725212346}
+--- !u!114 &1799680330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1799680329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d25b40ccc76f9942833e7cb5bea9d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  stanzaManager: {fileID: 1026469799}
+  stanzas: []
+  Lbutton: {fileID: 0}
+  Rbutton: {fileID: 0}
+  L1button: {fileID: 0}
+  R1button: {fileID: 0}
+  disableAutoplay: 0
+  sheet: {fileID: 2138017790}
 --- !u!224 &1805811266 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224455412377672120, guid: 644afff2e714ee041a2f569ceb9bd8bd,
@@ -3979,7 +4010,7 @@ Prefab:
         type: 2}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 67941d1db8e47644d85727e3182f7d81, type: 3}
+      objectReference: {fileID: 8300000, guid: dc0711dbf5b345a4492ac9efd0ca73fe, type: 3}
     - target: {fileID: 82257216930296010, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
       propertyPath: m_PlayOnAwake
@@ -4058,12 +4089,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224915065477950012, guid: 897aa8198a2395a45828861284c51093,
     type: 2}
   m_PrefabInternal: {fileID: 725212346}
---- !u!114 &1865187571 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
-    type: 2}
-  m_PrefabInternal: {fileID: 725212346}
-  m_Script: {fileID: 11500000, guid: b6a0b23f99cd33a4eb16a872217d1988, type: 3}
 --- !u!1001 &1942559852
 Prefab:
   m_ObjectHideFlags: 0
@@ -4508,6 +4533,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedtext1: {fileID: 1386300218}
   pairedtext2: {fileID: 1052507825}
+  myCanvas: {fileID: 412370062}
 --- !u!114 &2138017791
 MonoBehaviour:
   m_ObjectHideFlags: 0
