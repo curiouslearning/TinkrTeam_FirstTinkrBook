@@ -32,6 +32,20 @@ IBeginDragHandler, IDragHandler, IEndDragHandler
 		}
     }
 
+	public void OnBeginDrag(PointerEventData eventData)
+	{
+
+		GameObject go = GameObject.Find(eventData.pointerCurrentRaycast.gameObject.name);
+		if (go != null){
+			if (go.tag == "graphic") {
+				TinkerGraphic tinkerGraphic = go.GetComponent<TinkerGraphic> ();
+				sceneManager.OnDragBegin (tinkerGraphic);
+		     } else {
+			sceneManager.OnDragBegin (go);
+		    }
+		}
+
+	}
     public void OnPointerClick(PointerEventData eventData)
     {
         GameObject obj = eventData.pointerCurrentRaycast.gameObject;
@@ -60,16 +74,7 @@ IBeginDragHandler, IDragHandler, IEndDragHandler
 
 
     }
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-
-        GameObject go = GameObject.Find(eventData.pointerCurrentRaycast.gameObject.name);
-        if (go != null)
-        {
-            sceneManager.OnDragBegin(go);
-        }
-
-    }
+    
 
     public void OnPointerEnter(PointerEventData eventData)
     {

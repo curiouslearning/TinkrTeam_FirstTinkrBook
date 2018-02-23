@@ -54,7 +54,6 @@ public class StanzaManager : MonoBehaviour {
 
         while (wordIndex < wordsList.Count)
         {
-            Debug.Log(stanzaIndex+"stanzaz"+stanzas[stanzaIndex]);
             stanzas[stanzaIndex].tinkerTexts[relativeWordIndex].SetupWordTiming(wordsList[wordIndex]);
 
             wordIndex++;
@@ -73,7 +72,6 @@ public class StanzaManager : MonoBehaviour {
                     float firstWordStartTime = float.Parse(wordsList[wordIndex].Attributes["msStart"].Value) / 1000.0f;
                     float lastWordEndTime = float.Parse(wordsList[wordIndex - 1].Attributes["msEnd"].Value) / 1000.0f;
                     stanzas[stanzaIndex - 1].endDelay = firstWordStartTime - lastWordEndTime;
-                    Debug.Log("stanza time" + stanzas[stanzaIndex - 1].endDelay);
                 }
             }
         }
@@ -179,7 +177,6 @@ public class StanzaManager : MonoBehaviour {
    
 
     public void OnMouseDown(TinkerText tinkerText) {
-        Debug.Log("stanzamanager"+tinkerText.name);
         if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza) && !IsDrag())
         {
             RequestCancelAutoPlay();
@@ -191,7 +188,6 @@ public class StanzaManager : MonoBehaviour {
 
     public void OnMouseDown(TinkerGraphic tinkerGraphic)
     {
-        Debug.Log("stanzamanager" + tinkerGraphic.name);
         if (tinkerGraphic != null)
         {
             tinkerGraphic.OnMouseDown();
