@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class SManager : MonoBehaviour {
+
+
     [HideInInspector]
     public GameManager gameManager;
 
@@ -16,15 +18,15 @@ public class SManager : MonoBehaviour {
 
     public bool disableAutoplay;
 
-    // Use this for initialization
-    void Start () {
-       // if (L1button != null) 
+    void Start () { 
         Lbutton.SetActive(false);
         Rbutton.SetActive(false);
 		L1button.SetActive(true);
-       // if(R1button!=null)
         R1button.SetActive(false);
 
+    }
+    //override me
+    public virtual void Update() {
     }
     public virtual void Init(GameManager _gameManager)
     {
@@ -56,6 +58,11 @@ public class SManager : MonoBehaviour {
     }
 
 	//override me
+	public virtual void OnDragBegin(TinkerGraphic graphic){
+
+
+	}
+	//override me
 	public virtual void OnDrag(TinkerGraphic graphic){
 	     
 	    
@@ -66,19 +73,29 @@ public class SManager : MonoBehaviour {
 
 	}
 
+	// Override if a scene manager subclass needs a hint manager
+	public virtual IEnumerator StartHintManager()
+	{
+		yield break;
+	}
+
+	// Override if a scene manager subclass needs a graphic hint
+	public virtual IEnumerator PlayHintAnimation()
+	{
+		yield break;
+	}
+
+    // override me
     public virtual void OnPointerClick(GameObject cl)
     {
-        if (cl.name == "Duck")
-        {
-            gameManager.LoadNextScene();
-        }
 
-        if (cl.name == "yellow")
-        {
-            R1button.SetActive(true);
-        }
 
+        //if (cl.name == "yellow")
+        //{
+        //    R1button.SetActive(true);
+        //}
     }
+    
     public virtual void OnDragEnd()
     {
         if (stanzaManager != null)
@@ -91,20 +108,19 @@ public class SManager : MonoBehaviour {
    
     public virtual void OnMouseDown(GameObject go)
     {
-        Debug.Log(go.tag);
         if (go.tag == "text")
         {
             stanzaManager.OnMouseDown(go.GetComponent<TinkerText>());
 
         }
 		else if (go.tag=="graphic") {
-            Debug.Log("graphic");
             stanzaManager.OnMouseDown(go.GetComponent<TinkerGraphic>());
 
         }
 
     }
-    public virtual void OnMouseUp(GameObject go)
+
+	public virtual void OnMouseUp(GameObject go)
     {
          if(go.tag=="graphic"){
             stanzaManager.OnMouseUp(go.GetComponent<TinkerGraphic>());
@@ -149,4 +165,6 @@ public class SManager : MonoBehaviour {
 		}
 		return false;
 	}
+
+
 }

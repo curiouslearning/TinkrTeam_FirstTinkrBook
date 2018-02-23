@@ -324,8 +324,8 @@ MonoBehaviour:
   tinkerGraphic: {fileID: 2138017790}
   stanza: {fileID: 1219002820}
   delayTime: 0
-  anim: {fileID: 53560022}
-  anim2: {fileID: 2138017786}
+  anim: {fileID: 0}
+  anim2: {fileID: 0}
 --- !u!95 &247559852
 Animator:
   serializedVersion: 3
@@ -351,10 +351,10 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 247559849}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 35df7921f18d9bf49987d0d6bdaf0be9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 299a0c653785a524f8544a5fc6a73a3f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1523,7 +1523,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1865187571}
-        m_MethodName: left
+        m_MethodName: PreviousScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1782,7 +1782,7 @@ MonoBehaviour:
   tinkerGraphic: {fileID: 2138017790}
   stanza: {fileID: 1219002820}
   delayTime: 0
-  anim: {fileID: 676753132}
+  anim: {fileID: 0}
   anim2: {fileID: 2138017786}
 --- !u!95 &2097029250
 Animator:
@@ -1809,7 +1809,7 @@ AudioSource:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2097029247}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 35df7921f18d9bf49987d0d6bdaf0be9, type: 3}
@@ -1896,7 +1896,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2036,6 +2036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedtext1: {fileID: 0}
   pairedtext2: {fileID: 0}
+  myCanvas: {fileID: 0}
 --- !u!114 &2138017791
 MonoBehaviour:
   m_ObjectHideFlags: 0

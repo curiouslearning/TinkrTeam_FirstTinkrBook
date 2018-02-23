@@ -125,7 +125,6 @@ public class GameManager : MonoBehaviour
         if (currentScene < Scenes.END - 1)
         {
             currentScene++;
-            TinkerText.nooftaps = 0;
             SceneManager.LoadScene(currentScene.ToString());
             Debug.Log(currentScene);
         }

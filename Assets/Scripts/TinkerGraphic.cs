@@ -39,7 +39,7 @@ public class TinkerGraphic : MonoBehaviour {
     }
     public void graphicPlay()
     {
-        if (anim != null)
+      /*  if (anim != null)
         {
             if (TinkerText.nooftaps < 3)
             {
@@ -60,11 +60,11 @@ public class TinkerGraphic : MonoBehaviour {
 
                 //SceneManager.LoadScene("Scene02");
             }
-        }
+        }*/
     }
     public void graphicResume()
     {
-        if (TinkerText.nooftaps < 3)
+       /* if (TinkerText.nooftaps < 3)
         {
             Debug.Log("graphic resumed "+TinkerText.nooftaps);
             if (pairedtext1 != null)
@@ -77,7 +77,7 @@ public class TinkerGraphic : MonoBehaviour {
             if (pairedtext2 != null)
                 pairedtext2.clipResume();
             TinkerText.nooftaps = 0;
-        }
+        }*/
     }
 
 	public void MoveObject(){

@@ -10,22 +10,17 @@ public class TinkerText : MonoBehaviour {
     public TinkerText pairedTinkerText;
     public TinkerGraphic tinkerGraphic;
     public static bool pairedgraphic = false;
-   // public Text tinkerText;
     public Stanza stanza;
-    // Auto play timing related
     private float startTime;
     private float endTime;
     public float delayTime;
-    //public GameObject text;
     private Animator wordanimator;
     private Animator iconanimator;
     private Animator graphicanimator;
     public GameObject anim;
-    //egg crack
     public GameObject anim2;
-    public static int nooftaps;
-    public static int tapcheck;
-    // Use this for initialization
+
+
     void Start()
     {
         wordanimator = GetComponent<Animator>();
@@ -57,7 +52,6 @@ public class TinkerText : MonoBehaviour {
     }
     public void OnDrag()
     {
-        Debug.Log("drag true-------");
         GameObject[] g=GameObject.FindGameObjectsWithTag("anim");
         foreach(GameObject go in g) {
             go.SetActive(false);
@@ -77,11 +71,7 @@ public class TinkerText : MonoBehaviour {
     {
         clipResume();
         iconanimResume();
-        
-        //wordanimator.SetTrigger("resume");
         graphicResume();
-        //Debug.Log(anim.active);
-
     }
    
     public void clipResume()
@@ -95,7 +85,6 @@ public class TinkerText : MonoBehaviour {
             AudioSource source = gameObject.GetComponent<AudioSource>();
             delayTime = 0.21f;
             wordanimator.speed = 1 / (delayTime);
-            Debug.Log("source play");
             source.Play();
             wordanimator.SetTrigger("tapme");
     
@@ -124,23 +113,7 @@ public class TinkerText : MonoBehaviour {
     {
         if (anim2 != null)
             anim2.SetActive(true);
-        if (graphicanimator != null)
-        {
-            if (nooftaps < 3)
-
-            {
-                int i = nooftaps + 1;
-                graphicanimator.SetTrigger("crack"+i);
-               nooftaps++;
-            }
-			
-            else{
-                graphicanimator.SetTrigger("crack3");
-                nooftaps = 0;
-            }
-        }
-
-        }
+	}
     void graphicResume()
     {
         
