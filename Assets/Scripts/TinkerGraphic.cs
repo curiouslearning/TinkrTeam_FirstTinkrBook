@@ -84,6 +84,7 @@ public class TinkerGraphic : MonoBehaviour {
 		Vector2 pos;
 		RectTransformUtility.ScreenPointToLocalPointInRectangle(myCanvas.transform as RectTransform, Input.mousePosition, myCanvas.worldCamera, out pos);
 		transform.position = myCanvas.transform.TransformPoint(pos);
+		Debug.Log ("position:" + transform.position);
 	}
 
 	public Vector2 GetCoordinates(){

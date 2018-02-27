@@ -28,6 +28,8 @@ public class SManager : MonoBehaviour {
     //override me
     public virtual void Update() {
     }
+  
+  
     public virtual void Init(GameManager _gameManager)
     {
         gameManager = _gameManager;
@@ -159,8 +161,15 @@ public class SManager : MonoBehaviour {
 
 
 
-	public bool CalculateDistance(Vector2 start, Vector2 end, float requiredDistance){
+	public bool CheckFar(Vector2 start, Vector2 end, float requiredDistance){
 		if (requiredDistance <= Vector2.Distance (start, end)) {
+			return true;
+		}
+		return false;
+	}
+
+	public bool CheckNear(Vector2 start, Vector2 end, float requiredDistance){
+		if (requiredDistance >= Vector2.Distance (start, end)) {
 			return true;
 		}
 		return false;

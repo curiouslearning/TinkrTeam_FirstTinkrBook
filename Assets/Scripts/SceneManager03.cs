@@ -29,10 +29,9 @@ public class SceneManager03 : SManager {
 		while (true)
 		{
 			yield return new WaitForSeconds(hintDelayTime);
-
-			if (!(stanzaManager.IsAutoPlaying() || dragActivated))
+      
+			if (!(stanzaManager.IsAutoPlaying() || dragActivated))      // if drag is activated even once, don't play hints!
 			{
-				Debug.Log ("Start hint: "+dragActivated);
 				yield return StartCoroutine(PlayHintAnimation());
 			}
 		}
@@ -49,8 +48,8 @@ public class SceneManager03 : SManager {
 
 	public override void OnDragBegin(TinkerGraphic graphic){
 		if (graphic.GetDraggable ()) {
-			dragActivated = true;
-			topShell.MoveObject ();
+			dragActivated = true;         //for hint playing    
+			topShell.MoveObject (); 
 		}
 	}
 	public override void OnDrag(TinkerGraphic graphic)
@@ -64,7 +63,7 @@ public class SceneManager03 : SManager {
 			if (graphic.GetDraggable ()) {
 			   // dragActivated = false;
 				finalPos = topShell.GetCoordinates();
-				bool navigate= CalculateDistance (initialPos, finalPos, distance);
+			bool navigate= CheckFar (initialPos, finalPos, distance);
 				if(navigate){
 					NextScene ();
 				}
