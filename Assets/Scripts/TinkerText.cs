@@ -20,6 +20,8 @@ public class TinkerText : MonoBehaviour {
     public GameObject anim;
     public GameObject anim2;
 
+    public bool includeshake = false;
+
 
     void Start()
     {
@@ -72,6 +74,10 @@ public class TinkerText : MonoBehaviour {
         clipResume();
         iconanimResume();
         graphicResume();
+
+        SceneManager02.tapActive = false;
+
+        SceneManager02.sync();
     }
    
     public void clipResume()
@@ -82,12 +88,17 @@ public class TinkerText : MonoBehaviour {
     public void clipPlay()
     {
 
-            AudioSource source = gameObject.GetComponent<AudioSource>();
-            delayTime = 0.21f;
-            wordanimator.speed = 1 / (delayTime);
-            source.Play();
-            wordanimator.SetTrigger("tapme");
-    
+        AudioSource source = gameObject.GetComponent<AudioSource>();
+        if (includeshake)
+        {
+            wordanimator.SetBool("zoom", true);
+        }
+
+        //delayTime = 0.21f;
+        //wordanimator.speed = 1 / (delayTime);
+        source.Play();
+        wordanimator.SetTrigger("tapme");
+
 
     }
     public void iconanimPlay()

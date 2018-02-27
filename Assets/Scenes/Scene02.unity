@@ -286,6 +286,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 2138017786}
+  includeshake: 0
 --- !u!95 &146020952
 Animator:
   serializedVersion: 3
@@ -502,6 +503,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1734763575}
   anim2: {fileID: 0}
+  includeshake: 1
 --- !u!95 &247559852
 Animator:
   serializedVersion: 3
@@ -700,6 +702,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 2138017786}
+  includeshake: 0
 --- !u!95 &261251925
 Animator:
   serializedVersion: 3
@@ -1062,6 +1065,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1958025920}
   anim2: {fileID: 0}
+  includeshake: 0
 --- !u!95 &410971020
 Animator:
   serializedVersion: 3
@@ -1812,6 +1816,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeshake: 0
 --- !u!95 &729923768
 Animator:
   serializedVersion: 3
@@ -2084,6 +2089,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 447500789}
   anim2: {fileID: 0}
+  includeshake: 0
 --- !u!95 &960487538
 Animator:
   serializedVersion: 3
@@ -2805,6 +2811,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 2138017786}
+  includeshake: 0
 --- !u!95 &1144364661
 Animator:
   serializedVersion: 3
@@ -3731,6 +3738,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 2138017786}
+  includeshake: 0
 --- !u!95 &1468228435
 Animator:
   serializedVersion: 3
@@ -3929,6 +3937,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 2138017786}
+  includeshake: 0
 --- !u!95 &1506911652
 Animator:
   serializedVersion: 3
@@ -4131,6 +4140,7 @@ MonoBehaviour:
   disableAutoplay: 0
   tap: {fileID: 247559849}
   me: {fileID: 2097029247}
+  Image: {fileID: 0}
 --- !u!1 &1607808344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4189,6 +4199,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 2138017786}
+  includeshake: 0
 --- !u!95 &1607808347
 Animator:
   serializedVersion: 3
@@ -4696,6 +4707,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeshake: 0
 --- !u!95 &2046472289
 Animator:
   serializedVersion: 3
@@ -5041,6 +5053,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 2138017786}
+  includeshake: 1
 --- !u!95 &2097029250
 Animator:
   serializedVersion: 3

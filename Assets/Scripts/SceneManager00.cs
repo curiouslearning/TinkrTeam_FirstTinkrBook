@@ -6,8 +6,9 @@ public class SceneManager00 : SManager {
 
     public override void OnPointerClick(GameObject cl)
     {
-        if (cl.name == "Duck")
+        if (cl.name == "egg_anim")
         {
+            Debug.Log("clicked");
             NextScene();
         }
 
