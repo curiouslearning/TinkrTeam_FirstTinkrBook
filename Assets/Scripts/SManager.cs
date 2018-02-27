@@ -28,7 +28,8 @@ public class SManager : MonoBehaviour {
     //override me
     public virtual void Update() {
     }
-
+  
+  
     public virtual void Init(GameManager _gameManager)
     {
         gameManager = _gameManager;
@@ -173,5 +174,6 @@ public class SManager : MonoBehaviour {
 		}
 		return false;
 	}
+
 
 }
