@@ -42,6 +42,7 @@ public class SceneManager20 : SManager {
 		    	currentPos = sheet.GetCoordinates();
 	     		bool navigate= CheckNear (targetPos, currentPos, distance);
 			    if(navigate){
+				    sheet.transform.position = targetPos;   
 			     	NextScene ();
 			    }
 		   }
