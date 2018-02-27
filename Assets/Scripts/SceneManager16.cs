@@ -8,9 +8,5 @@ public class SceneManager16 : SManager {
 	void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

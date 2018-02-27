@@ -621,7 +621,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1865187571}
-        m_MethodName: right
+        m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3566,7 +3566,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1865187571}
-        m_MethodName: left
+        m_MethodName: PreviousScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4549,6 +4549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedtext1: {fileID: 1386300218}
   pairedtext2: {fileID: 1052507825}
+  myCanvas: {fileID: 0}
 --- !u!114 &2138017791
 MonoBehaviour:
   m_ObjectHideFlags: 0

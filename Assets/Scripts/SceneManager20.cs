@@ -6,20 +6,30 @@ public class SceneManager20 : SManager {
 
 
 	public TinkerGraphic sheet;
-	//public distance;  define the var and initialize in Start()
-	// write func in SManager for checking boundary
+	public GameObject target;
+	private Vector2 currentPos, targetPos;
+	float distance;
+	bool dragActivated = false;
+
 	void Start () {
-		//set the distance and draggable obj.
+		distance = 0.1f;   //change according to your need
 		if (sheet != null) {
 			sheet.SetDraggable(true);
+			currentPos = sheet.GetCoordinates ();
+
+			targetPos = target.transform.position;
+			Debug.Log ("target position:" + targetPos);
 		}
 	}
-	
-	public override void OnDragBegin(GameObject go)
-	{
-		
-	}
 
+
+	public override void OnDragBegin(TinkerGraphic graphic)
+	{
+		if (graphic.GetDraggable ()) {
+			dragActivated = true;         //for hint playing    
+			sheet.MoveObject (); 
+		}
+	}
 	public override void OnDrag(TinkerGraphic graphic)
 	{
 			if (graphic.GetDraggable ()) {
@@ -29,8 +39,11 @@ public class SceneManager20 : SManager {
 	public override void OnDragEnd(TinkerGraphic graphic)
 	{
 			if (graphic.GetDraggable ()) {
-				Vector3 position = sheet.GetCoordinates();
-				Debug.Log ("position:" + position);
-			}
+		    	currentPos = sheet.GetCoordinates();
+	     		bool navigate= CheckNear (targetPos, currentPos, distance);
+			    if(navigate){
+			     	NextScene ();
+			    }
+		   }
 	}
 }
