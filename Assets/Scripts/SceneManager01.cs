@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SceneManager01 : SManager {
     
 	public GameObject graphicEgg;
-	private int noOfTaps;
+	private int noOfTaps;   
 
 	void Start(){
 		noOfTaps = 0;
