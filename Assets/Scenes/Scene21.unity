@@ -165,7 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -458,7 +457,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -949,7 +947,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
@@ -1165,7 +1162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -1363,7 +1359,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -1804,7 +1799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -2097,7 +2091,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
@@ -2566,7 +2559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -2769,7 +2761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
@@ -3122,7 +3113,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -3899,12 +3889,12 @@ Prefab:
     - target: {fileID: 224286023256645642, guid: 214860818d0567340ba3b8ffedb89c00,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 78
       objectReference: {fileID: 0}
     - target: {fileID: 224286023256645642, guid: 214860818d0567340ba3b8ffedb89c00,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -26
       objectReference: {fileID: 0}
     - target: {fileID: 224286023256645642, guid: 214860818d0567340ba3b8ffedb89c00,
         type: 2}
@@ -4575,7 +4565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
@@ -5926,7 +5915,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -6129,7 +6117,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -6650,7 +6637,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -7202,7 +7188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
@@ -7400,7 +7385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -7598,7 +7582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -7907,7 +7890,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
@@ -8361,7 +8343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
@@ -8655,7 +8636,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -8889,7 +8869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -9087,7 +9066,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
@@ -9406,7 +9384,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -9666,7 +9643,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
