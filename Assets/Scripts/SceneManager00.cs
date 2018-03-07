@@ -4,18 +4,13 @@ using UnityEngine;
 
 public class SceneManager00 : SManager { 
 
-    public override void OnPointerClick(GameObject cl)
+   public override void OnMouseDown(GameObject go)
     {
-        if (cl.name == "egg_anim")
-        {
-            Debug.Log("clicked");
-            NextScene();
-        }
+		if (go.name == "egg_anim")
+		{
+			NextScene();
+		}
 
-        //if (cl.name == "yellow")
-        //{
-        //    R1button.SetActive(true);
-        //}
 
     }
 

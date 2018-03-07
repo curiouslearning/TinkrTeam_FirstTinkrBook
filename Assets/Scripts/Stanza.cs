@@ -6,10 +6,13 @@ public class Stanza : MonoBehaviour {
     public StanzaManager stanzaManager;
     public List<TinkerText> tinkerTexts;
     // Time delay at end of stanza during autoplay
-    public float endDelay;
-    private TinkerText mouseDownTinkerText;
-    private TinkerText mouseCurrentlyDownTinkerText;
+	public float endDelay; 
 
+	private TinkerText mouseDownTinkerText;
+	private TinkerText mouseCurrentlyDownTinkerText;
+
+	// used as tracking to detect stanza auto play
+	private int lastTinkerTextIndex = -9999;
   
     // Use this for initialization
     void Start () {
@@ -49,12 +52,13 @@ public class Stanza : MonoBehaviour {
                 //anim.SetTrigger("tapme");
                 anim.Play("textzoomin");
                 yield return new WaitForSeconds(t.delayTime / 2);
-
-                anim.speed = 1 / pauseDelay;
-                anim.Play("pausedelay");
-                //anim.SetTrigger("resume");
-                yield return new WaitForSeconds(pauseDelay);
-
+				if (pauseDelay != 0) 
+				{
+					anim.speed = 1 / pauseDelay;
+					anim.Play ("pausedelay");
+					//anim.SetTrigger("resume");
+					yield return new WaitForSeconds (pauseDelay);
+				}
             }
             else // Delay before next stanza
             {
@@ -66,7 +70,7 @@ public class Stanza : MonoBehaviour {
                 if (endDelay != 0)
                 {
                     anim.speed = 1 / endDelay;
-                    anim.Play("pausedelay");
+                    anim.Play("enddelay");
                 }
 
                 yield return new WaitForSeconds(endDelay);
@@ -84,29 +88,194 @@ public class Stanza : MonoBehaviour {
         yield break;
     }
 
+	public void OnMouseDown(TinkerText tinkerText, bool suppressAnim = false)
+	{
+		// if we aren't already mouse down on this text
+		if (mouseDownTinkerText != null && mouseDownTinkerText != tinkerText)
+		{
+			// Then reset the old one
+			mouseDownTinkerText.Reset();
+		}
 
-    public void OnDrag(TinkerText tinkerText)
-    {
-        tinkerText.OnDrag();
-        // and reassign it to currently down 
-        int currentTextIndex = tinkerTexts.IndexOf(tinkerText);
+		// Assign this new one
+		mouseDownTinkerText = tinkerText;
 
-        stanzaManager.RequestAutoPlay(this, tinkerTexts[currentTextIndex]);
-    }
+		// And signal the tinkerText 
+		tinkerText.OnMouseDown(suppressAnim);
+	}
 
-    public void OnMouseUp(TinkerText tinkerText)
-    {
-        // Assign this new one
-        mouseDownTinkerText = tinkerText;
-        // And signal the tinkerText 
-        tinkerText.OnMouseUp();
-    }
+	public void OnPairedMouseDown(TinkerText tinkerText)
+	{
+		// if we aren't already mouse down on this text
+		if (mouseDownTinkerText != null && mouseDownTinkerText != tinkerText)
+		{
+			// Then reset the old one
+			mouseDownTinkerText.Reset();
+		}
+
+		// Assign this new one
+		mouseDownTinkerText = tinkerText;
+
+		// And signal the tinkerText 
+		tinkerText.OnPairedMouseDown();
+	}
+
+	public void OnMouseCurrentlyDown(TinkerText tinkerText)
+	{
+		// If this text is already marked as mouse down, clear that
+		if (mouseDownTinkerText != null && mouseDownTinkerText == tinkerText)
+		{
+			mouseDownTinkerText = null;
+
+			// and reassign it to currently down 
+			mouseCurrentlyDownTinkerText = tinkerText;
+
+			DetectStanzaAutoPlay(tinkerText);
+		}
+		else if (mouseCurrentlyDownTinkerText != null)
+		{
+			// If this text isn't already marked as currently down
+			if (mouseCurrentlyDownTinkerText != tinkerText)
+			{
+				// Then reset the old one
+				mouseCurrentlyDownTinkerText.Reset();
+
+				// Assign this new one
+				mouseCurrentlyDownTinkerText = tinkerText;
+
+				// Signal tinkerText
+				tinkerText.OnMouseCurrentlyDown();
+
+				DetectStanzaAutoPlay(tinkerText);
+			}
+		}
+		else
+		{
+			// Assign this new one
+			mouseCurrentlyDownTinkerText = tinkerText;
+
+			// Signal tinkerText
+			tinkerText.OnMouseCurrentlyDown();
+
+			DetectStanzaAutoPlay(tinkerText);
+		}
+	}
+
+	public void OnPairedMouseCurrentlyDown(TinkerText tinkerText)
+	{
+		// If this text is already marked as mouse down, clear that
+		if (mouseDownTinkerText != null && mouseDownTinkerText == tinkerText)
+		{
+			mouseDownTinkerText = null;
+
+			// and reassign it to currently down 
+			mouseCurrentlyDownTinkerText = tinkerText;
+
+			DetectStanzaAutoPlay(tinkerText);
+		}
+		else if (mouseCurrentlyDownTinkerText != null)
+		{
+			// If this text isn't already marked as currently down
+			if (mouseCurrentlyDownTinkerText != tinkerText)
+			{
+				// Then reset the old one
+				mouseCurrentlyDownTinkerText.Reset();
+
+				// Assign this new one
+				mouseCurrentlyDownTinkerText = tinkerText;
+
+				// Signal tinkerText
+				tinkerText.OnPairedMouseCurrentlyDown();
+
+				DetectStanzaAutoPlay(tinkerText);
+			}
+		}
+		else
+		{
+			// Assign this new one
+			mouseCurrentlyDownTinkerText = tinkerText;
+
+			// Signal tinkerText
+			tinkerText.OnPairedMouseCurrentlyDown();
+
+			DetectStanzaAutoPlay(tinkerText);
+		}
+	}
+		
+
+	public void StopAllIndividualSounds()
+	{
+		foreach (TinkerText tinkerText in tinkerTexts)
+		{
+			tinkerText.StopSound();
+		}
+	}
+
+	public void OnMouseUp(TinkerText tinkerText)
+	{
+		// Assign this new one
+		mouseDownTinkerText = tinkerText;
+		// And signal the tinkerText 
+		tinkerText.MyOnMouseUp();
+	}
+		
+
+	public void ResetInputStates(GameManager.MouseEvents mouseEvent)
+	{
+		ResetMouseDownStates();
+		ResetMouseCurrentlyDownStates();
+
+		if (mouseEvent == GameManager.MouseEvents.MouseUp)
+		{
+			lastTinkerTextIndex = -9999;
+		}
+	}
+
+	private void ResetMouseDownStates()
+	{
+		if (mouseDownTinkerText != null)
+		{
+			mouseDownTinkerText.Reset();
+		}
+		mouseDownTinkerText = null;
+	}
+
+	private void ResetMouseCurrentlyDownStates()
+	{
+		if (mouseCurrentlyDownTinkerText != null)
+		{
+			mouseCurrentlyDownTinkerText.Reset();
+		}
+		mouseCurrentlyDownTinkerText = null;
+	}
+
+	// Attempts to detect when player has swiped across two words left to right in a stanza to begin autoplay
+	private void DetectStanzaAutoPlay(TinkerText tinkerText)
+	{
+		int currentTinkerTextIndex = tinkerTexts.IndexOf(tinkerText);
+
+		if (lastTinkerTextIndex == -9999)
+		{
+			lastTinkerTextIndex = currentTinkerTextIndex;
+		}
+		else
+		{
+			if (currentTinkerTextIndex == lastTinkerTextIndex + 1)
+			{
+				stanzaManager.RequestAutoPlay(this, tinkerTexts[lastTinkerTextIndex]);
+
+				lastTinkerTextIndex = -9999;
+			}
+			else if (currentTinkerTextIndex < lastTinkerTextIndex)
+			{
+				lastTinkerTextIndex = -9999;
+			}
+			else
+			{
+				lastTinkerTextIndex = currentTinkerTextIndex;
+			}
+		}
+	}
+
   
-    public void OnMouseDown(TinkerText tinkerText)
-    {
-        // Assign this new one
-        mouseDownTinkerText = tinkerText;
-        // And signal the tinkerText 
-        tinkerText.OnMouseDown();
-    }
 }
