@@ -16,35 +16,46 @@ public class SceneManager20 : SManager {
 		if (sheet != null) {
 			sheet.SetDraggable(true);
 			currentPos = sheet.GetCoordinates ();
-
 			targetPos = target.transform.position;
-			Debug.Log ("target position:" + targetPos);
 		}
 	}
 
-
-	public override void OnDragBegin(TinkerGraphic graphic)
+	// Scene specific override (when play clicks on top shell, make it stick to wherever they move)
+	public override void OnMouseDown(TinkerGraphic tinkerGraphic)
 	{
-		if (graphic.GetDraggable ()) {
-			dragActivated = true;         //for hint playing    
-			sheet.MoveObject (); 
+		base.OnMouseDown(tinkerGraphic);
+		if (tinkerGraphic.GetDraggable ()) {
+			dragActive = true;
 		}
 	}
-	public override void OnDrag(TinkerGraphic graphic)
+
+	// Scene specific override (when play clicks on top shell, make it stick to wherever they move)
+	public override void OnMouseCurrentlyDown(TinkerGraphic tinkerGraphic)
 	{
-			if (graphic.GetDraggable ()) {
+		base.OnMouseCurrentlyDown(tinkerGraphic);
+		if (dragActive)
+		{
+			if (tinkerGraphic.GetDraggable ()) {
 				sheet.MoveObject ();
 			}
+		}
 	}
-	public override void OnDragEnd(TinkerGraphic graphic)
+
+	// Scene specific override (when play clicks on top shell, make it stick to wherever they move)
+	public override void OnMouseUp(TinkerGraphic tinkerGraphic)
 	{
-			if (graphic.GetDraggable ()) {
-		    	currentPos = sheet.GetCoordinates();
-	     		bool navigate= CheckNear (targetPos, currentPos, distance);
-			    if(navigate){
-				    sheet.transform.position = targetPos;   
-			     	NextScene ();
-			    }
-		   }
+		base.OnMouseUp(tinkerGraphic);
+
+		if (dragActive && tinkerGraphic.GetDraggable() )
+		{
+			dragActive = false;
+			// See if player has moved shell far away enough to advance the scene
+			currentPos = sheet.GetCoordinates();
+			bool navigate= CheckNear (targetPos, currentPos, distance);
+			if (navigate) {
+				sheet.transform.position = targetPos;   
+				NextScene ();
+			}
+		}
 	}
 }

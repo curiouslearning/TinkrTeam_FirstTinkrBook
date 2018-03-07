@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SceneManager03 : SManager {
 
-
 	public TinkerGraphic topShell;
 	private Vector2 initialPos, finalPos;
 	float distance, hintDelayTime, animationLength;
@@ -12,7 +11,7 @@ public class SceneManager03 : SManager {
 	public GameObject animObject;
 
 	void Start () {
-		distance = 0.6f;   //change according to your need
+		distance = 1.0f;   //change according to your need
 		hintDelayTime = 2.0f;
 		animationLength = 2.0f;
 		if (topShell != null) {
@@ -45,28 +44,46 @@ public class SceneManager03 : SManager {
 	    	animObject.SetActive (false);
 			yield return new WaitForSeconds(hintDelayTime);
 	}
+		
 
-	public override void OnDragBegin(TinkerGraphic graphic){
-		if (graphic.GetDraggable ()) {
-			dragActivated = true;         //for hint playing    
-			topShell.MoveObject (); 
+	// Scene specific override (when play clicks on top shell, make it stick to wherever they move)
+	public override void OnMouseDown(TinkerGraphic tinkerGraphic)
+	{
+		base.OnMouseDown(tinkerGraphic);
+		if (tinkerGraphic.GetDraggable ()) {
+			dragActive = true;
 		}
 	}
-	public override void OnDrag(TinkerGraphic graphic)
+
+	// Scene specific override (when play clicks on top shell, make it stick to wherever they move)
+	public override void OnMouseCurrentlyDown(TinkerGraphic tinkerGraphic)
 	{
-			if (graphic.GetDraggable ()) {
+		base.OnMouseCurrentlyDown(tinkerGraphic);
+
+		if (dragActive)
+		{
+			if (tinkerGraphic.GetDraggable ()) {
 				topShell.MoveObject ();
 			}
+
+		}
 	}
-	public override void OnDragEnd(TinkerGraphic graphic)
+
+	// Scene specific override (when play clicks on top shell, make it stick to wherever they move)
+	public override void OnMouseUp(TinkerGraphic tinkerGraphic)
 	{
-			if (graphic.GetDraggable ()) {
-			   // dragActivated = false;
-				finalPos = topShell.GetCoordinates();
+		base.OnMouseUp(tinkerGraphic);
+
+		if (dragActive && tinkerGraphic.GetDraggable() )
+		{
+			dragActive = false;
+
+			// See if player has moved shell far enough away to advance the scene
+			finalPos = topShell.GetCoordinates();
 			bool navigate= CheckFar (initialPos, finalPos, distance);
-				if(navigate){
-					NextScene ();
-				}
+			if(navigate){
+				NextScene ();
 			}
+		}
 	}
 }
