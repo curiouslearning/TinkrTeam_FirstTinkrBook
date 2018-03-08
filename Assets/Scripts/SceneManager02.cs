@@ -35,10 +35,10 @@ public class SceneManager02 : SManager {
 
     }
    
-
-    IEnumerator Example()
-    {
-        yield return new WaitForSeconds(10000);
-        
-    }
+	public override void OnMouseUp(GameObject go){
+		if (go == tap || go == me) {
+			tapActive = false;
+		}
+	}
+     
 }
