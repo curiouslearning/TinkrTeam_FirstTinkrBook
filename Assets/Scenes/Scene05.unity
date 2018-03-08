@@ -733,11 +733,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4283422376275282, guid: e700c418ef8d15b44b4182fb16928b0c, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3.12
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4283422376275282, guid: e700c418ef8d15b44b4182fb16928b0c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.92
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1427913694447814, guid: e700c418ef8d15b44b4182fb16928b0c, type: 2}
       propertyPath: m_Name
@@ -2677,12 +2677,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!1001 &1388671298
 Prefab:
   m_ObjectHideFlags: 0

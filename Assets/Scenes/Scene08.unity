@@ -1203,7 +1203,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4841699451452004, guid: d898b81e561a61b4eabd88da450ddaf9, type: 2}
       propertyPath: m_LocalScale.y
-      value: 50
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4841699451452004, guid: d898b81e561a61b4eabd88da450ddaf9, type: 2}
       propertyPath: m_LocalScale.z
@@ -2294,12 +2294,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
   anim: {fileID: 425261294}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!224 &1572655353 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224902804801179606, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
