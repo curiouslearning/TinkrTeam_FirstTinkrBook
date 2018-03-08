@@ -101,7 +101,7 @@ public class Stanza : MonoBehaviour {
 		mouseDownTinkerText = tinkerText;
 
 		// And signal the tinkerText 
-		tinkerText.OnMouseDown(suppressAnim);
+		tinkerText.MyMouseDown(suppressAnim);
 	}
 
 	public void OnPairedMouseDown(TinkerText tinkerText)

@@ -8,7 +8,7 @@ using System.Xml;
 public class TinkerText : MonoBehaviour {
     //private static bool check=false;
     public TinkerGraphic pairedGraphic;
-
+    public TinkerText pairedText1;
 
     public Stanza stanza;
     private float startTime;
@@ -19,6 +19,7 @@ public class TinkerText : MonoBehaviour {
     private Animator graphicanimator;
     public GameObject anim;
     public GameObject anim2;
+    public bool includeShake = false;
 
     void Start()
     {
@@ -76,9 +77,12 @@ public class TinkerText : MonoBehaviour {
     public void clipPlay()
 	{
             AudioSource source = gameObject.GetComponent<AudioSource>();
+        if (!includeShake)
+        {
             delayTime = 0.21f;
-             wordanimator.speed = 1 / (delayTime);
-            source.Play();
+            wordanimator.speed = 1 / (delayTime);
+        }
+        source.Play();
             wordanimator.SetTrigger("tapme");
     
 
@@ -114,7 +118,7 @@ public class TinkerText : MonoBehaviour {
 
 
 	// Mouse Down Event
-	public void OnMouseDown(bool suppressAnim = false)
+	public void MyMouseDown(bool suppressAnim = false)
 	{
 		if (!stanza.stanzaManager.sceneManager.disableSounds)
 		{

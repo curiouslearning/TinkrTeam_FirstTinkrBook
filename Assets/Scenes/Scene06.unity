@@ -437,6 +437,40 @@ Transform:
   m_PrefabParentObject: {fileID: 4832920278897434, guid: c94bad6f7e4915343b56160474114084,
     type: 2}
   m_PrefabInternal: {fileID: 751808340}
+--- !u!1 &404772647 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1566987185865780, guid: 415d5ca4f8499f54a994a5f17d9a9155,
+    type: 2}
+  m_PrefabInternal: {fileID: 1547316213}
+--- !u!65 &404772648
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404772647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1338599, y: 2.6215348, z: 0.2}
+  m_Center: {x: 0.3880701, y: 0.5942322, z: 0}
+--- !u!114 &404772649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404772647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e465b898a74d5f64dbaeab969faf1f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pairedText1: {fileID: 1319621300}
+  pairedText2: {fileID: 0}
+  sceneManager: {fileID: 1865187571}
+  myCanvas: {fileID: 412370062}
+  resetColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
 --- !u!1 &412370059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2614,7 +2648,7 @@ Prefab:
         type: 2}
       propertyPath: pairedGraphic
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 404772649}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
   m_IsPrefabParent: 0
@@ -2633,6 +2667,12 @@ Animator:
   m_PrefabParentObject: {fileID: 95574849047563254, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
     type: 2}
   m_PrefabInternal: {fileID: 1319621294}
+--- !u!114 &1319621300 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114209332643440358, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
+    type: 2}
+  m_PrefabInternal: {fileID: 1319621294}
+  m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
 --- !u!1 &1386300212
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,6 +2868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
   anim: {fileID: 0}
@@ -3237,6 +3278,10 @@ Prefab:
         type: 2}
       propertyPath: m_LocalScale.y
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 1566987185865780, guid: 415d5ca4f8499f54a994a5f17d9a9155, type: 2}
+      propertyPath: m_Name
+      value: face
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 415d5ca4f8499f54a994a5f17d9a9155, type: 2}
