@@ -13,7 +13,6 @@ public class StanzaManager : MonoBehaviour {
     private bool autoPlaying = false;
     private bool cancelAutoPlay = false;
 
-    public volatile bool drag = false;
     public TextAsset xmlStanzaData;
 
     void Start()
@@ -85,10 +84,6 @@ public class StanzaManager : MonoBehaviour {
         return autoPlaying;
     }
 
-    public bool IsDrag()
-    {
-        return drag;
-    }
 
     // Method to request an auto play starting w/ a stanza
     public void RequestAutoPlay(Stanza startingStanza, TinkerText startingTinkerText = null)
@@ -149,56 +144,72 @@ public class StanzaManager : MonoBehaviour {
         autoPlaying = false;
         yield break;
     }
-    public void OnDragBegin(TinkerText tinkerText)
-    {
 
-        drag = true;
-        if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza))
-        {
-            tinkerText.stanza.OnDrag(tinkerText);
-        }
+	public void OnMouseDown(TinkerText tinkerText, bool suppressAnim = false)
+	{
+		if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza))
+		{
+			tinkerText.stanza.OnMouseDown(tinkerText, suppressAnim);
+		}
+			
+	}
 
-    }
+	public void OnPairedMouseDown(TinkerText tinkerText)
+	{
+		if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza))
+		{
+			tinkerText.stanza.OnPairedMouseDown(tinkerText);
+		}
+	}
 
-    public void OnDragEnd()
-    {
-        drag = false;
-    }
+	public void OnMouseCurrentlyDown(TinkerText tinkerText)
+	{
+		if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza))
+		{
+			tinkerText.stanza.OnMouseCurrentlyDown(tinkerText);
+		}
+	}
 
-    public void OnMouseUp(TinkerText tinkerText)
-    {
-        if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza) && !IsDrag())
-        {
-            GetComponent<AudioSource>().Stop();
-            tinkerText.stanza.OnMouseUp(tinkerText);
-        }
+	public void OnPairedMouseCurrentlyDown(TinkerText tinkerText)
+	{
+		if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza))
+		{
+			tinkerText.stanza.OnPairedMouseCurrentlyDown(tinkerText);
+		}
+	}
 
-    }
-   
+	public void OnMouseUp(TinkerText tinkerText)
+	{
+		if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza))
+		{
+			tinkerText.stanza.OnMouseUp(tinkerText);
+		}
+			
+	}
+		
 
-    public void OnMouseDown(TinkerText tinkerText) {
-        if (tinkerText.stanza != null && stanzas.Contains(tinkerText.stanza) && !IsDrag())
-        {
-            RequestCancelAutoPlay();
-            tinkerText.stanza.OnMouseDown(tinkerText);
-        }
+	public void ResetInputStates(GameManager.MouseEvents mouseEvent)
+	{
+		foreach (Stanza stanza in stanzas)
+		{
+			stanza.ResetInputStates(mouseEvent);
+		}
+	}
 
-
-    }
 
     public void OnMouseDown(TinkerGraphic tinkerGraphic)
     {
         if (tinkerGraphic != null)
         {
-            tinkerGraphic.OnMouseDown();
+            tinkerGraphic.MyOnMouseDown();
         }
 
-
     }
+
     public void OnMouseUp(TinkerGraphic tinkerGraphic)
     {
         
-        tinkerGraphic.OnMouseUp();
+        tinkerGraphic.MyOnMouseUp();
     }
 
 }

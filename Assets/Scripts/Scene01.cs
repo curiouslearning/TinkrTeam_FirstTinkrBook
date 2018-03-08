@@ -10,7 +10,7 @@ public class Scene01:SManager {
 
 
     }
-    void Update()
+	public override void Update()
     {
 
         if (Input.GetKeyDown(KeyCode.A))
