@@ -2393,12 +2393,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 971614107}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
   anim: {fileID: 1807836556}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!1 &1442958285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2872,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1742481218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.9918919, y: -1.9909635, z: 0}
+  m_LocalPosition: {x: -2.98, y: -1.9909635, z: 0}
   m_LocalScale: {x: 2.3193898, y: 2.319388, z: 0}
   m_Children:
   - {fileID: 747735419}
