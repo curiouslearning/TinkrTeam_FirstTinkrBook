@@ -165,7 +165,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 596680627}
   delayTime: 0
@@ -363,7 +362,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
@@ -603,7 +601,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
@@ -974,7 +971,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &324902460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1183,7 +1180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1550432959}
   delayTime: 0
@@ -1381,7 +1377,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -1799,7 +1794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -2525,7 +2519,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -3107,7 +3100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1550432959}
   delayTime: 0
@@ -3758,7 +3750,7 @@ MonoBehaviour:
   disableSounds: 0
   dragActive: 0
   topShell: {fileID: 2024631280}
-  animObject: {fileID: 0}
+  animObject: {fileID: 324902459}
 --- !u!1 &1291738217
 GameObject:
   m_ObjectHideFlags: 0
@@ -3947,7 +3939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1550432959}
   delayTime: 0
@@ -4321,7 +4312,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
@@ -4519,7 +4509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 596680627}
   delayTime: 0
@@ -4717,7 +4706,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1550432959}
   delayTime: 0
@@ -4915,7 +4903,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
@@ -5736,7 +5723,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 2024631280}
   stanza: {fileID: 1306297626}
   delayTime: 0
@@ -6011,7 +5997,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 596680627}
   delayTime: 0
@@ -6209,7 +6194,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
   stanza: {fileID: 596680627}
   delayTime: 0

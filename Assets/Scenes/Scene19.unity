@@ -2805,12 +2805,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 1052507825}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!1 &1473797661
 GameObject:
   m_ObjectHideFlags: 0

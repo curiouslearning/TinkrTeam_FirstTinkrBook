@@ -39,7 +39,6 @@ public class SceneManager03 : SManager {
 	public override IEnumerator PlayHintAnimation()
 	{
 			animObject.SetActive (true);
-			animObject.GetComponent<Animator> ().Play ("init_tap_anim");
 			yield return new WaitForSeconds(animationLength);
 	    	animObject.SetActive (false);
 			yield return new WaitForSeconds(hintDelayTime);
@@ -51,8 +50,9 @@ public class SceneManager03 : SManager {
 	{
 		base.OnMouseDown(tinkerGraphic);
 		if (tinkerGraphic.GetDraggable ()) {
-			dragActive = true;
-		}
+			dragActive = true;     //active only DURING frag active
+			dragActivated = true;  //activated for even a single drag
+		} 
 	}
 
 	// Scene specific override (when play clicks on top shell, make it stick to wherever they move)

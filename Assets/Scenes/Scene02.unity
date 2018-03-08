@@ -280,12 +280,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1223118964}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &146020952
 Animator:
   serializedVersion: 3
@@ -496,12 +497,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
   anim: {fileID: 1734763575}
   anim2: {fileID: 0}
+  includeShake: 1
 --- !u!95 &247559852
 Animator:
   serializedVersion: 3
@@ -694,12 +696,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &261251925
 Animator:
   serializedVersion: 3
@@ -1056,12 +1059,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 1958025920}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &410971020
 Animator:
   serializedVersion: 3
@@ -1652,8 +1656,9 @@ GameObject:
   - component: {fileID: 632523801}
   - component: {fileID: 632523803}
   - component: {fileID: 632523802}
+  - component: {fileID: 632523804}
   m_Layer: 0
-  m_Name: Scene02.swf_Tex0_0
+  m_Name: eggcrack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1755,6 +1760,18 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 632523799}
+--- !u!65 &632523804
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 632523799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.049999, y: 5.0500007, z: 0.2}
+  m_Center: {x: 0, y: 0.00000011920929, z: 0}
 --- !u!1 &675346172
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,12 +2057,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &729923768
 Animator:
   serializedVersion: 3
@@ -2312,12 +2330,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1223118964}
   delayTime: 0
   anim: {fileID: 447500789}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &960487538
 Animator:
   serializedVersion: 3
@@ -2939,12 +2958,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1144364661
 Animator:
   serializedVersion: 3
@@ -3961,12 +3981,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1468228435
 Animator:
   serializedVersion: 3
@@ -4159,12 +4180,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1506911652
 Animator:
   serializedVersion: 3
@@ -4471,6 +4493,8 @@ MonoBehaviour:
   dragActive: 0
   tap: {fileID: 247559849}
   me: {fileID: 2097029247}
+  eggCrack: {fileID: 2024663630}
+  eggCrackLastClip: {fileID: 1848275003}
 --- !u!1 &1607808344
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,12 +4547,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1607808347
 Animator:
   serializedVersion: 3
@@ -4900,6 +4925,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1942559852}
   m_Script: {fileID: 11500000, guid: 42ba7c439fd75ae4d8a92029f54c8859, type: 3}
+--- !u!1 &1848275003 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1295369681714732, guid: 30a38dc1e0138da45bf19d2f02c0930b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1523175532}
 --- !u!224 &1865187570 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224915065477950012, guid: 897aa8198a2395a45828861284c51093,
@@ -5198,12 +5228,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1805811267}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &2046472289
 Animator:
   serializedVersion: 3
@@ -5543,12 +5574,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedTinkerText: {fileID: 0}
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1219002820}
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 1
 --- !u!95 &2097029250
 Animator:
   serializedVersion: 3
