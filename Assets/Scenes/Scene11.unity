@@ -1928,6 +1928,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 534527525}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!1 &1509414803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2073,12 +2074,12 @@ Prefab:
     - target: {fileID: 224821728988191486, guid: dab21ed83bcb3e24bbf92e408ec0b45d,
         type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.2003113
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 224821728988191486, guid: dab21ed83bcb3e24bbf92e408ec0b45d,
         type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.8004669
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 224821728988191486, guid: dab21ed83bcb3e24bbf92e408ec0b45d,
         type: 2}

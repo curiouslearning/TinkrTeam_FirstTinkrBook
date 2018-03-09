@@ -2,12 +2,35 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneManager18 : SManager {
+public class SceneManager18 : SManager
+{
+    public GameObject chewinggo;
+    public GameObject burpgo;
+    public GameObject chewing1;
+    public GameObject chewing2;
+    public GameObject chewing3;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+    public GameObject burp;
+    // Use this for initialization
+    void Start()
+    {
+
+    }
+    public override void Update()
+    {
+        if (chewing1.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("removed"))
+        {
+            chewinggo.SetActive(false);
+            burpgo.SetActive(true);
+            StartCoroutine(waitForTime());
+        }
+    }
+
+    IEnumerator waitForTime()
+    {
+        yield return new WaitForSeconds(1.33f);
+        NextScene();
+    }
+
 
 }

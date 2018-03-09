@@ -171,6 +171,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 669613319}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &17484413
 Animator:
   serializedVersion: 3
@@ -369,6 +370,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &86047383
 Animator:
   serializedVersion: 3
@@ -683,6 +685,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &201885049
 Animator:
   serializedVersion: 3
@@ -965,6 +968,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &247559852
 Animator:
   serializedVersion: 3
@@ -1163,6 +1167,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1481920667}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &261251925
 Animator:
   serializedVersion: 3
@@ -1601,6 +1606,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &410971020
 Animator:
   serializedVersion: 3
@@ -1894,6 +1900,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 389339743}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &426363393
 Animator:
   serializedVersion: 3
@@ -2362,6 +2369,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &588959722
 Animator:
   serializedVersion: 3
@@ -2565,6 +2573,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &650156121
 Animator:
   serializedVersion: 3
@@ -2918,6 +2927,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &729923768
 Animator:
   serializedVersion: 3
@@ -3503,12 +3513,12 @@ Prefab:
     - target: {fileID: 224286023256645642, guid: 214860818d0567340ba3b8ffedb89c00,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 224286023256645642, guid: 214860818d0567340ba3b8ffedb89c00,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -29
       objectReference: {fileID: 0}
     - target: {fileID: 224286023256645642, guid: 214860818d0567340ba3b8ffedb89c00,
         type: 2}
@@ -3553,6 +3563,16 @@ Prefab:
     - target: {fileID: 1209555908071946, guid: 214860818d0567340ba3b8ffedb89c00, type: 2}
       propertyPath: m_Name
       value: head
+      objectReference: {fileID: 0}
+    - target: {fileID: 224286023256645642, guid: 214860818d0567340ba3b8ffedb89c00,
+        type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224286023256645642, guid: 214860818d0567340ba3b8ffedb89c00,
+        type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 214860818d0567340ba3b8ffedb89c00, type: 2}
@@ -4188,6 +4208,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1144364661
 Animator:
   serializedVersion: 3
@@ -5238,6 +5259,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1021544384}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1468228435
 Animator:
   serializedVersion: 3
@@ -5441,6 +5463,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1556723710}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1506911652
 Animator:
   serializedVersion: 3
@@ -5806,6 +5829,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1916477531}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1563901252
 Animator:
   serializedVersion: 3
@@ -6372,6 +6396,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1630534099}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1839864467
 Animator:
   serializedVersion: 3
@@ -6570,6 +6595,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1850925813
 Animator:
   serializedVersion: 3
@@ -6768,6 +6794,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1851369661
 Animator:
   serializedVersion: 3
@@ -7077,6 +7104,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 831707456}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1921455589
 Animator:
   serializedVersion: 3
@@ -7531,6 +7559,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1948646683
 Animator:
   serializedVersion: 3
@@ -7825,6 +7854,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1974413212
 Animator:
   serializedVersion: 3
@@ -8059,6 +8089,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1988531624
 Animator:
   serializedVersion: 3
@@ -8257,6 +8288,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &2034079020
 Animator:
   serializedVersion: 3
@@ -8576,6 +8608,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 914051812}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &2076609761
 Animator:
   serializedVersion: 3
@@ -8836,6 +8869,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1307952325}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &2097029250
 Animator:
   serializedVersion: 3
