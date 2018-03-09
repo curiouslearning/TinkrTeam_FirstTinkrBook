@@ -20,8 +20,17 @@ public class SceneManager13 : SManager {
 		base.OnMouseDown(tinkerGraphic);
 
 		if (tinkerGraphic.GetDraggable ()) {
+			if (Input.GetAxis ("Mouse X") < 0)
+			{
+				tinkerGraphic.transform.rotation = Quaternion.Euler (0, 180, 0);
+			}
+			if (Input.GetAxis ("Mouse X") > 0)
+			{
+				tinkerGraphic.transform.rotation = Quaternion.Euler (0, 0, 0);
+			}
 			dragActive = true;
 		}
+
 		if (tinkerGraphic == duckParent) {
 			duckParent.GetComponent<DuckAnimSwitching> ().DuckOnMouseDown ();
 		}
@@ -56,8 +65,17 @@ public class SceneManager13 : SManager {
 		{
 			if (tinkerGraphic.GetDraggable ()) {
 				
+				if (Input.GetAxis ("Mouse X") < 0)
+				{
+					tinkerGraphic.transform.rotation = Quaternion.Euler (0, 180, 0);
+				}
+				if (Input.GetAxis ("Mouse X") > 0)
+				{
+					tinkerGraphic.transform.rotation = Quaternion.Euler (0, 0, 0);
+				}
 				duckParent.GetComponent<TinkerGraphic>().MoveObject ();
 			}
+
 			if (tinkerGraphic == duckParent) {
 				
 				duckParent.GetComponent<DuckAnimSwitching> ().DuckOnMouseCurrentlyDown ();

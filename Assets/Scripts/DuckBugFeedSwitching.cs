@@ -10,9 +10,9 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 	public GameObject duckMouthOpen;
 	public GameObject bugInMouth;
 	public GameObject handHint;
-	public int bugCounter;
+	public static int bugCounter;
 	public SManager sceneManager;
-	public Text num;
+	//public Text num;
 
 	// Use this for initialization
 	void Start () {
@@ -27,7 +27,7 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collider)
 	{   
-		num.text = bugCounter.ToString ();
+		//num.text = bugCounter.ToString ();
 		duckIdle.SetActive(false);  
 		duckChew.SetActive (false);
 		duckMouthOpen.SetActive (true); //mouth open
@@ -43,18 +43,18 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 		duckChew.SetActive (false);
 	}
 
-	public void FeedDuckOnMouseDown()
-	{   
-		num.text = bugCounter.ToString ();
-	}
-
-	public void FeedDuckOnMouseCurrentlyDown()
-	{  
-		num.text = bugCounter.ToString ();
-	}
+//	public void FeedDuckOnMouseDown()
+//	{   
+//		num.text = bugCounter.ToString ();
+//	}
+//
+//	public void FeedDuckOnMouseCurrentlyDown()
+//	{  
+//		num.text = bugCounter.ToString ();
+//	}
 
 	public void FeedDuckOnMouseUp()
-	{   num.text = "";
+	{   //num.text = "";
 		if (bugInMouth) {
 			Destroy (bugInMouth);
 			handHint.SetActive (false);
@@ -62,7 +62,7 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 			duckChew.SetActive (true);
 
 			bugCounter++;
-			if (bugCounter == 8) {
+			if (bugCounter == 9) {
 				sceneManager.NextScene ();
 			}
 		}
@@ -72,7 +72,7 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 		}
 
 	 public IEnumerator SetChewFalse()
-		{yield return new WaitForSeconds (1.0f);
+		{yield return new WaitForSeconds (2.0f);
 		duckChew.SetActive (false);
 		duckIdle.SetActive (true);
 			

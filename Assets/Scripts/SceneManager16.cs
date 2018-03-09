@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SceneManager16 : SManager {
 
@@ -17,6 +18,7 @@ public class SceneManager16 : SManager {
 
 	private Vector2 currentPos;
 
+	private Text t;
 	Vector2 pos;
 
 	// Use this for initialization
@@ -47,6 +49,8 @@ public class SceneManager16 : SManager {
 
 		if (tinkerGraphic.GetDraggable ()) {
 			dragActive = true;
+			t= tinkerGraphic.gameObject.GetComponentInChildren<Text>();
+			t.text= ""+DuckBugFeedSwitching.bugCounter;
 		}
 
 
@@ -59,6 +63,7 @@ public class SceneManager16 : SManager {
 		{
 			if (tinkerGraphic.GetDraggable ()) {
 				tinkerGraphic.MoveObject ();
+				t.text= ""+DuckBugFeedSwitching.bugCounter;
 			}
 
 		}
@@ -71,9 +76,10 @@ public class SceneManager16 : SManager {
 
 		if (dragActive && tinkerGraphic.GetDraggable ()) {
 			dragActive = false;
+			t.text = "";
 		}
 		if(tinkerGraphic.gameObject.name=="duck_parent")
-		duckParent.GetComponent<DuckFeedSwitching> ().FeedDuckOnMouseUp();
+		duckParent.GetComponent<DuckBugFeedSwitching> ().FeedDuckOnMouseUp();
 
 	}
 
