@@ -19,7 +19,7 @@ public class TinkerText : MonoBehaviour {
     private Animator graphicanimator;
     public GameObject anim;
     public GameObject anim2;
-    public bool includeShake = false;
+    //public bool includeShake = false;
 
     void Start()
     {
@@ -77,11 +77,11 @@ public class TinkerText : MonoBehaviour {
     public void clipPlay()
 	{
             AudioSource source = gameObject.GetComponent<AudioSource>();
-        if (!includeShake)
-        {
+        //if (!includeShake)
+        //{
             delayTime = 0.21f;
             wordanimator.speed = 1 / (delayTime);
-        }
+        //}
         source.Play();
             wordanimator.SetTrigger("tapme");
     

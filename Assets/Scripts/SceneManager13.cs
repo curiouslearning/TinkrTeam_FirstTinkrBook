@@ -39,6 +39,7 @@ public class SceneManager13 : SManager {
 			RectTransformUtility.ScreenPointToLocalPointInRectangle(tinkerGraphic.myCanvas.transform as RectTransform, Input.mousePosition, tinkerGraphic.myCanvas.worldCamera, out pos);
 			pos = tinkerGraphic.myCanvas.transform.TransformPoint(pos);
 			//if in water
+			Debug.Log("pos: "+pos+(duckParent.gameObject.GetComponent<DuckAnimSwitching>().insideWater) );
 			if ( (duckParent.gameObject.GetComponent<DuckAnimSwitching>().insideWater) && (pos.x < 0.6f)) {
 				//splash
 				duckParent.transform.GetChild (0).gameObject.SetActive (false); 
@@ -47,7 +48,6 @@ public class SceneManager13 : SManager {
 				duckParent.transform.GetChild (3).gameObject.SetActive (true);  //splash active
 				duckParent.transform.GetChild (4).gameObject.SetActive (false);  
 				dive.gameObject.SetActive (false);  
-				duckParent.transform.GetChild (3).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
 				StartCoroutine (SetSplashFalse());
 			} else {
 			 //bad dive

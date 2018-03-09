@@ -7,7 +7,6 @@ public class SceneManager03 : SManager {
 	public TinkerGraphic topShell;
 	private Vector2 initialPos, finalPos;
 	float distance, hintDelayTime, animationLength;
-	bool dragActivated = false;
 	public GameObject hintObject;
 
     public GameObject help;
@@ -140,7 +139,7 @@ public class SceneManager03 : SManager {
 		{
 			yield return new WaitForSeconds(hintDelayTime);
       
-			if (!(stanzaManager.IsAutoPlaying() || dragActivated))      // if drag is activated even once, don't play hints!
+			if (!(stanzaManager.IsAutoPlaying() || dragActive))      // if drag is activate, don't play hints!
 			{
 				yield return StartCoroutine(PlayHintAnimation());
 			}
@@ -162,7 +161,6 @@ public class SceneManager03 : SManager {
 		base.OnMouseDown(tinkerGraphic);
 		if (tinkerGraphic.GetDraggable ()) {
 			dragActive = true;     //active only DURING frag active
-			dragActivated = true;  //activated for even a single drag
 		} 
 	}
 
