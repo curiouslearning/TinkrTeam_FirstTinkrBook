@@ -11,6 +11,7 @@ public class DuckAnimSwitching : MonoBehaviour {
 	public static float diveStartX=0.6f;
 	public static float diveEndX=1.1f;
 	public GameObject dive;
+	public GameObject sideLeaf;
 	private Vector2 pos;
 	public bool insideWater = false;
 	// Use this for initialization
@@ -81,7 +82,8 @@ public class DuckAnimSwitching : MonoBehaviour {
 			this.transform.GetChild (2).gameObject.SetActive (false);
 			this.transform.GetChild (3).gameObject.SetActive (false);  
 			this.transform.GetChild (4).gameObject.SetActive (false);   
-			dive.gameObject.SetActive (true);   
+			dive.gameObject.SetActive (true); 
+			sideLeaf.SetActive (false);
 			dive.gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
 			StartCoroutine (SetDiveFalse());
 		} else if ((pos.x >= pondStartX && pos.x <= pondEndX) && (pos.y >= pondStartY && pos.y <= pondEndY)) {
@@ -109,6 +111,7 @@ public class DuckAnimSwitching : MonoBehaviour {
 
 		yield return new WaitForSeconds (3.5f);
 		dive.gameObject.SetActive (false);
+		sideLeaf.SetActive (true);
 		this.transform.position = new Vector2(0.0f, -0.5f);
 		this.transform.GetChild (2).gameObject.SetActive (true);
 		yield break;
