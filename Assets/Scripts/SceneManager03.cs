@@ -10,7 +10,13 @@ public class SceneManager03 : SManager {
 	bool dragActivated = false;
 	public GameObject animObject;
 
-	void Start () {
+    public GameObject help;
+    private static Animator animatorTap;
+    public static bool tapActive = false;
+    public bool autoPlayingDoneNow = false;
+    public bool playingWasActive = false;
+
+    void Start () {
 		distance = 1.0f;   //change according to your need
 		hintDelayTime = 2.0f;
 		animationLength = 2.0f;
@@ -18,10 +24,119 @@ public class SceneManager03 : SManager {
 			topShell.SetDraggable(true);
 			initialPos = topShell.GetCoordinates ();
 		}
-		StartCoroutine (StartHintManager());
+        animatorTap = help.GetComponent<Animator>();
+        
+        StartCoroutine(Shake());
+        StartCoroutine (StartHintManager());
 	}
+    IEnumerator WaitTime()
+    {
+        yield return new WaitForSeconds(0.33f);
 
-   public override IEnumerator StartHintManager()
+        sync();
+
+    }
+    IEnumerator Shake()
+    {
+        while (true)
+        {
+            Debug.Log(tapActive);
+            
+
+            if (stanzaManager.IsAutoPlaying())
+            {
+                autoPlayingDoneNow = false;
+                playingWasActive = true;
+            }
+            if (!stanzaManager.IsAutoPlaying() && playingWasActive)
+            {
+                autoPlayingDoneNow = true;
+            }
+            if (autoPlayingDoneNow)
+            {
+                sync();
+                autoPlayingDoneNow = false;
+            }
+
+            if (!tapActive && !stanzaManager.IsAutoPlaying())
+            {
+
+                if (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                {
+                    Debug.Log("shake start");
+                    shakeStart();
+                }
+            }
+
+            yield return new WaitForSeconds(0.3f);
+
+
+        }
+    }
+    public override void OnMouseCurrentlyDown(GameObject go)
+    {
+        base.OnMouseCurrentlyDown(go);
+
+        if (go.name == "help")
+        {
+            tapActive = true;
+            animatorTap.SetBool("zoom", true);
+        }
+        
+    }
+    public override void OnMouseUp(GameObject go)
+    {
+        base.OnMouseUp(go);
+
+        if (go.name == "help")
+        {
+            tapActive = false;
+            animatorTap.SetBool("zoom", false);
+        }
+        
+        StartCoroutine(WaitTime());
+    }
+
+
+    public override void OnMouseDown(GameObject go)
+    {
+
+        base.OnMouseDown(go);
+        if (go.name == "help")
+        {
+            Debug.Log("tapactive stage");
+            animatorTap.SetTrigger("tapme");
+
+            animatorTap.SetBool("zoom", true);
+
+            tapActive = true;
+            shakeStop();
+            
+        }
+       
+      
+
+
+
+    }
+    
+
+    public void shakeStop()
+    {
+        Debug.Log("stopShake");
+        animatorTap.ResetTrigger("shake");
+    }
+    public void shakeStart()
+    {
+        
+        animatorTap.SetTrigger("shake");
+    }
+    public static void sync()
+    {
+        animatorTap.Rebind();
+    }
+
+    public override IEnumerator StartHintManager()
 	{
 		//implement a delay at start
 
