@@ -8,7 +8,7 @@ public class SceneManager03 : SManager {
 	private Vector2 initialPos, finalPos;
 	float distance, hintDelayTime, animationLength;
 	bool dragActivated = false;
-	public GameObject animObject;
+	public GameObject hintObject;
 
     public GameObject help;
     private static Animator animatorTap;
@@ -114,10 +114,6 @@ public class SceneManager03 : SManager {
             
         }
        
-      
-
-
-
     }
     
 
@@ -153,9 +149,9 @@ public class SceneManager03 : SManager {
 
 	public override IEnumerator PlayHintAnimation()
 	{
-			animObject.SetActive (true);
+			hintObject.SetActive (true);
 			yield return new WaitForSeconds(animationLength);
-	    	animObject.SetActive (false);
+	    	hintObject.SetActive (false);
 			yield return new WaitForSeconds(hintDelayTime);
 	}
 		
