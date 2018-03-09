@@ -10,11 +10,6 @@ public class GameManagerInitializer : MonoBehaviour {
 
     void Awake()
     {
-        //Debug.Log("in start");
-        //Resolution r = Screen.currentResolution;
-        //Screen.SetResolution(r.width, r.height, true);
-        //Debug.Log(r.width + " " + r.height);
-
         if (!GameManager.Instance)
         {
             Debug.Log("NO GAME MANAGER INSTANCE FOUND - CREATING ONE!");
