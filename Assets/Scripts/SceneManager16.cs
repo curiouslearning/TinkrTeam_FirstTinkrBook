@@ -73,7 +73,7 @@ public class SceneManager16 : SManager {
 			dragActive = false;
 		}
 		if(tinkerGraphic.gameObject.name=="duck_parent")
-		duckParent.GetComponent<DuckFeedSwitching> ().FeedDuckOnMouseUp();
+		duckParent.GetComponent<DuckBugFeedSwitching> ().FeedDuckOnMouseUp();
 
 	}
 

@@ -166,10 +166,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 596680627}
   delayTime: 0
   anim: {fileID: 1646330291}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &4872229
 Animator:
   serializedVersion: 3
@@ -405,15 +407,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1e41f6b27ff54ca138190fd9f00c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckIdle: {fileID: 0}
-  duckChew: {fileID: 0}
-  duckMouthOpen: {fileID: 0}
-  bugInMouth: {fileID: 0}
-  handHint: {fileID: 0}
-  bugCounter: 0
-  sceneManager: {fileID: 0}
-  num: {fileID: 0}
-  num: {fileID: 0}
 --- !u!1 &40486380
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,10 +534,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
   anim: {fileID: 1860529929}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &51692532
 Animator:
   serializedVersion: 3
@@ -871,10 +866,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
   anim: {fileID: 272012281}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &141044215
 Animator:
   serializedVersion: 3
@@ -1131,15 +1128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1e41f6b27ff54ca138190fd9f00c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckIdle: {fileID: 0}
-  duckChew: {fileID: 0}
-  duckMouthOpen: {fileID: 0}
-  bugInMouth: {fileID: 0}
-  handHint: {fileID: 0}
-  bugCounter: 0
-  sceneManager: {fileID: 0}
-  num: {fileID: 0}
-  num: {fileID: 0}
 --- !u!1 &214342784 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1816483656186398, guid: 0e4df4d81cc62ca4daa231ca83098e63,
@@ -1304,15 +1292,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1e41f6b27ff54ca138190fd9f00c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckIdle: {fileID: 0}
-  duckChew: {fileID: 0}
-  duckMouthOpen: {fileID: 0}
-  bugInMouth: {fileID: 0}
-  handHint: {fileID: 0}
-  bugCounter: 0
-  sceneManager: {fileID: 0}
-  num: {fileID: 0}
-  num: {fileID: 0}
 --- !u!114 &342017447 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114531969152389756, guid: 023b8d7988158df49b01f96f7d6e0e49,
@@ -1446,10 +1425,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 1468649649}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &410971020
 Animator:
   serializedVersion: 3
@@ -2676,10 +2657,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 1061273611}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &729923768
 Animator:
   serializedVersion: 3
@@ -3588,10 +3571,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
   anim: {fileID: 1443362234}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1069969891
 Animator:
   serializedVersion: 3
@@ -3753,15 +3738,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1e41f6b27ff54ca138190fd9f00c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckIdle: {fileID: 0}
-  duckChew: {fileID: 0}
-  duckMouthOpen: {fileID: 0}
-  bugInMouth: {fileID: 0}
-  handHint: {fileID: 0}
-  bugCounter: 0
-  sceneManager: {fileID: 0}
-  num: {fileID: 0}
-  num: {fileID: 0}
 --- !u!1 &1089412414
 GameObject:
   m_ObjectHideFlags: 0
@@ -4142,15 +4118,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1e41f6b27ff54ca138190fd9f00c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckIdle: {fileID: 0}
-  duckChew: {fileID: 0}
-  duckMouthOpen: {fileID: 0}
-  bugInMouth: {fileID: 0}
-  handHint: {fileID: 0}
-  bugCounter: 0
-  sceneManager: {fileID: 0}
-  num: {fileID: 0}
-  num: {fileID: 0}
 --- !u!1 &1236446606
 GameObject:
   m_ObjectHideFlags: 0
@@ -4417,7 +4384,7 @@ Prefab:
     - target: {fileID: 212756639095104676, guid: 023b8d7988158df49b01f96f7d6e0e49,
         type: 2}
       propertyPath: m_SortingOrder
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 212756639095104676, guid: 023b8d7988158df49b01f96f7d6e0e49,
         type: 2}
@@ -4533,10 +4500,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
   anim: {fileID: 1526829960}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1298677662
 Animator:
   serializedVersion: 3
@@ -5150,10 +5119,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
   anim: {fileID: 465520193}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1379313212
 Animator:
   serializedVersion: 3
@@ -5347,10 +5318,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 596680627}
   delayTime: 0
   anim: {fileID: 1316540919}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1382957631
 Animator:
   serializedVersion: 3
@@ -5881,10 +5854,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
   anim: {fileID: 101031479}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1528035235
 Animator:
   serializedVersion: 3
@@ -6681,10 +6656,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 460568082}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1812326795
 Animator:
   serializedVersion: 3
@@ -6846,15 +6823,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1e41f6b27ff54ca138190fd9f00c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckIdle: {fileID: 0}
-  duckChew: {fileID: 0}
-  duckMouthOpen: {fileID: 0}
-  bugInMouth: {fileID: 0}
-  handHint: {fileID: 0}
-  bugCounter: 0
-  sceneManager: {fileID: 0}
-  num: {fileID: 0}
-  num: {fileID: 0}
 --- !u!1 &1858872822
 GameObject:
   m_ObjectHideFlags: 0
@@ -7043,10 +7011,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 596680627}
   delayTime: 0
   anim: {fileID: 1119031808}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1904264138
 Animator:
   serializedVersion: 3
@@ -7240,10 +7210,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
+  pairedText1: {fileID: 0}
   stanza: {fileID: 1667455888}
   delayTime: 0
   anim: {fileID: 1089412414}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!95 &1946145202
 Animator:
   serializedVersion: 3
@@ -7411,15 +7383,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1e41f6b27ff54ca138190fd9f00c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckIdle: {fileID: 0}
-  duckChew: {fileID: 0}
-  duckMouthOpen: {fileID: 0}
-  bugInMouth: {fileID: 0}
-  handHint: {fileID: 0}
-  bugCounter: 0
-  sceneManager: {fileID: 0}
-  num: {fileID: 0}
-  num: {fileID: 0}
 --- !u!1 &2053635682 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1707668606386954, guid: 023b8d7988158df49b01f96f7d6e0e49,
@@ -7441,15 +7404,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22e1e41f6b27ff54ca138190fd9f00c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duckIdle: {fileID: 0}
-  duckChew: {fileID: 0}
-  duckMouthOpen: {fileID: 0}
-  bugInMouth: {fileID: 0}
-  handHint: {fileID: 0}
-  bugCounter: 0
-  sceneManager: {fileID: 0}
-  num: {fileID: 0}
-  num: {fileID: 0}
 --- !u!1 &2063150609 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1497543787890250, guid: b6c3c69fcd525a844adc609c7a36630f,
