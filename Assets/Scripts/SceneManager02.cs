@@ -103,7 +103,7 @@ public class SceneManager02 : SManager
             animatorTap.SetBool("zoom", false);
         }
         else if (go.name == "me") {
-            tapActive = false;
+            tapActive = false;  
 
             animatorMe.SetBool("zoom", false);
         }
