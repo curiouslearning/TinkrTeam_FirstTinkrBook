@@ -7,6 +7,7 @@ public class SceneManager03 : SManager {
 	public TinkerGraphic topShell;
 	private Vector2 initialPos, finalPos;
 	float distance, hintDelayTime, animationLength;
+
 	public GameObject hintObject;
 
     public GameObject help;
@@ -121,6 +122,7 @@ public class SceneManager03 : SManager {
         Debug.Log("stopShake");
         animatorTap.ResetTrigger("shake");
     }
+  
     public void shakeStart()
     {
         

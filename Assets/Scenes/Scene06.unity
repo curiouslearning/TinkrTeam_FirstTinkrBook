@@ -254,7 +254,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: can
       objectReference: {fileID: 0}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -787,7 +787,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: a
       objectReference: {fileID: 0}
     - target: {fileID: 224902804801179606, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -998,7 +998,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: color
       objectReference: {fileID: 0}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -1848,7 +1848,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: be
       objectReference: {fileID: 0}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -2535,7 +2535,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: duck
       objectReference: {fileID: 0}
     - target: {fileID: 224902804801179606, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -2688,7 +2688,7 @@ GameObject:
   - component: {fileID: 1386300214}
   - component: {fileID: 1386300218}
   m_Layer: 0
-  m_Name: text
+  m_Name: I
   m_TagString: text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2873,6 +2873,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!1001 &1388671298
 Prefab:
   m_ObjectHideFlags: 0
@@ -2972,7 +2973,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: baby
       objectReference: {fileID: 0}
     - target: {fileID: 224902804801179606, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -3099,6 +3100,12 @@ Animator:
   m_PrefabParentObject: {fileID: 95574849047563254, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
     type: 2}
   m_PrefabInternal: {fileID: 1388671298}
+--- !u!114 &1388671304 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114209332643440358, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
+    type: 2}
+  m_PrefabInternal: {fileID: 1388671298}
+  m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
 --- !u!1001 &1427505577
 Prefab:
   m_ObjectHideFlags: 0
@@ -3445,7 +3452,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: am
       objectReference: {fileID: 0}
     - target: {fileID: 114209332643440358, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -3783,7 +3790,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: What
       objectReference: {fileID: 0}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -4049,12 +4056,12 @@ Prefab:
         type: 2}
       propertyPath: tinkerTexts.Array.data[3]
       value: 
-      objectReference: {fileID: 669918856}
+      objectReference: {fileID: 1388671304}
     - target: {fileID: 114745750294994386, guid: 644afff2e714ee041a2f569ceb9bd8bd,
         type: 2}
       propertyPath: tinkerTexts.Array.data[4]
       value: 
-      objectReference: {fileID: 669918856}
+      objectReference: {fileID: 1319621300}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 644afff2e714ee041a2f569ceb9bd8bd, type: 2}
   m_IsPrefabParent: 0
@@ -4197,7 +4204,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: text
+      value: I
       objectReference: {fileID: 0}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}

@@ -3674,7 +3674,7 @@ MonoBehaviour:
   disableSounds: 0
   dragActive: 0
   topShell: {fileID: 2024631280}
-  hintObject: {fileID: 324902459}
+  animObject: {fileID: 324902459}
   help: {fileID: 1812326792}
   autoPlayingDoneNow: 0
   playingWasActive: 0
