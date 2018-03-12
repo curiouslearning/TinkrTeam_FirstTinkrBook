@@ -3223,7 +3223,9 @@ GameObject:
   - component: {fileID: 1386300214}
   - component: {fileID: 1386300218}
   m_Layer: 0
-  m_Name: i
+
+  m_Name: I
+
   m_TagString: text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3408,6 +3410,7 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
+  includeShake: 0
 --- !u!1001 &1388671298
 Prefab:
   m_ObjectHideFlags: 0
@@ -4475,7 +4478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: what
+      value: What
       objectReference: {fileID: 0}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
@@ -4889,7 +4892,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1205149657787200, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
       propertyPath: m_Name
-      value: i
+      value: I
       objectReference: {fileID: 0}
     - target: {fileID: 114354365826196830, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
