@@ -18,7 +18,6 @@ public class SceneManager07 : SManager
     //babyd components
     public GameObject babyD;
     public GameObject water;
-    public GameObject eyesAndFeet;
     public GameObject movingArms;
     //public GameObject[] bubbles;
     public GameObject bubble1;
@@ -28,13 +27,12 @@ public class SceneManager07 : SManager
     public GameObject bubble5;
 
     public GameObject bubble6;
-    public GameObject bubble7;
+    
 
     private SpriteRenderer spriteRenderer;
 
     //private SpriteRenderer[] spriteRendererBubbles;
     private SpriteRenderer spriteRendererWater;
-    private SpriteRenderer spriteRendererEyesAndFeet;
     private SpriteRenderer spriteRendererMovingArms;
 
     private SpriteRenderer bubbleSprite1;
@@ -45,11 +43,11 @@ public class SceneManager07 : SManager
 
     private SpriteRenderer bubbleSprite6;
 
-    private SpriteRenderer bubbleSprite7;
+  
     // Use this for initialization
     void Start()
     {
-
+        ChangeColor(GameManager.white);
 
 
         //Fetch the SpriteRenderer from the GameObject
@@ -63,12 +61,6 @@ public class SceneManager07 : SManager
         bubbleSprite4 = bubble4.GetComponent<SpriteRenderer>();
         bubbleSprite5 = bubble5.GetComponent<SpriteRenderer>();
         bubbleSprite6 = bubble6.GetComponent<SpriteRenderer>();
-        bubbleSprite7 = bubble7.GetComponent<SpriteRenderer>();
-
-
-
-
-        spriteRendererEyesAndFeet = eyesAndFeet.GetComponent<SpriteRenderer>();
         spriteRendererMovingArms = movingArms.GetComponent<SpriteRenderer>();
     }
     public override void OnMouseDown(GameObject go)
@@ -100,14 +92,12 @@ public class SceneManager07 : SManager
         yield return new WaitForSeconds(0.5f);
         spriteRenderer.color = color;
         spriteRendererWater.color = color;
-        spriteRendererEyesAndFeet.color = color;
         spriteRendererMovingArms.color = color;
         bubbleSprite1.color = color;
         bubbleSprite2.color = color;
         bubbleSprite3.color = color;
         bubbleSprite4.color = color;
         bubbleSprite5.color = color;
-        bubbleSprite6.color = color;
         bubbleSprite6.color = color;
 
     }
@@ -119,7 +109,7 @@ public class SceneManager07 : SManager
         {
             waterLeaf.GetComponent<Animator>().SetTrigger("start");
             fallingWater.GetComponent<Animator>().SetTrigger("start");
-            ChangeColor(Color.white);
+            ChangeColor(GameManager.white);
 
         }
         else if (duckcolor == GameManager.orange || duckcolor == GameManager.brown
@@ -154,7 +144,7 @@ public class SceneManager07 : SManager
             ChangeColor(GameManager.brown);
         }
 
-        else if (duckcolor == Color.yellow)
+        else if (duckcolor == GameManager.yellow)
         {
             if (go.name == "red_leaf")
             {
@@ -178,7 +168,7 @@ public class SceneManager07 : SManager
             }
 
         }
-        else if (duckcolor == Color.red)
+        else if (duckcolor == GameManager.red)
         {
             if (go.name == "yellow_leaf")
             {
@@ -198,13 +188,13 @@ public class SceneManager07 : SManager
             }
 
         }
-        else if (duckcolor == Color.blue)
+        else if (duckcolor == GameManager.blue)
         {
             if (go.name == "yellow_leaf")
             {
                 fallingYellow.GetComponent<Animator>().SetTrigger("start");
                 yellowLeaf.GetComponent<Animator>().SetTrigger("start");
-                ChangeColor(Color.green);
+                ChangeColor(GameManager.green);
             }
             else if (go.name == "red_leaf")
             {
@@ -232,26 +222,26 @@ public class SceneManager07 : SManager
             redLeaf.GetComponent<Animator>().SetTrigger("start");
             fallingRed.GetComponent<Animator>().SetTrigger("start");
 
-            ChangeColor(Color.red);
+            ChangeColor(GameManager.red);
         }
         if (go.name == "blue_leaf")
         {
             fallingBlue.GetComponent<Animator>().SetTrigger("start");
             blueLeaf.GetComponent<Animator>().SetTrigger("start");
-            ChangeColor(Color.blue);
+            ChangeColor(GameManager.blue);
         }
         if (go.name == "yellow_leaf")
         {
             fallingYellow.GetComponent<Animator>().SetTrigger("start");
             yellowLeaf.GetComponent<Animator>().SetTrigger("start");
-            ChangeColor(Color.yellow);
+            ChangeColor(GameManager.yellow);
 
         }
         if (go.name == "water_leaf")
         {
             fallingWater.GetComponent<Animator>().SetTrigger("start");
             waterLeaf.GetComponent<Animator>().SetTrigger("start");
-            ChangeColor(Color.white);
+            ChangeColor(GameManager.white);
 
         }
     }
