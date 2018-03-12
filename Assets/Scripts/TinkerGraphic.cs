@@ -33,7 +33,7 @@ public class TinkerGraphic : MonoBehaviour {
     public void OnMouseDown()
     {
 		sceneManager.OnMouseDown(this);
-     
+        Debug.Log(sceneManager);
     }
 
 	// Paired TinkerText Mouse Down Event

@@ -15,18 +15,14 @@ public class TinkerText : MonoBehaviour {
     private float endTime;
     public float delayTime;
     private Animator wordanimator;
-    //private Animator iconanimator;
     private Animator graphicanimator;
     public GameObject anim;
     public GameObject anim2;
-    //public bool includeShake = false;
-
+    
     void Start()
     {
 		AddCollider ();
         wordanimator = GetComponent<Animator>();
-        //if (anim != null)
-            //iconanimator = anim.GetComponent<Animator>();
         if (anim2 != null)
             graphicanimator = anim2.GetComponent<Animator>();
     }
@@ -77,11 +73,8 @@ public class TinkerText : MonoBehaviour {
     public void clipPlay()
 	{
             AudioSource source = gameObject.GetComponent<AudioSource>();
-        //if (!includeShake)
-        //{
             delayTime = 0.21f;
             wordanimator.speed = 1 / (delayTime);
-        //}
         source.Play();
             wordanimator.SetTrigger("tapme");
     
@@ -92,7 +85,6 @@ public class TinkerText : MonoBehaviour {
         if (anim != null)
         {
             anim.SetActive(true);
-            //iconanimator.SetTrigger("tap");
         }
     }
 
@@ -100,7 +92,6 @@ public class TinkerText : MonoBehaviour {
     {
         if (anim != null)
         {
-         //   iconanimator.SetTrigger("tapup");
             anim.SetActive(false);
         }
     }
