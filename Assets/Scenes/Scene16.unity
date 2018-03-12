@@ -2758,7 +2758,6 @@ RectTransform:
   m_AnchoredPosition: {x: 154, y: 162}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
-
 --- !u!95 &383788335
 Animator:
   serializedVersion: 3
@@ -4474,7 +4473,6 @@ Prefab:
         type: 2}
       propertyPath: stanzas.Array.data[2]
       value: 
-
       objectReference: {fileID: 596680627}
     m_RemovedComponents:
     - {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093, type: 2}
@@ -4610,7 +4608,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
   pairedText1: {fileID: 0}
-
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 1061273611}
@@ -6306,7 +6303,7 @@ Prefab:
         type: 2}
       propertyPath: sceneManager
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1663249384}
     - target: {fileID: 114400468832251464, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: stanzas.Array.data[0]
@@ -6321,7 +6318,7 @@ Prefab:
         type: 2}
       propertyPath: xmlStanzaData
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4900000, guid: ee25103f835ec3447bae779e3a268ea8, type: 3}
     - target: {fileID: 114400468832251464, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: stanzas.Array.data[2]
