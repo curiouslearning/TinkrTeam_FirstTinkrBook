@@ -1360,7 +1360,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1398260658428664, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212157918409122222, guid: e959fd495ca8517428bfdbde7f832f34,
         type: 2}
@@ -1408,16 +1408,16 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 971614101}
-  m_LocalRotation: {x: 0, y: 0, z: 0.043619405, w: 0.9990483}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.1865274}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1738747861}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 5}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.205297, y: 0.61728036}
+  m_AnchoredPosition: {x: -3.1099997, y: 0.57}
   m_SizeDelta: {x: 2.39, y: 3}
   m_Pivot: {x: 0.5, y: -0}
 --- !u!114 &971614103
@@ -1493,7 +1493,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.39, y: 3}
+  m_Size: {x: 2.4, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1545,7 +1545,7 @@ CapsuleCollider:
   m_Radius: 1.05
   m_Height: 3.0000002
   m_Direction: 1
-  m_Center: {x: -0.028930834, y: 1.5088753, z: 0.0000051171837}
+  m_Center: {x: 0, y: 1.5, z: 0.0000051171837}
 --- !u!224 &1026469798 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224960764825847358, guid: b6c3c69fcd525a844adc609c7a36630f,
@@ -2399,7 +2399,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1807836556}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!1 &1442958285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,7 +2471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1398260658428664, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212157918409122222, guid: e959fd495ca8517428bfdbde7f832f34,
         type: 2}
@@ -2872,7 +2871,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1742481218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.75, y: -1.49, z: 0}
+  m_LocalPosition: {x: -1.75, y: -0.65, z: 0}
   m_LocalScale: {x: 2.3193898, y: 2.319388, z: 0}
   m_Children:
   - {fileID: 747735419}
