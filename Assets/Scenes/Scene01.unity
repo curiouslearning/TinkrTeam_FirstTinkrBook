@@ -1360,7 +1360,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1398260658428664, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212157918409122222, guid: e959fd495ca8517428bfdbde7f832f34,
         type: 2}
@@ -2399,7 +2399,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1807836556}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!1 &1442958285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2472,7 +2471,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1398260658428664, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212157918409122222, guid: e959fd495ca8517428bfdbde7f832f34,
         type: 2}

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Xml;
-
+//20.3,-18.8 (yellow), 0,-17.4 (white),blue (22.9,-0.4)
 public class TinkerText : MonoBehaviour {
     //private static bool check=false;
     public TinkerGraphic pairedGraphic;
@@ -15,7 +15,7 @@ public class TinkerText : MonoBehaviour {
     private float endTime;
     public float delayTime;
     private Animator wordanimator;
-    private Animator iconanimator;
+    //private Animator iconanimator;
     private Animator graphicanimator;
     public GameObject anim;
     public GameObject anim2;
@@ -25,8 +25,8 @@ public class TinkerText : MonoBehaviour {
     {
 		AddCollider ();
         wordanimator = GetComponent<Animator>();
-        if (anim != null)
-            iconanimator = anim.GetComponent<Animator>();
+        //if (anim != null)
+            //iconanimator = anim.GetComponent<Animator>();
         if (anim2 != null)
             graphicanimator = anim2.GetComponent<Animator>();
     }
@@ -89,18 +89,18 @@ public class TinkerText : MonoBehaviour {
     }
     public void iconanimPlay()
     {
-        if (iconanimator != null)
+        if (anim != null)
         {
             anim.SetActive(true);
-            iconanimator.SetTrigger("tap");
+            //iconanimator.SetTrigger("tap");
         }
     }
 
     public void iconanimResume()
     {
-        if (iconanimator != null)
+        if (anim != null)
         {
-            iconanimator.SetTrigger("tapup");
+         //   iconanimator.SetTrigger("tapup");
             anim.SetActive(false);
         }
     }

@@ -171,7 +171,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1646330291}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &4872229
 Animator:
   serializedVersion: 3
@@ -584,7 +583,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1860529929}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &51692532
 Animator:
   serializedVersion: 3
@@ -1339,7 +1337,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 272012281}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &141044215
 Animator:
   serializedVersion: 3
@@ -2758,7 +2755,6 @@ RectTransform:
   m_AnchoredPosition: {x: 154, y: 162}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
-
 --- !u!95 &383788335
 Animator:
   serializedVersion: 3
@@ -2872,7 +2868,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1468649649}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &410971020
 Animator:
   serializedVersion: 3
@@ -3184,7 +3179,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1663249384}
         m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
@@ -4474,7 +4469,6 @@ Prefab:
         type: 2}
       propertyPath: stanzas.Array.data[2]
       value: 
-
       objectReference: {fileID: 596680627}
     m_RemovedComponents:
     - {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093, type: 2}
@@ -4610,12 +4604,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedGraphic: {fileID: 0}
   pairedText1: {fileID: 0}
-
   stanza: {fileID: 1306297626}
   delayTime: 0
   anim: {fileID: 1061273611}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &729923768
 Animator:
   serializedVersion: 3
@@ -6459,7 +6451,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1443362234}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1069969891
 Animator:
   serializedVersion: 3
@@ -7716,7 +7707,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1526829960}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1298677662
 Animator:
   serializedVersion: 3
@@ -8411,7 +8401,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 465520193}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1379313212
 Animator:
   serializedVersion: 3
@@ -8610,7 +8599,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1316540919}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1382957631
 Animator:
   serializedVersion: 3
@@ -9485,7 +9473,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 101031479}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1528035235
 Animator:
   serializedVersion: 3
@@ -11019,7 +11006,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1663249384}
         m_MethodName: PreviousScene
         m_Mode: 1
         m_Arguments:
@@ -11222,7 +11209,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 460568082}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1812326795
 Animator:
   serializedVersion: 3
@@ -11775,7 +11761,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1119031808}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1904264138
 Animator:
   serializedVersion: 3
@@ -12226,7 +12211,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1089412414}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1946145202
 Animator:
   serializedVersion: 3
