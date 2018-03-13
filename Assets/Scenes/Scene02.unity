@@ -482,7 +482,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -1, y: -0.7}
-  m_SizeDelta: {x: 50, y: 40}
+  m_SizeDelta: {x: 55, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &247559851
 MonoBehaviour:
@@ -917,11 +917,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.9999474
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.9999474
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.z
@@ -1002,7 +1002,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -321.9, y: -79}
-  m_SizeDelta: {x: 50, y: 40}
+  m_SizeDelta: {x: 55, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &410971017
 GameObject:
@@ -1375,11 +1375,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.0001181
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.0001181
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.z
@@ -2692,11 +2692,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4317575295912606, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.9999474
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4317575295912606, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.9999474
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4317575295912606, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_LocalScale.z
