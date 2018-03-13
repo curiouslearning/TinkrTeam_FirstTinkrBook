@@ -657,7 +657,7 @@ GameObject:
   - component: {fileID: 261251925}
   - component: {fileID: 261251924}
   m_Layer: 0
-  m_Name: me
+  m_Name: me2
   m_TagString: text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -917,15 +917,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.9999474
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.9999474
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.9999474
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
@@ -1375,15 +1375,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.0001181
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.0001181
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4995640597967518, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
       propertyPath: m_LocalScale.z
-      value: 1.0001181
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 79e7d222e3d44764f8ecc54978b162ec, type: 2}
@@ -2692,15 +2692,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4317575295912606, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.9999474
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4317575295912606, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.9999474
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4317575295912606, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.9999474
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1398260658428664, guid: e959fd495ca8517428bfdbde7f832f34, type: 2}
       propertyPath: m_TagString

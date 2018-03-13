@@ -147,8 +147,11 @@ public class SceneManager02 : SManager
             eggCrack.SetActive(false);
             eggCrackLastClip.SetActive(true);
 
-            animatorMe.ResetTrigger("shake");
-            animatorTap.ResetTrigger("shake");
+            animatorMe.Play("idle");
+
+            animatorTap.Play("idle");
+            //animatorMe.ResetTrigger("shake");
+            //animatorTap.ResetTrigger("shake");
             StartCoroutine(WaitTimeAndLoadNextScene());
 
 
@@ -166,12 +169,16 @@ public class SceneManager02 : SManager
     public void shakeStop()
     {
         Debug.Log("stopShake");
+        //animatorMe.Play("idle");
+        //animatorTap.Play("idle");
         animatorTap.ResetTrigger("shake");
         animatorMe.ResetTrigger("shake");
     }
     public void shakeStart()
     {
-      
+        //animatorMe.Play("shake");
+
+        //animatorTap.Play("shake");
         animatorMe.SetTrigger("shake");
         animatorTap.SetTrigger("shake");
     }
