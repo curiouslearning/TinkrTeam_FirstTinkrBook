@@ -39,6 +39,9 @@ public class SceneManager02 : SManager
     {
         while (true)
         {
+            animatorTap.speed = 1.0f;
+
+            animatorMe.speed = 1.0f;
             Debug.Log(tapActive);
             Debug.Log(imageClicked);
 
@@ -53,16 +56,20 @@ public class SceneManager02 : SManager
             }
             if (autoPlayingDoneNow)
             {
-                sync();
+                shakeStart();
+                //sync(); 
+                //animatorTap.speed = 1.0f;
+                //animatorMe.speed = 1.0f;
                 autoPlayingDoneNow = false;
             }
 
             if (!tapActive && !imageClicked && !stanzaManager.IsAutoPlaying())
             {
-                
-                if (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+
+                //if ((animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle")&&animatorMe.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorMe.IsInTransition(0))&& (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorMe.IsInTransition(0))) 
+                if(animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
                 {
-                    Debug.Log("shake start");
+                    Debug.Log("shake start");              
                     shakeStart();
                 }
             }
@@ -96,7 +103,7 @@ public class SceneManager02 : SManager
             animatorTap.SetBool("zoom", false);
         }
         else if (go.name == "me") {
-            tapActive = false;
+            tapActive = false;  
 
             animatorMe.SetBool("zoom", false);
         }
@@ -164,7 +171,7 @@ public class SceneManager02 : SManager
     }
     public void shakeStart()
     {
-        
+      
         animatorMe.SetTrigger("shake");
         animatorTap.SetTrigger("shake");
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Xml;
-
+//20.3,-18.8 (yellow), 0,-17.4 (white),blue (22.9,-0.4)
 public class TinkerText : MonoBehaviour {
     //private static bool check=false;
     public TinkerGraphic pairedGraphic;
@@ -72,22 +72,24 @@ public class TinkerText : MonoBehaviour {
     public void clipPlay()
 	{
             AudioSource source = gameObject.GetComponent<AudioSource>();
-       
+
             delayTime = 0.21f;
             wordanimator.speed = 1 / (delayTime);
-      
+
         source.Play();
             wordanimator.SetTrigger("tapme");
     
 
     }
     public void iconanimPlay()
+
 	{
 		if (anim != null)
 		{
 			anim.SetActive(true);
 		}
 	}
+
 
     public void iconanimResume()
     {

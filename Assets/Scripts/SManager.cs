@@ -126,7 +126,8 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerText paired mouse down events
 	public virtual void OnPairedMouseDown(TinkerText tinkerText)
 	{
-		tinkerText.pairedGraphic.GetComponent<Renderer>().material.color = tinkerText.pairedGraphic.highlightColor;
+        tinkerText.pairedGraphic.GetComponent<Renderer>().material.color = tinkerText.pairedGraphic.highlightColor;
+       
 	}
 
 	// Here we have a superclass intercept for catching global GameObject mouse currently down events
