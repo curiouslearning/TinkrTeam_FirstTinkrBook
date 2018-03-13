@@ -328,7 +328,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &247559852
 Animator:
   serializedVersion: 3
@@ -527,7 +526,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 910235281}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &261251925
 Animator:
   serializedVersion: 3
@@ -726,7 +724,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1047729337}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &293319329
 Animator:
   serializedVersion: 3
@@ -1129,11 +1126,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4460764999383626, guid: cb58e30dd8c68a5439d44eaee5a266f3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -64
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4460764999383626, guid: cb58e30dd8c68a5439d44eaee5a266f3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 124
+      value: 145
       objectReference: {fileID: 0}
     - target: {fileID: 4460764999383626, guid: cb58e30dd8c68a5439d44eaee5a266f3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1161,11 +1158,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4460764999383626, guid: cb58e30dd8c68a5439d44eaee5a266f3, type: 2}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 7.3499994
       objectReference: {fileID: 0}
     - target: {fileID: 4460764999383626, guid: cb58e30dd8c68a5439d44eaee5a266f3, type: 2}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 7.3499994
       objectReference: {fileID: 0}
     - target: {fileID: 4460764999383626, guid: cb58e30dd8c68a5439d44eaee5a266f3, type: 2}
       propertyPath: m_LocalScale.z
@@ -1273,6 +1270,11 @@ Prefab:
       propertyPath: m_SortingOrder
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 212395513795722624, guid: cb58e30dd8c68a5439d44eaee5a266f3,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: -2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cb58e30dd8c68a5439d44eaee5a266f3, type: 2}
   m_IsPrefabParent: 0
@@ -1334,7 +1336,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &609083422
 Animator:
   serializedVersion: 3
@@ -1533,7 +1534,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &716620467
 Animator:
   serializedVersion: 3
@@ -2848,7 +2848,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1878818193}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1429063802
 Animator:
   serializedVersion: 3
@@ -3049,7 +3048,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1506911652
 Animator:
   serializedVersion: 3
@@ -3560,7 +3558,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &2001825114
 Animator:
   serializedVersion: 3
@@ -3942,7 +3939,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &2097029250
 Animator:
   serializedVersion: 3

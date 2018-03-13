@@ -15,6 +15,9 @@ public class SceneManager16 : SManager {
 	public TinkerGraphic worm8;
 
 	public GameObject duckParent;
+	public GameObject duckIdle;
+	public GameObject duckChew;
+	public GameObject duckMouthOpen;
 
 	private Vector2 currentPos;
 
@@ -77,6 +80,10 @@ public class SceneManager16 : SManager {
 		if (dragActive && tinkerGraphic.GetDraggable ()) {
 			dragActive = false;
 			t.text = "";
+			duckIdle.SetActive (true);
+			duckMouthOpen.SetActive (false);
+			duckChew.SetActive (false);
+
 		}
 		if(tinkerGraphic.gameObject.name=="duck_parent")
 		duckParent.GetComponent<DuckBugFeedSwitching> ().FeedDuckOnMouseUp();

@@ -38,9 +38,8 @@ public class GameManager : MonoBehaviour
 		Scene19,
 		Scene20,
 		Scene21,
-		Scene22,
-		Scene23,
 		Scene24,
+		Scene25,
 		END
 	}
 
