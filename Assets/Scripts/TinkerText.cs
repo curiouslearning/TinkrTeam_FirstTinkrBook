@@ -9,8 +9,7 @@ public class TinkerText : MonoBehaviour {
     //private static bool check=false;
     public TinkerGraphic pairedGraphic;
     public TinkerText pairedText1;
-
-    public Stanza stanza;
+	public Stanza stanza;
     private float startTime;
     private float endTime;
     public float delayTime;
@@ -18,7 +17,7 @@ public class TinkerText : MonoBehaviour {
     private Animator graphicanimator;
     public GameObject anim;
     public GameObject anim2;
-    
+
     void Start()
     {
 		AddCollider ();
@@ -68,25 +67,29 @@ public class TinkerText : MonoBehaviour {
     public void clipResume()
     {
 		wordanimator.Play("textzoomin");
-		wordanimator.ResetTrigger("tapme");
-    }
+		wordanimator.ResetTrigger("tapme");    
+	}
     public void clipPlay()
 	{
             AudioSource source = gameObject.GetComponent<AudioSource>();
+
             delayTime = 0.21f;
             wordanimator.speed = 1 / (delayTime);
+
         source.Play();
             wordanimator.SetTrigger("tapme");
     
 
     }
     public void iconanimPlay()
-    {
-        if (anim != null)
-        {
-            anim.SetActive(true);
-        }
-    }
+
+	{
+		if (anim != null)
+		{
+			anim.SetActive(true);
+		}
+	}
+
 
     public void iconanimResume()
     {

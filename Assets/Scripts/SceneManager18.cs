@@ -28,7 +28,7 @@ public class SceneManager18 : SManager
 
     IEnumerator waitForTime()
     {
-        yield return new WaitForSeconds(1.33f);
+        yield return new WaitForSeconds(4.33f);
         NextScene();
     }
 
