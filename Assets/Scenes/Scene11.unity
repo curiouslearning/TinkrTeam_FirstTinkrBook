@@ -249,12 +249,12 @@ Prefab:
     - target: {fileID: 212574480493389664, guid: 9e7045f095a60d24391e7397949460d0,
         type: 2}
       propertyPath: m_Size.x
-      value: 21
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: 212574480493389664, guid: 9e7045f095a60d24391e7397949460d0,
         type: 2}
       propertyPath: m_Size.y
-      value: 21.5
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 212574480493389664, guid: 9e7045f095a60d24391e7397949460d0,
         type: 2}
@@ -1928,7 +1928,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 534527525}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!1 &1509414803
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,6 +2088,10 @@ Prefab:
     - target: {fileID: 1648248928279044, guid: dab21ed83bcb3e24bbf92e408ec0b45d, type: 2}
       propertyPath: m_Name
       value: frog
+      objectReference: {fileID: 0}
+    - target: {fileID: 1578455319913550, guid: dab21ed83bcb3e24bbf92e408ec0b45d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dab21ed83bcb3e24bbf92e408ec0b45d, type: 2}
