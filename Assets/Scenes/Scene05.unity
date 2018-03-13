@@ -357,7 +357,7 @@ Prefab:
         type: 2}
       propertyPath: pairedGraphic
       value: 
-      objectReference: {fileID: 887276831}
+      objectReference: {fileID: 1952363437}
     - target: {fileID: 114209332643440358, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
         type: 2}
       propertyPath: pairedGraphic2
@@ -625,7 +625,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865187571}
+      - m_Target: {fileID: 0}
         m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
@@ -683,7 +683,7 @@ Transform:
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1721422441}
-  - {fileID: 887276830}
+  - {fileID: 1952363436}
   m_Father: {fileID: 412370063}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -777,11 +777,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 453736866}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: 6.8210006, y: -22, z: -226.02945}
-  m_LocalScale: {x: 18.602798, y: 18.602787, z: 0}
+  m_LocalPosition: {x: 0.04313479, y: -0.5386347, z: 0.0039978027}
+  m_LocalScale: {x: 0.8088173, y: 0.80881685, z: 0}
   m_Children: []
-  m_Father: {fileID: 887276830}
-  m_RootOrder: 1
+  m_Father: {fileID: 1952363436}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!114 &453736870
 MonoBehaviour:
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedText1: {fileID: 0}
   pairedText2: {fileID: 0}
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 0}
   myCanvas: {fileID: 412370062}
   resetColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
@@ -1426,7 +1426,8 @@ Prefab:
       propertyPath: stanzas.Array.data[1]
       value: 
       objectReference: {fileID: 1121447532}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &761952127
@@ -1646,55 +1647,6 @@ RectTransform:
   m_AnchoredPosition: {x: -131.64713, y: -26.503746}
   m_SizeDelta: {x: 116.7, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &887276829
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 887276830}
-  - component: {fileID: 887276831}
-  m_Layer: 0
-  m_Name: bodyandwing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &887276830
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 887276829}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1952363436}
-  - {fileID: 453736869}
-  - {fileID: 2004474448}
-  m_Father: {fileID: 442871279}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &887276831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 887276829}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e465b898a74d5f64dbaeab969faf1f97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pairedText1: {fileID: 0}
-  pairedText2: {fileID: 0}
-  sceneManager: {fileID: 1865187571}
-  myCanvas: {fileID: 412370062}
-  resetColor: {r: 1, g: 1, b: 1, a: 1}
-  highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
 --- !u!224 &1026469798 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224960764825847358, guid: b6c3c69fcd525a844adc609c7a36630f,
@@ -1885,7 +1837,7 @@ Prefab:
         type: 2}
       propertyPath: sceneManager
       value: 
-      objectReference: {fileID: 1865187571}
+      objectReference: {fileID: 1767070438}
     - target: {fileID: 114400468832251464, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: stanzas.Array.data[0]
@@ -2282,7 +2234,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a145c40c09f06674797d330c9a51c3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 1767070438}
   myCanvas: {fileID: 412370062}
   currentScene: 0
 --- !u!4 &1236446608
@@ -3533,7 +3485,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865187571}
+      - m_Target: {fileID: 0}
         m_MethodName: PreviousScene
         m_Mode: 1
         m_Arguments:
@@ -3579,6 +3531,34 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1751614411}
+--- !u!1 &1767070437 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1010704905742394, guid: 897aa8198a2395a45828861284c51093,
+    type: 2}
+  m_PrefabInternal: {fileID: 725212346}
+--- !u!114 &1767070438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1767070437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90bf0a4f0d3971c4b98de9baf5c20cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  stanzaManager: {fileID: 1026469799}
+  stanzas:
+  - {fileID: 1805811267}
+  - {fileID: 1121447532}
+  Lbutton: {fileID: 1751614411}
+  Rbutton: {fileID: 427614378}
+  inputAllowedDuringAutoplay: 1
+  inputInterruptsAutoplay: 1
+  disableAutoplay: 0
+  disableSounds: 0
+  dragActive: 0
 --- !u!224 &1805811266 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224455412377672120, guid: 644afff2e714ee041a2f569ceb9bd8bd,
@@ -3791,12 +3771,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224915065477950012, guid: 897aa8198a2395a45828861284c51093,
     type: 2}
   m_PrefabInternal: {fileID: 725212346}
---- !u!114 &1865187571 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
-    type: 2}
-  m_PrefabInternal: {fileID: 725212346}
-  m_Script: {fileID: 11500000, guid: b6a0b23f99cd33a4eb16a872217d1988, type: 3}
 --- !u!1001 &1942559852
 Prefab:
   m_ObjectHideFlags: 0
@@ -4022,11 +3996,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1952363434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.8289003, y: -9.611401, z: -226.03336}
+  m_LocalPosition: {x: 5.8289013, y: -9.611402, z: -226.03333}
   m_LocalScale: {x: 23, y: 23, z: 1}
-  m_Children: []
-  m_Father: {fileID: 887276830}
-  m_RootOrder: 0
+  m_Children:
+  - {fileID: 453736869}
+  - {fileID: 2004474448}
+  m_Father: {fileID: 442871279}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1952363437
 MonoBehaviour:
@@ -4041,7 +4017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedText1: {fileID: 0}
   pairedText2: {fileID: 0}
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 1767070438}
   myCanvas: {fileID: 412370062}
   resetColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
@@ -4112,11 +4088,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2004474447}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 12.588, y: -22, z: -226.02945}
-  m_LocalScale: {x: 18.602798, y: 18.602787, z: 0}
+  m_LocalPosition: {x: 0.2938739, y: -0.5386347, z: 0.0039978027}
+  m_LocalScale: {x: 0.8088173, y: 0.80881685, z: 0}
   m_Children: []
-  m_Father: {fileID: 887276830}
-  m_RootOrder: 2
+  m_Father: {fileID: 1952363436}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2004474449
 Animator:
@@ -4194,7 +4170,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedText1: {fileID: 0}
   pairedText2: {fileID: 0}
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 0}
   myCanvas: {fileID: 412370062}
   resetColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
