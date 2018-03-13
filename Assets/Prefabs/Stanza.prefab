@@ -38,6 +38,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ba7c439fd75ae4d8a92029f54c8859, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stanzaManager: {fileID: 0}
+  tinkerTexts: []
+  endDelay: 0
 --- !u!224 &224455412377672120
 RectTransform:
   m_ObjectHideFlags: 1
