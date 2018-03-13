@@ -38,9 +38,8 @@ public class GameManager : MonoBehaviour
 		Scene19,
 		Scene20,
 		Scene21,
-		Scene22,
-		Scene23,
 		Scene24,
+		Scene25,
 		END
 	}
 
@@ -83,27 +82,21 @@ public class GameManager : MonoBehaviour
 		{
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
-			foreach (GameObject go in gos)
-			{
+
 				// Pass the go along to the current scene manager (if any) to let it respond
-				if (sceneManager != null)
-				{
-					sceneManager.OnMouseDown(go);
-				}
+			if (sceneManager != null) {
+				sceneManager.OnMouseDown (gos[0]);
 			}
 		} 
 		else if (Input.GetMouseButton(0))
 		{
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
-			foreach (GameObject go in gos)
-			{
 				// Pass the go along to the current scene manager (if any) to let it respond
 				if (sceneManager != null)
 				{
-					sceneManager.OnMouseCurrentlyDown(go);
+					sceneManager.OnMouseCurrentlyDown(gos[0]);
 				}
-			}
 
 			if (gos.Count == 0)
 			{
@@ -116,13 +109,10 @@ public class GameManager : MonoBehaviour
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
 
-			foreach (GameObject go in gos)
-			{
 				// Pass the go along to the current scene manager (if any) to let it respond
 				if (sceneManager != null) {
-					sceneManager.OnMouseUp (go);
+					sceneManager.OnMouseUp (gos[0]);
 				}
-			}
 
 			// Anytime there is a mouse up event, update applicable lists in scene manager
 			sceneManager.ResetInputStates(MouseEvents.MouseUp);
