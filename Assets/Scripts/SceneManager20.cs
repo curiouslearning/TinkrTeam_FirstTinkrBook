@@ -9,7 +9,6 @@ public class SceneManager20 : SManager {
 	public GameObject target;
 	private Vector2 currentPos, targetPos;
 	float distance;
-	bool dragActivated = false;
 
 	void Start () {
 		distance = 0.1f;   //change according to your need

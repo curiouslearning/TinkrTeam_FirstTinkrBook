@@ -260,10 +260,24 @@ public class Stanza : MonoBehaviour {
 		}
 		else
 		{
+
 			if (currentTinkerTextIndex == lastTinkerTextIndex + 1)
 			{
-				stanzaManager.RequestAutoPlay(this, tinkerTexts[lastTinkerTextIndex]);
+				
+				if (currentTinkerTextIndex < tinkerTexts.Count - 1)     //less than last index of this stanza.
+				{
+					float pauseDelay = tinkerTexts[currentTinkerTextIndex].GetStartTime() - tinkerTexts[lastTinkerTextIndex].GetEndTime();
+					StartCoroutine (RequestToPlay (pauseDelay,this,currentTinkerTextIndex+1 ));    //start from next TinkerText of this stanza (avoid overlap)
+    
+				}
+				else {
+					int nextStanzaIndex = stanzaManager.stanzas.IndexOf (this) + 1;
+					//start from next stanza's first TinkerText (avoid overlap)
+					StartCoroutine (RequestToPlay (endDelay,stanzaManager.stanzas[nextStanzaIndex],0 ));
+ 
+				     }
 
+				//stanzaManager.RequestAutoPlay (this, tinkerTexts [lastTinkerTextIndex]);
 				lastTinkerTextIndex = -9999;
 			}
 			else if (currentTinkerTextIndex < lastTinkerTextIndex)
@@ -275,7 +289,11 @@ public class Stanza : MonoBehaviour {
 				lastTinkerTextIndex = currentTinkerTextIndex;
 			}
 		}
-	}
 
+	}
   
+	private IEnumerator RequestToPlay(float delay, Stanza stanza, int tinkerTextIndex){
+		yield return new WaitForSeconds (delay+.5f);
+		stanzaManager.RequestAutoPlay (stanza, stanza.tinkerTexts [tinkerTextIndex]);
+	}
 }
