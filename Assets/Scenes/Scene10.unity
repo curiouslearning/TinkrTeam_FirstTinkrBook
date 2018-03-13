@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 46878053}
   - component: {fileID: 46878052}
   m_Layer: 0
-  m_Name: color
+  m_Name: red
   m_TagString: text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -179,9 +179,8 @@ MonoBehaviour:
   pairedText1: {fileID: 0}
   stanza: {fileID: 1306297626}
   delayTime: 0
-  anim: {fileID: 686483425}
+  anim: {fileID: 1007092892}
   anim2: {fileID: 0}
-  includeShake: 1
 --- !u!95 &46878053
 Animator:
   serializedVersion: 3
@@ -394,7 +393,7 @@ RectTransform:
   m_LocalScale: {x: 1.0005512, y: 1.0005512, z: 1.0005512}
   m_Children:
   - {fileID: 46878051}
-  - {fileID: 686483426}
+  - {fileID: 1007092893}
   m_Father: {fileID: 1306297627}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -479,7 +478,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &247559852
 Animator:
   serializedVersion: 3
@@ -683,7 +681,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &261251925
 Animator:
   serializedVersion: 3
@@ -954,7 +951,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &410971020
 Animator:
   serializedVersion: 3
@@ -1381,15 +1377,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4640007725551668, guid: e2410b2e23a8c7a47bed40282cc5d63e, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.9998334
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4640007725551668, guid: e2410b2e23a8c7a47bed40282cc5d63e, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.9998334
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4640007725551668, guid: e2410b2e23a8c7a47bed40282cc5d63e, type: 2}
       propertyPath: m_LocalScale.z
-      value: 0.9998334
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 95830442807090606, guid: e2410b2e23a8c7a47bed40282cc5d63e,
         type: 2}
@@ -1403,11 +1399,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2410b2e23a8c7a47bed40282cc5d63e, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &686483425 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1164024983730754, guid: 9e7045f095a60d24391e7397949460d0,
-    type: 2}
-  m_PrefabInternal: {fileID: 1751225420}
 --- !u!4 &686483426 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0,
@@ -1607,7 +1598,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &729923768
 Animator:
   serializedVersion: 3
@@ -1824,9 +1814,51 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4640007725551668, guid: e2410b2e23a8c7a47bed40282cc5d63e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640007725551668, guid: e2410b2e23a8c7a47bed40282cc5d63e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2410b2e23a8c7a47bed40282cc5d63e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1007092892
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1007092893}
+  m_Layer: 0
+  m_Name: red_anim_parent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1007092893
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007092892}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 55, y: 55, z: 1}
+  m_Children:
+  - {fileID: 686483426}
+  m_Father: {fileID: 143997921}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &1026469798 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 224960764825847358, guid: b6c3c69fcd525a844adc609c7a36630f,
@@ -2016,7 +2048,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 515574519}
   anim2: {fileID: 0}
-  includeShake: 1
 --- !u!95 &1045517838
 Animator:
   serializedVersion: 3
@@ -2874,7 +2905,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1809257561}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1405941142
 Animator:
   serializedVersion: 3
@@ -3073,7 +3103,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1468228435
 Animator:
   serializedVersion: 3
@@ -3272,7 +3301,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 32970438}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1506911652
 Animator:
   serializedVersion: 3
@@ -3507,6 +3535,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4615037942345708, guid: 57a5d588dde0cb1418aaeca0e3b90d0c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4615037942345708, guid: 57a5d588dde0cb1418aaeca0e3b90d0c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 57a5d588dde0cb1418aaeca0e3b90d0c, type: 2}
   m_IsPrefabParent: 0
@@ -3520,15 +3556,15 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 143997921}
+    m_TransformParent: {fileID: 1007092893}
     m_Modifications:
     - target: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 22.8
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3536,15 +3572,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_LocalRotation.w
@@ -3552,7 +3588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4792943819869340, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212574480493389664, guid: 9e7045f095a60d24391e7397949460d0,
         type: 2}
@@ -3571,7 +3607,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1164024983730754, guid: 9e7045f095a60d24391e7397949460d0, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 95029626284067306, guid: 9e7045f095a60d24391e7397949460d0,
         type: 2}
@@ -4229,7 +4265,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &2097029250
 Animator:
   serializedVersion: 3

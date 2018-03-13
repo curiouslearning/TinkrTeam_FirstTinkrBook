@@ -15,7 +15,6 @@ public class TinkerText : MonoBehaviour {
     private float endTime;
     public float delayTime;
     private Animator wordanimator;
-    private Animator iconanimator;
     private Animator graphicanimator;
     public GameObject anim;
     public GameObject anim2;
@@ -25,8 +24,6 @@ public class TinkerText : MonoBehaviour {
     {
 		AddCollider ();
         wordanimator = GetComponent<Animator>();
-        if (anim != null)
-            iconanimator = anim.GetComponent<Animator>();
         if (anim2 != null)
             graphicanimator = anim2.GetComponent<Animator>();
     }
@@ -89,20 +86,14 @@ public class TinkerText : MonoBehaviour {
     }
     public void iconanimPlay()
     {
-        if (iconanimator != null)
-        {
+		if(anim!=null)
             anim.SetActive(true);
-            iconanimator.SetTrigger("tap");
-        }
     }
 
     public void iconanimResume()
     {
-        if (iconanimator != null)
-        {
-            iconanimator.SetTrigger("tapup");
+		if(anim!=null)
             anim.SetActive(false);
-        }
     }
     
 
@@ -221,7 +212,6 @@ public class TinkerText : MonoBehaviour {
 	public void Reset()
 	{
 		// If there is an anim attached, stop it from playing and hide it
-
 		clipResume();
 		iconanimResume();
 

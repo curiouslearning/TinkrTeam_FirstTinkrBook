@@ -231,7 +231,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &247559852
 Animator:
   serializedVersion: 3
@@ -430,7 +429,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &261251925
 Animator:
   serializedVersion: 3
@@ -701,7 +699,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &410971020
 Animator:
   serializedVersion: 3
@@ -1276,7 +1273,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &729923768
 Animator:
   serializedVersion: 3
@@ -1475,7 +1471,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 2086355176}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &750376310
 Animator:
   serializedVersion: 3
@@ -1760,7 +1755,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4063916678218298, guid: 00124dc158c09e6479462b1118598bd2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 19.6
+      value: 24.3
       objectReference: {fileID: 0}
     - target: {fileID: 4063916678218298, guid: 00124dc158c09e6479462b1118598bd2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1784,48 +1779,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4063916678218298, guid: 00124dc158c09e6479462b1118598bd2, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 212644956066059194, guid: 00124dc158c09e6479462b1118598bd2,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 212644956066059194, guid: 00124dc158c09e6479462b1118598bd2,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 18.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 212644956066059194, guid: 00124dc158c09e6479462b1118598bd2,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1799848674045824, guid: 00124dc158c09e6479462b1118598bd2, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 212242645059695720, guid: 00124dc158c09e6479462b1118598bd2,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 212242645059695720, guid: 00124dc158c09e6479462b1118598bd2,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 18.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 212242645059695720, guid: 00124dc158c09e6479462b1118598bd2,
-        type: 2}
-      propertyPath: m_WasSpriteAssigned
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1180221521521472, guid: 00124dc158c09e6479462b1118598bd2, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1350809922654448, guid: 00124dc158c09e6479462b1118598bd2, type: 2}
-      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2629,7 +2582,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1468228435
 Animator:
   serializedVersion: 3
@@ -2828,7 +2780,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 491303375}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1506911652
 Animator:
   serializedVersion: 3
@@ -3342,6 +3293,14 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4029874500385038, guid: 32c43e760af1ce247a950e755598fe7e, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 4029874500385038, guid: 32c43e760af1ce247a950e755598fe7e, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 55
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 32c43e760af1ce247a950e755598fe7e, type: 2}
   m_IsPrefabParent: 0
@@ -3413,7 +3372,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &2097029250
 Animator:
   serializedVersion: 3
