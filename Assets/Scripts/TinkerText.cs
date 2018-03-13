@@ -9,24 +9,19 @@ public class TinkerText : MonoBehaviour {
     //private static bool check=false;
     public TinkerGraphic pairedGraphic;
     public TinkerText pairedText1;
-
-    public Stanza stanza;
+	public Stanza stanza;
     private float startTime;
     private float endTime;
     public float delayTime;
     private Animator wordanimator;
-    //private Animator iconanimator;
     private Animator graphicanimator;
     public GameObject anim;
     public GameObject anim2;
-    //public bool includeShake = false;
 
     void Start()
     {
 		AddCollider ();
         wordanimator = GetComponent<Animator>();
-        //if (anim != null)
-            //iconanimator = anim.GetComponent<Animator>();
         if (anim2 != null)
             graphicanimator = anim2.GetComponent<Animator>();
     }
@@ -72,38 +67,37 @@ public class TinkerText : MonoBehaviour {
     public void clipResume()
     {
 		wordanimator.Play("textzoomin");
-		wordanimator.ResetTrigger("tapme");
-    }
+		wordanimator.ResetTrigger("tapme");    
+	}
     public void clipPlay()
 	{
             AudioSource source = gameObject.GetComponent<AudioSource>();
-        //if (!includeShake)
-        //{
+
             delayTime = 0.21f;
             wordanimator.speed = 1 / (delayTime);
-        //}
+
         source.Play();
             wordanimator.SetTrigger("tapme");
     
 
     }
     public void iconanimPlay()
-    {
-        if (anim != null)
-        {
-            anim.SetActive(true);
-            //iconanimator.SetTrigger("tap");
-        }
-    }
+
+	{
+		if (anim != null)
+		{
+			anim.SetActive(true);
+		}
+	}
+
 
     public void iconanimResume()
     {
         if (anim != null)
         {
-         //   iconanimator.SetTrigger("tapup");
             anim.SetActive(false);
-        }
-    }
+		}
+	}
     
 
     public void graphicPlay()
@@ -221,7 +215,6 @@ public class TinkerText : MonoBehaviour {
 	public void Reset()
 	{
 		// If there is an anim attached, stop it from playing and hide it
-
 		clipResume();
 		iconanimResume();
 

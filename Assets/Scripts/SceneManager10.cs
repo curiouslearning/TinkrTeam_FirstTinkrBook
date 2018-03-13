@@ -36,9 +36,6 @@ public class SceneManager10 : SManager {
     {
         while (true)
         {
-            Debug.Log(tapActive);
-            Debug.Log(imageClicked);
-
             if (stanzaManager.IsAutoPlaying())
             {
                 autoPlayingDoneNow = false;
@@ -59,7 +56,6 @@ public class SceneManager10 : SManager {
 
                 if (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle"))
                 {
-                    Debug.Log("shake start");
                     shakeStart();
                 }
             }
@@ -108,7 +104,6 @@ public class SceneManager10 : SManager {
 
 		base.OnMouseDown (go); if (go.name == "tap")
         {
-            Debug.Log("tapactive stage");
             animatorTap.SetTrigger("tapme");
 
             animatorTap.SetBool("zoom", true);
@@ -122,7 +117,6 @@ public class SceneManager10 : SManager {
         }
         else if (go.name == "me")
         {
-            Debug.Log("meactive stage");
             animatorMe.SetTrigger("tapme");
 
             animatorMe.SetBool("zoom", true);
@@ -143,7 +137,7 @@ public class SceneManager10 : SManager {
 
 	}
 	private IEnumerator StartSceneTransitionListener(){
-			yield return new WaitForSeconds (1.0f);
+			yield return new WaitForSeconds (0.8f);
 			NextScene ();
 	}
     public static void sync()
@@ -154,7 +148,6 @@ public class SceneManager10 : SManager {
 
     public void shakeStop()
     {
-        Debug.Log("stopShake");
         animatorTap.ResetTrigger("shake");
         animatorMe.ResetTrigger("shake");
     }

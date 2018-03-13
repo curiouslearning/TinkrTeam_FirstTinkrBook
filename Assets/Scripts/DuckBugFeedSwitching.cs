@@ -12,18 +12,13 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 	public GameObject handHint;
 	public static int bugCounter;
 	public SManager sceneManager;
-	//public Text num;
+
 
 	// Use this for initialization
 	void Start () {
 		bugCounter = 1;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		//num.text = bugCounter.ToString();
-		
-	}
+
 
 	void OnTriggerEnter(Collider collider)
 	{   
@@ -38,38 +33,36 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 	void OnTriggerExit(Collider collider)
 	{
 		bugInMouth = null;
-		duckIdle.SetActive (true);
-		duckMouthOpen.SetActive (false);
+		duckIdle.SetActive (false);
+		duckMouthOpen.SetActive (true);
 		duckChew.SetActive (false);
 	}
 
-//	public void FeedDuckOnMouseDown()
-//	{   
-//		num.text = bugCounter.ToString ();
-//	}
-//
-//	public void FeedDuckOnMouseCurrentlyDown()
-//	{  
-//		num.text = bugCounter.ToString ();
-//	}
+
 
 	public void FeedDuckOnMouseUp()
 	{   //num.text = "";
+		
 		if (bugInMouth) {
 			Destroy (bugInMouth);
 			handHint.SetActive (false);
+			duckIdle.SetActive (false);
 			duckMouthOpen.SetActive (false);
 			duckChew.SetActive (true);
-
+			StartCoroutine (SetChewFalse ());
 			bugCounter++;
 			if (bugCounter == 9) {
 				sceneManager.NextScene ();
 			}
-		}
-		    // chew on mouse up on gameobject
-			StartCoroutine (SetChewFalse());
-			
-		}
+		} if(bugInMouth==null)
+		  {
+			duckIdle.SetActive (true);
+			duckMouthOpen.SetActive (false);
+			duckChew.SetActive (false);}
+		    
+	}
+
+
 
 	 public IEnumerator SetChewFalse()
 		{yield return new WaitForSeconds (2.0f);

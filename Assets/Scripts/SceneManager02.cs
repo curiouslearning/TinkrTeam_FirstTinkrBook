@@ -56,7 +56,7 @@ public class SceneManager02 : SManager
             }
             if (autoPlayingDoneNow)
             {
-                shakeStop();
+                shakeStart();
                 //sync(); 
                 //animatorTap.speed = 1.0f;
                 //animatorMe.speed = 1.0f;
