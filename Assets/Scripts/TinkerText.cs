@@ -96,8 +96,8 @@ public class TinkerText : MonoBehaviour {
         if (anim != null)
         {
             anim.SetActive(false);
-        }
-    }
+		}
+	}
     
 
     public void graphicPlay()
@@ -215,7 +215,6 @@ public class TinkerText : MonoBehaviour {
 	public void Reset()
 	{
 		// If there is an anim attached, stop it from playing and hide it
-
 		clipResume();
 		iconanimResume();
 
