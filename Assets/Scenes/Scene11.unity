@@ -1989,11 +1989,6 @@ Prefab:
       objectReference: {fileID: 1865187571}
     - target: {fileID: 114587098476806886, guid: dab21ed83bcb3e24bbf92e408ec0b45d,
         type: 2}
-<<<<<<< HEAD
-      propertyPath: myCanvas
-      value: 
-      objectReference: {fileID: 412370062}
-=======
       propertyPath: m_LocalScale.z
       value: 1.0002594
       objectReference: {fileID: 0}
@@ -2005,7 +2000,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
->>>>>>> master
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dab21ed83bcb3e24bbf92e408ec0b45d, type: 2}
   m_IsPrefabParent: 0
