@@ -91,9 +91,5 @@ public class SceneManager16 : SManager {
 	}
 
 
-
-
-
-
 		
 }

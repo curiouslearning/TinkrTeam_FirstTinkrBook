@@ -171,7 +171,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &4872229
 Animator:
   serializedVersion: 3
@@ -370,7 +369,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &51692532
 Animator:
   serializedVersion: 3
@@ -611,7 +609,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &141044215
 Animator:
   serializedVersion: 3
@@ -1097,7 +1094,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &397453599
 Animator:
   serializedVersion: 3
@@ -1296,7 +1292,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &410971020
 Animator:
   serializedVersion: 3
@@ -1715,7 +1710,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &446464541
 Animator:
   serializedVersion: 3
@@ -2442,7 +2436,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &729923768
 Animator:
   serializedVersion: 3
@@ -3024,7 +3017,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1041679111
 Animator:
   serializedVersion: 3
@@ -3674,7 +3666,7 @@ MonoBehaviour:
   disableSounds: 0
   dragActive: 0
   topShell: {fileID: 2024631280}
-  animObject: {fileID: 324902459}
+  hintObject: {fileID: 324902459}
   help: {fileID: 1812326792}
   autoPlayingDoneNow: 0
   playingWasActive: 0
@@ -3872,7 +3864,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1306248827
 Animator:
   serializedVersion: 3
@@ -4247,7 +4238,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1379313212
 Animator:
   serializedVersion: 3
@@ -4446,7 +4436,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1382957631
 Animator:
   serializedVersion: 3
@@ -4645,7 +4634,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1485942770
 Animator:
   serializedVersion: 3
@@ -4844,7 +4832,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1528035235
 Animator:
   serializedVersion: 3
@@ -5618,7 +5605,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 1
 --- !u!95 &1812326795
 Animator:
   serializedVersion: 3
@@ -5894,7 +5880,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1904264138
 Animator:
   serializedVersion: 3
@@ -6093,7 +6078,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &2011159805
 Animator:
   serializedVersion: 3

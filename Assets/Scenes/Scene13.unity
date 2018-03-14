@@ -513,7 +513,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &58107614
 Animator:
   serializedVersion: 3
@@ -1331,7 +1330,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 1899139743}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &247559852
 Animator:
   serializedVersion: 3
@@ -1530,7 +1528,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 817087108}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &261251925
 Animator:
   serializedVersion: 3
@@ -3047,7 +3044,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &468743242
 Animator:
   serializedVersion: 3
@@ -6929,7 +6925,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 0}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1390222950
 Animator:
   serializedVersion: 3
@@ -7453,7 +7448,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 673696477}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &1506911652
 Animator:
   serializedVersion: 3
@@ -9487,13 +9481,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedGraphic: {fileID: 0}
+  pairedGraphic: {fileID: 215644697}
   pairedText1: {fileID: 0}
   stanza: {fileID: 440529482}
   delayTime: 0
   anim: {fileID: 1055962334}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &2023082406
 Animator:
   serializedVersion: 3
@@ -10049,7 +10042,6 @@ MonoBehaviour:
   delayTime: 0
   anim: {fileID: 402930364}
   anim2: {fileID: 0}
-  includeShake: 0
 --- !u!95 &2097029250
 Animator:
   serializedVersion: 3
