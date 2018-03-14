@@ -1176,7 +1176,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &568853592
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1185,7 +1185,7 @@ RectTransform:
   m_GameObject: {fileID: 568853591}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.99978393, y: 0.99978393, z: 0.99978393}
+  m_LocalScale: {x: 55, y: 55, z: 0.99978393}
   m_Children:
   - {fileID: 667257553}
   - {fileID: 1645492650}
@@ -1445,7 +1445,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 667257552}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.900009, y: 15.599998, z: 0}
+  m_LocalPosition: {x: 8.900009, y: 3.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 568853592}
@@ -1491,7 +1491,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 21, y: 21.5}
+  m_Size: {x: 0.42, y: 0.43}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1776,11 +1776,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4832920278897434, guid: c94bad6f7e4915343b56160474114084, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.0004526
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4832920278897434, guid: c94bad6f7e4915343b56160474114084, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.0004526
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4832920278897434, guid: c94bad6f7e4915343b56160474114084, type: 2}
       propertyPath: m_LocalScale.z
@@ -3528,7 +3528,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4435485821949316, guid: 0f60a1bddc757134d8b36eb22fc138e4, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 212545653607841760, guid: 0f60a1bddc757134d8b36eb22fc138e4,
         type: 2}
@@ -3547,15 +3547,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1831885026848582, guid: 0f60a1bddc757134d8b36eb22fc138e4, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4435485821949316, guid: 0f60a1bddc757134d8b36eb22fc138e4, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.0004526
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4435485821949316, guid: 0f60a1bddc757134d8b36eb22fc138e4, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.0004526
+      value: 55
       objectReference: {fileID: 0}
     - target: {fileID: 4435485821949316, guid: 0f60a1bddc757134d8b36eb22fc138e4, type: 2}
       propertyPath: m_LocalScale.z
