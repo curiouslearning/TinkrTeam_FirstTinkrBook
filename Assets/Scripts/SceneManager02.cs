@@ -24,6 +24,20 @@ public class SceneManager02 : SManager
         yield return new WaitForSeconds(0.33f);
         sync();
     }
+
+    IEnumerator WaitTime2()
+    {
+        yield return new WaitForSeconds(1.0f);
+       
+        animatorTap.SetTrigger("shake");
+        animatorMe.SetTrigger("shake");
+    }
+    //IEnumerator WaitTime3(float a)
+    //{
+    //    yield return new WaitForSeconds(a);
+    //    animatorMe.Play("nmscale");
+    //    animatorTap.Play("nmscale");
+    //}
     void Start()
     {
         animatorTap = tap.GetComponent<Animator>();
@@ -45,20 +59,27 @@ public class SceneManager02 : SManager
             }
             if (!stanzaManager.IsAutoPlaying() && playingWasActive)
             {
+                //call mouse down
+                Debug.Log("entered2");
+               
+
+                playingWasActive = false;
                 autoPlayingDoneNow = true;
             }
             if (autoPlayingDoneNow)
             {
                 //sync();   
+                if ((animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorMe.GetCurrentAnimatorStateInfo(0).normalizedTime == 1 && !animatorMe.IsInTransition(0)) && (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).normalizedTime == 1 && !animatorMe.IsInTransition(0)))
+                {
 
-                shakeStart();
-
+                    shakeStart();
+                }
                 autoPlayingDoneNow = false;
             }
             if (!tapActive && !imageClicked && !stanzaManager.IsAutoPlaying())
             {
-                if ((animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorMe.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorMe.IsInTransition(0)) && (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorMe.IsInTransition(0)))
-                //if (animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                //if ((animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorMe.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorMe.IsInTransition(0)) && (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorMe.IsInTransition(0)))
+                if (animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
                 {
                     Debug.Log("shake start");
                     shakeStart();
@@ -140,13 +161,39 @@ public class SceneManager02 : SManager
     public void shakeStop()
     {
         Debug.Log("stopShake");
+        //animatorMe.Play("idle");
+        //animatorTap.Play("idle");
         animatorTap.ResetTrigger("shake");
         animatorMe.ResetTrigger("shake");
     }
     public void shakeStart()
     {
+        animatorTap.speed = 1.0f;
+        animatorMe.speed = 1.0f;
+        //if(animatorTap.GetComponent<Animation>().isActiveAndEnabled)
+        //StartCoroutine(WaitTime2());
+        //if (animatorMe.GetCurrentAnimatorStateInfo(0).IsName("shake") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("shake"))
+        //{
+        //    Debug.Log("do nothing");
+        //}
+        //else
+        //{
+        //    animatorMe.Play("idle");
+        //    animatorTap.Play("idle");
+        if (animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        {
+            animatorMe.Play("idle");
+            animatorTap.Play("idle");
+            animatorTap.SetTrigger("shake");
+            animatorMe.SetTrigger("shake");
+        }
 
-        animatorMe.SetTrigger("shake");
-        animatorTap.SetTrigger("shake");
+        //}
+
+        // StartCoroutine(WaitTime2(animatorMe.GetCurrentAnimatorStateInfo(0).length));
+
+        // StartCoroutine(WaitTime3(animatorMe.GetCurrentAnimatorStateInfo(0).length));
+        //Debug.Log("Length "+animatorMe.GetCurrentAnimatorStateInfo(0).length);
+
     }
 }

@@ -55,7 +55,7 @@ public class Stanza : MonoBehaviour {
 				if (pauseDelay != 0) 
 				{
 					anim.speed = 1 / pauseDelay;
-                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle") && anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+                    if (anim.GetCurrentAnimatorStateInfo(0).IsName("idle"))
                         anim.Play ("pausedelay");
 					//anim.SetTrigger("resume");
 					yield return new WaitForSeconds (pauseDelay);

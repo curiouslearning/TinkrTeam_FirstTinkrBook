@@ -45,6 +45,7 @@ public class SceneManager03 : SManager {
 
             if (stanzaManager.IsAutoPlaying())
             {
+                shakeStop();
                 autoPlayingDoneNow = false;
                 playingWasActive = true;
             }
@@ -54,7 +55,7 @@ public class SceneManager03 : SManager {
             }
             if (autoPlayingDoneNow)
             {
-                sync();
+                shakeStart();
                 autoPlayingDoneNow = false;
             }
 
@@ -122,11 +123,16 @@ public class SceneManager03 : SManager {
         Debug.Log("stopShake");
         animatorTap.ResetTrigger("shake");
     }
-  
+
     public void shakeStart()
     {
-        
-        animatorTap.SetTrigger("shake");
+        animatorTap.speed = 1.0f;
+        if (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        {
+            animatorTap.Play("idle");
+
+            animatorTap.SetTrigger("shake");
+        }
     }
     public static void sync()
     {

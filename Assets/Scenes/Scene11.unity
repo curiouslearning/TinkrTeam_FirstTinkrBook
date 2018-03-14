@@ -323,7 +323,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedText1: {fileID: 2002034843}
   pairedText2: {fileID: 0}
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 506246711}
   myCanvas: {fileID: 412370062}
   resetColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
@@ -709,7 +709,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865187571}
+      - m_Target: {fileID: 506246711}
         m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
@@ -755,6 +755,35 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 427614378}
+--- !u!1 &506246710 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1010704905742394, guid: 897aa8198a2395a45828861284c51093,
+    type: 2}
+  m_PrefabInternal: {fileID: 725212346}
+--- !u!114 &506246711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 506246710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a8b826c94a6e8d48b53223d7521f749, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  stanzaManager: {fileID: 1026469799}
+  stanzas:
+  - {fileID: 1805811267}
+  - {fileID: 1121447532}
+  Lbutton: {fileID: 1751614411}
+  Rbutton: {fileID: 427614378}
+  inputAllowedDuringAutoplay: 1
+  inputInterruptsAutoplay: 1
+  disableAutoplay: 0
+  disableSounds: 0
+  dragActive: 0
+  frog: {fileID: 275556905}
 --- !u!1001 &725212346
 Prefab:
   m_ObjectHideFlags: 0
@@ -897,7 +926,8 @@ Prefab:
       propertyPath: stanzas.Array.data[1]
       value: 
       objectReference: {fileID: 1121447532}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 897aa8198a2395a45828861284c51093, type: 2}
   m_IsPrefabParent: 0
 --- !u!1001 &865298297
@@ -1129,7 +1159,7 @@ Prefab:
         type: 2}
       propertyPath: sceneManager
       value: 
-      objectReference: {fileID: 1865187571}
+      objectReference: {fileID: 506246711}
     - target: {fileID: 114400468832251464, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: stanzas.Array.data[0]
@@ -1515,7 +1545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a145c40c09f06674797d330c9a51c3f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneManager: {fileID: 1865187571}
+  sceneManager: {fileID: 506246711}
   myCanvas: {fileID: 412370062}
   currentScene: 0
 --- !u!4 &1236446608
@@ -1963,7 +1993,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1578455319913550, guid: dab21ed83bcb3e24bbf92e408ec0b45d, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dab21ed83bcb3e24bbf92e408ec0b45d, type: 2}
@@ -2245,7 +2275,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1865187571}
+      - m_Target: {fileID: 506246711}
         m_MethodName: PreviousScene
         m_Mode: 1
         m_Arguments:
@@ -2693,12 +2723,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 224915065477950012, guid: 897aa8198a2395a45828861284c51093,
     type: 2}
   m_PrefabInternal: {fileID: 725212346}
---- !u!114 &1865187571 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114542088063334352, guid: 897aa8198a2395a45828861284c51093,
-    type: 2}
-  m_PrefabInternal: {fileID: 725212346}
-  m_Script: {fileID: 11500000, guid: b6a0b23f99cd33a4eb16a872217d1988, type: 3}
 --- !u!1001 &1942559852
 Prefab:
   m_ObjectHideFlags: 0
