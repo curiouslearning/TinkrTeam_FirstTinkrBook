@@ -9245,7 +9245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1df5429c040a5fc4ba4ae1075c8aa304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedGraphic: {fileID: 0}
+  pairedGraphic: {fileID: 215644697}
   pairedText1: {fileID: 0}
   stanza: {fileID: 440529482}
   delayTime: 0

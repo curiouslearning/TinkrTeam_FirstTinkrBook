@@ -14,6 +14,7 @@ public class DuckAnimSwitching : MonoBehaviour {
 	public GameObject sideLeaf;
 	private Vector2 pos;
 	public bool insideWater = false;
+	bool running =false;
 	// Use this for initialization
 	void Start () {
 		//idle on land
@@ -47,6 +48,7 @@ public class DuckAnimSwitching : MonoBehaviour {
 			this.transform.GetChild (4).gameObject.SetActive (false);
 			this.transform.GetChild (1).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
 			dive.gameObject.SetActive (false); 
+			running = true;
 		}
 	}
 
@@ -61,6 +63,10 @@ public class DuckAnimSwitching : MonoBehaviour {
 			this.transform.GetChild (4).gameObject.SetActive (true);   
 			dive.gameObject.SetActive (false);   
 			insideWater = true;
+			if (running) {
+				running = false;
+				this.transform.GetChild (4).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+			}
 		} else {
 			//run active, other inactive
 			this.transform.GetChild (0).gameObject.SetActive (false);
@@ -69,6 +75,10 @@ public class DuckAnimSwitching : MonoBehaviour {
 			this.transform.GetChild (3).gameObject.SetActive (false);
 			this.transform.GetChild (4).gameObject.SetActive (false);
 			dive.gameObject.SetActive (false); 
+			if (!running) {
+				running = true;
+				this.transform.GetChild (1).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+			}
 		}
 	}
 		

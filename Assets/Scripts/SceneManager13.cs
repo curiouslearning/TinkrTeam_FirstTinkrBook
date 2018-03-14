@@ -8,12 +8,14 @@ public class SceneManager13 : SManager {
 	public GameObject pond_and_grass;
 	public GameObject runAnim;
 	public GameObject dive;
+
 	// Use this for initialization
-	void Start () {
+	public override void Start () {
 		if (duckParent != null) {
 			duckParent.GetComponent<TinkerGraphic>().SetDraggable (true);
 		}
 	}
+
 	public override void OnMouseDown(TinkerGraphic tinkerGraphic)
 	{
 		Vector2 pos;
@@ -34,12 +36,12 @@ public class SceneManager13 : SManager {
 		if (tinkerGraphic == duckParent) {
 			duckParent.GetComponent<DuckAnimSwitching> ().DuckOnMouseDown ();
 		}
+
 		if (tinkerGraphic.name == "pond_and_grass") {
 			
 			RectTransformUtility.ScreenPointToLocalPointInRectangle(tinkerGraphic.myCanvas.transform as RectTransform, Input.mousePosition, tinkerGraphic.myCanvas.worldCamera, out pos);
 			pos = tinkerGraphic.myCanvas.transform.TransformPoint(pos);
 			//if in water
-			Debug.Log("pos: "+pos+(duckParent.gameObject.GetComponent<DuckAnimSwitching>().insideWater) );
 			if ( (duckParent.gameObject.GetComponent<DuckAnimSwitching>().insideWater) && (pos.x < 0.6f)) {
 				//splash
 				duckParent.transform.GetChild (0).gameObject.SetActive (false); 
@@ -48,7 +50,8 @@ public class SceneManager13 : SManager {
 				duckParent.transform.GetChild (3).gameObject.SetActive (true);  //splash active
 				duckParent.transform.GetChild (4).gameObject.SetActive (false);  
 				dive.gameObject.SetActive (false);  
-				StartCoroutine (SetSplashFalse());
+				duckParent.transform.GetChild (3).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+				StartCoroutine (SetIdleAfterSplash());
 			} else {
 			 //bad dive
 			}
@@ -59,7 +62,6 @@ public class SceneManager13 : SManager {
 
 	public override void OnMouseCurrentlyDown(TinkerGraphic tinkerGraphic)
 	{
-		
 		base.OnMouseCurrentlyDown(tinkerGraphic);
 		if (dragActive)
 		{
@@ -79,9 +81,11 @@ public class SceneManager13 : SManager {
 			if (tinkerGraphic == duckParent) {
 				
 				duckParent.GetComponent<DuckAnimSwitching> ().DuckOnMouseCurrentlyDown ();
+
 			}
 		}
 	}
+
 	public override void OnMouseUp(TinkerGraphic tinkerGraphic)
 	{
 		base.OnMouseUp(tinkerGraphic);
@@ -94,12 +98,20 @@ public class SceneManager13 : SManager {
 			duckParent.GetComponent<DuckAnimSwitching> ().DuckOnMouseUp ();
 		}
 	}
-	public IEnumerator SetSplashFalse(){
+
+	/*
+	 * TinkerGraphic[] list;
+				list = tinkerGraphic.gameObject.GetComponentsInChildren<TinkerGraphic>();
+				foreach(TinkerGraphic item in list){
+					item.OnMouseDown ();
+				}
+				*/
+	public IEnumerator SetIdleAfterSplash(){
 
 		yield return new WaitForSeconds (1.0f);
 		duckParent.transform.GetChild (3).gameObject.SetActive (false);
 		duckParent.transform.GetChild (2).gameObject.SetActive (true);
 		yield break;
-
 	}
+		
 }

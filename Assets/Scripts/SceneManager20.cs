@@ -10,7 +10,9 @@ public class SceneManager20 : SManager {
 	private Vector2 currentPos, targetPos;
 	float distance;
 
-	void Start () {
+
+	public override void Start() {
+		base.Start ();
 		distance = 0.1f;   //change according to your need
 		if (sheet != null) {
 			sheet.SetDraggable(true);

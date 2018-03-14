@@ -9,7 +9,8 @@ public class SceneManager01 : SManager {
 	public GameObject eggCrack;
 	private int noOfTaps;
 
-	void Start() {
+	public override void Start() {
+		base.Start ();
 		noOfTaps = 0;
 
 	}

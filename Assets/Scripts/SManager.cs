@@ -33,11 +33,12 @@ public class SManager :  MonoBehaviour {
 	[HideInInspector]
 	public bool dragActive = false;
 
-	void Start () { 
-
+	public virtual void Start () { 
 	}
+
 	//override me
 	public virtual void Update() {
+		
 	}
 
 
@@ -76,6 +77,7 @@ public class SManager :  MonoBehaviour {
 
 		return true; // stanza manager must be null
 	}
+
 	// Here we have a superclass intercept for catching global GameObject mouse down events
 	public virtual void OnMouseDown(GameObject go)
 	{
@@ -117,6 +119,7 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerGraphic mouse down events
 	public virtual void OnMouseDown(TinkerGraphic tinkerGraphic)
 	{
+		
 		if (tinkerGraphic.pairedText1 != null)
 		{
 			stanzaManager.OnPairedMouseDown(tinkerGraphic.pairedText1);
@@ -126,7 +129,13 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerText paired mouse down events
 	public virtual void OnPairedMouseDown(TinkerText tinkerText)
 	{
-        tinkerText.pairedGraphic.GetComponent<Renderer>().material.color = tinkerText.pairedGraphic.highlightColor;
+		Renderer[] list;
+		list = tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>();
+		foreach(Renderer item in list){
+			if (item.name == "ripple") //don't color ripple in scene 13 attached to BabyD.
+				continue;
+			item.material.color = tinkerText.pairedGraphic.highlightColor;
+		 }
        
 	}
 
@@ -215,7 +224,11 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerText paired mouse up events
 	public virtual void OnPairedMouseUp(TinkerText tinkerText)
 	{
-		tinkerText.pairedGraphic.GetComponent<Renderer>().material.color = tinkerText.pairedGraphic.resetColor;
+		Renderer[] list;
+		list = tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>();
+		foreach(Renderer item in list){   //color all the components
+			item.material.color = tinkerText.pairedGraphic.resetColor;
+		}
 	}
 		
 

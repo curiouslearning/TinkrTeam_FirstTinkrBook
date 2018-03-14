@@ -5,9 +5,10 @@ using UnityEngine;
 public class SceneManager11 : SManager
 {
     public GameObject frog;
+
     // Use this for initialization
-    void Start()
-    {
+	public override void Start() {
+		base.Start ();
         frog.GetComponent<SpriteRenderer>().color = GameManager.red;
     }
 

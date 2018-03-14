@@ -2624,15 +2624,10 @@ GameObject:
   m_PrefabInternal: {fileID: 0}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 352505040}
-  - component: {fileID: 352505044}
-  - component: {fileID: 352505043}
-  - component: {fileID: 352505042}
-  - component: {fileID: 352505041}
-  - component: {fileID: 352505045}
-  m_Layer: 0
-  m_Name: bug
-  m_TagString: text
+  - component: {fileID: 198245077}
+  m_Layer: 5
+  m_Name: Bugs
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2656,28 +2651,9 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: -0.7}
   m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!95 &352505041
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 95912951887241060, guid: 9844befffd0cf324bb78bf8260d0311c,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 352505039}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 774f64b8d1ff73b49b8fe6c02bb76778, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
---- !u!82 &352505042
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 82903237767780706, guid: 9844befffd0cf324bb78bf8260d0311c,
+--- !u!1 &214342784 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1816483656186398, guid: 0e4df4d81cc62ca4daa231ca83098e63,
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 352505039}
