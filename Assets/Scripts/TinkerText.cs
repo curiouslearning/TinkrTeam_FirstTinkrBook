@@ -106,7 +106,8 @@ public class TinkerText : MonoBehaviour {
             anim2.SetActive(true);
 	}
     void graphicResume()
-    {
+	{if (anim2 != null)
+		anim2.SetActive(false);
         
     }
 

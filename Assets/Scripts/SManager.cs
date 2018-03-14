@@ -126,7 +126,13 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerText paired mouse down events
 	public virtual void OnPairedMouseDown(TinkerText tinkerText)
 	{
-        tinkerText.pairedGraphic.GetComponent<Renderer>().material.color = tinkerText.pairedGraphic.highlightColor;
+		Renderer[] list;
+		list = tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>();
+		foreach(Renderer item in list){
+			if (item.name == "ripple")
+				continue;
+			item.material.color = tinkerText.pairedGraphic.highlightColor;
+		 }
        
 	}
 
@@ -215,7 +221,11 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerText paired mouse up events
 	public virtual void OnPairedMouseUp(TinkerText tinkerText)
 	{
-		tinkerText.pairedGraphic.GetComponent<Renderer>().material.color = tinkerText.pairedGraphic.resetColor;
+		Renderer[] list;
+		list = tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>();
+		foreach(Renderer item in list){   //color all the components
+			item.material.color = tinkerText.pairedGraphic.resetColor;
+		}
 	}
 		
 
