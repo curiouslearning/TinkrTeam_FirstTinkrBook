@@ -16,7 +16,8 @@ public class SceneManager03 : SManager {
     public bool autoPlayingDoneNow = false;
     public bool playingWasActive = false;
 
-    void Start () {
+	public override void Start () {
+		base.Start ();
 		distance = 1.0f;   //change according to your need
 		hintDelayTime = 2.0f;
 		animationLength = 2.0f;

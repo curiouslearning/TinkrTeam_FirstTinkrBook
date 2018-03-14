@@ -14,6 +14,13 @@ public class SceneManager02 : SManager
     public bool playingWasActive = false;
     bool imageClicked = false;
 
+	public override void Start() {
+		base.Start ();
+		animatorTap = tap.GetComponent<Animator>();
+		animatorMe = me.GetComponent<Animator>();
+		StartCoroutine(Shake());
+	}
+
     IEnumerator WaitTimeAndLoadNextScene()
     {
         yield return new WaitForSeconds(2.33f);
@@ -23,6 +30,7 @@ public class SceneManager02 : SManager
     {
         yield return new WaitForSeconds(0.33f);
         sync();
+
     }   
     void Start()
     {
@@ -30,6 +38,7 @@ public class SceneManager02 : SManager
         animatorMe = me.GetComponent<Animator>();
         StartCoroutine(Shake());
     }
+
     IEnumerator Shake()
     {
         while (true)

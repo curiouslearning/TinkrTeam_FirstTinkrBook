@@ -37,8 +37,8 @@ public class SceneManager07 : SManager
     private SpriteRenderer bubbleSprite6;
 
     // Use this for initialization
-    void Start()
-    {
+	public override void Start() {
+		base.Start ();
         ChangeColor(GameManager.white);
         //Fetch the SpriteRenderer from the GameObject
 

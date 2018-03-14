@@ -11,11 +11,7 @@ public class SceneManager18 : SManager
     public GameObject chewing3;
 
     public GameObject burp;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
+    
     public override void Update()
     {
         if (chewing1.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("removed"))

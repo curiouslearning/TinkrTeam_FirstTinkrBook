@@ -221,7 +221,11 @@ public class TinkerText : MonoBehaviour {
 
 		if (pairedGraphic != null)
 		{
-			pairedGraphic.GetComponent<Renderer>().material.color = pairedGraphic.resetColor;
+			Renderer[] list;
+			list = this.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>();
+			foreach(Renderer item in list){   //color all the components
+				item.material.color = this.pairedGraphic.resetColor;
+			}
 		}
 	}
 
