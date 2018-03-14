@@ -40,8 +40,29 @@ public class SManager :  MonoBehaviour {
 	public virtual void Update() {
 	}
 
-
-	public virtual void Init(GameManager _gameManager)
+    public IEnumerator Playloopingsound(float startdelay, float enddelay)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(startdelay);
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                GetComponent<AudioSource>().Play();
+            }
+            yield return new WaitForSeconds(enddelay);
+        }
+    }
+    public IEnumerator Playnonloopsound(float startdelay, float enddelay)
+    {
+        
+            yield return new WaitForSeconds(startdelay);
+            if (!GetComponent<AudioSource>().isPlaying)
+            {
+                GetComponent<AudioSource>().Play();
+            }
+            yield return new WaitForSeconds(enddelay);
+    }
+    public virtual void Init(GameManager _gameManager)
 	{
 		gameManager = _gameManager;
 
@@ -275,6 +296,7 @@ public class SManager :  MonoBehaviour {
 		}
 		return false;
 	}
+    
 
 
 }
