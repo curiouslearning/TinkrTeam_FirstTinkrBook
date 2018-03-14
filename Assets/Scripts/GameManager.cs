@@ -39,7 +39,6 @@ public class GameManager : MonoBehaviour
 		Scene20,
 		Scene21,
 		Scene24,
-		Scene25,
 		END
 	}
 
@@ -195,7 +194,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void LoadNextScene()
 	{
-		if (currentScene < Scenes.END - 1)
+		if (currentScene < Scenes.END)
 		{
 			currentScene++;
 			SceneManager.LoadScene(currentScene.ToString());
