@@ -25,50 +25,39 @@ public class SceneManager07 : SManager
     public GameObject bubble3;
     public GameObject bubble4;
     public GameObject bubble5;
-
     public GameObject bubble6;
-    
-
     private SpriteRenderer spriteRenderer;
-
-    //private SpriteRenderer[] spriteRendererBubbles;
     private SpriteRenderer spriteRendererWater;
     private SpriteRenderer spriteRendererMovingArms;
-
     private SpriteRenderer bubbleSprite1;
     private SpriteRenderer bubbleSprite2;
     private SpriteRenderer bubbleSprite3;
     private SpriteRenderer bubbleSprite4;
     private SpriteRenderer bubbleSprite5;
-
     private SpriteRenderer bubbleSprite6;
 
-  
     // Use this for initialization
-    void Start()
-    {
+	public override void Start() {
+		base.Start ();
         ChangeColor(GameManager.white);
-
-
         //Fetch the SpriteRenderer from the GameObject
+
         spriteRenderer = babyD.GetComponent<SpriteRenderer>();
         spriteRenderer.color = Color.white;
         spriteRendererWater = water.GetComponent<SpriteRenderer>();
-        //spriteRendererWater.color = Color.red;
+  
         bubbleSprite1 = bubble1.GetComponent<SpriteRenderer>();
         bubbleSprite2 = bubble2.GetComponent<SpriteRenderer>();
         bubbleSprite3 = bubble3.GetComponent<SpriteRenderer>();
         bubbleSprite4 = bubble4.GetComponent<SpriteRenderer>();
         bubbleSprite5 = bubble5.GetComponent<SpriteRenderer>();
         bubbleSprite6 = bubble6.GetComponent<SpriteRenderer>();
+
         spriteRendererMovingArms = movingArms.GetComponent<SpriteRenderer>();
     }
     public override void OnMouseDown(GameObject go)
     {
-        //spriteRendererBubbles[0] = bubbles[0].GetComponent<SpriteRenderer>();
-
         Color duckcolor = getDuckColor();
-        //if (duckcolor!= Color.red&& duckcolor != Color.blue&& duckcolor != Color.yellow)
         if (duckcolor == Color.white)
             SingleColor(go);
         else

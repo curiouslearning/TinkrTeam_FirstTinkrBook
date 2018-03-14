@@ -396,23 +396,6 @@ Transform:
   m_Father: {fileID: 1650838283}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &275556907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e465b898a74d5f64dbaeab969faf1f97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pairedText1: {fileID: 2002034843}
-  pairedText2: {fileID: 0}
-  sceneManager: {fileID: 506246711}
-  myCanvas: {fileID: 412370062}
-  resetColor: {r: 1, g: 1, b: 1, a: 1}
-  highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
 --- !u!1001 &391762218
 Prefab:
   m_ObjectHideFlags: 0
@@ -857,7 +840,7 @@ MonoBehaviour:
   disableAutoplay: 0
   disableSounds: 0
   dragActive: 0
-  frog: {fileID: 0}
+  frog: {fileID: 2069380276}
 --- !u!1001 &725212346
 Prefab:
   m_ObjectHideFlags: 0
@@ -1274,12 +1257,12 @@ Prefab:
     - target: {fileID: 224960764825847358, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 73
+      value: 68
       objectReference: {fileID: 0}
     - target: {fileID: 224960764825847358, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 86
+      value: 91
       objectReference: {fileID: 0}
     - target: {fileID: 224960764825847358, guid: b6c3c69fcd525a844adc609c7a36630f,
         type: 2}
@@ -2255,7 +2238,7 @@ Prefab:
         type: 2}
       propertyPath: pairedGraphic
       value: 
-      objectReference: {fileID: 275556907}
+      objectReference: {fileID: 2069380277}
     m_RemovedComponents:
     - {fileID: 111503359842858874, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
@@ -3403,8 +3386,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pairedText1: {fileID: 2002034843}
   pairedText2: {fileID: 0}
-  sceneManager: {fileID: 0}
-  myCanvas: {fileID: 0}
+  sceneManager: {fileID: 506246711}
+  myCanvas: {fileID: 412370062}
   resetColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
 --- !u!65 &2069380278
