@@ -23,21 +23,7 @@ public class SceneManager02 : SManager
     {
         yield return new WaitForSeconds(0.33f);
         sync();
-    }
-
-    IEnumerator WaitTime2()
-    {
-        yield return new WaitForSeconds(1.0f);
-       
-        animatorTap.SetTrigger("shake");
-        animatorMe.SetTrigger("shake");
-    }
-    //IEnumerator WaitTime3(float a)
-    //{
-    //    yield return new WaitForSeconds(a);
-    //    animatorMe.Play("nmscale");
-    //    animatorTap.Play("nmscale");
-    //}
+    }   
     void Start()
     {
         animatorTap = tap.GetComponent<Animator>();
@@ -50,7 +36,7 @@ public class SceneManager02 : SManager
         {
             animatorTap.speed = 1.0f;
             animatorMe.speed = 1.0f;
-           
+
             if (stanzaManager.IsAutoPlaying())
             {
                 shakeStop();
@@ -59,16 +45,17 @@ public class SceneManager02 : SManager
             }
             if (!stanzaManager.IsAutoPlaying() && playingWasActive)
             {
-                //call mouse down
+                
                 Debug.Log("entered2");
-               
+                //restart idle
+                animatorMe.Play("idle", 0, 0);
+                animatorTap.Play("idle", 0, 0);
 
                 playingWasActive = false;
                 autoPlayingDoneNow = true;
             }
             if (autoPlayingDoneNow)
-            {
-                //sync();   
+            { 
                 if ((animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorMe.GetCurrentAnimatorStateInfo(0).normalizedTime == 1 && !animatorMe.IsInTransition(0)) && (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).normalizedTime == 1 && !animatorMe.IsInTransition(0)))
                 {
 
@@ -78,7 +65,7 @@ public class SceneManager02 : SManager
             }
             if (!tapActive && !imageClicked && !stanzaManager.IsAutoPlaying())
             {
-                //if ((animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorMe.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorMe.IsInTransition(0)) && (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).normalizedTime > 1 && !animatorMe.IsInTransition(0)))
+                
                 if (animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
                 {
                     Debug.Log("shake start");
@@ -90,6 +77,7 @@ public class SceneManager02 : SManager
 
         }
     }
+    
     public override void OnMouseCurrentlyDown(GameObject go)
     {
         base.OnMouseCurrentlyDown(go);
@@ -131,8 +119,6 @@ public class SceneManager02 : SManager
             animatorTap.SetBool("zoom", true);
             tapActive = true;
             shakeStop();
-            //animatorTap.SetBool("zoom", false);
-            //animatorMe.SetBool("zoom", false);
         }
         else if (go.name == "me")
         {
@@ -160,40 +146,19 @@ public class SceneManager02 : SManager
     }
     public void shakeStop()
     {
-        Debug.Log("stopShake");
-        //animatorMe.Play("idle");
-        //animatorTap.Play("idle");
+        Debug.Log("stopShake"); 
         animatorTap.ResetTrigger("shake");
         animatorMe.ResetTrigger("shake");
     }
     public void shakeStart()
     {
+
         animatorTap.speed = 1.0f;
         animatorMe.speed = 1.0f;
-        //if(animatorTap.GetComponent<Animation>().isActiveAndEnabled)
-        //StartCoroutine(WaitTime2());
-        //if (animatorMe.GetCurrentAnimatorStateInfo(0).IsName("shake") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("shake"))
-        //{
-        //    Debug.Log("do nothing");
-        //}
-        //else
-        //{
-        //    animatorMe.Play("idle");
-        //    animatorTap.Play("idle");
-        if (animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
+        if ((animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle")  ) && (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle") ))
         {
-            animatorMe.Play("idle");
-            animatorTap.Play("idle");
             animatorTap.SetTrigger("shake");
             animatorMe.SetTrigger("shake");
         }
-
-        //}
-
-        // StartCoroutine(WaitTime2(animatorMe.GetCurrentAnimatorStateInfo(0).length));
-
-        // StartCoroutine(WaitTime3(animatorMe.GetCurrentAnimatorStateInfo(0).length));
-        //Debug.Log("Length "+animatorMe.GetCurrentAnimatorStateInfo(0).length);
-
     }
 }

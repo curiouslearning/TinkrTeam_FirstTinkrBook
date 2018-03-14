@@ -14,8 +14,8 @@ public class SceneManager11 : SManager
 
     public override void OnPairedMouseDown(TinkerText tinkerText)
     {
-        
-            tinkerText.pairedGraphic.gameObject.GetComponent<SpriteRenderer>().color = tinkerText.pairedGraphic.highlightColor;
+
+        tinkerText.pairedGraphic.gameObject.GetComponent<SpriteRenderer>().color = GameManager.yellow;
 
 
     }

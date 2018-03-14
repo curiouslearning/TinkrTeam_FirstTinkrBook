@@ -51,7 +51,8 @@ public class SceneManager03 : SManager {
             }
             if (!stanzaManager.IsAutoPlaying() && playingWasActive)
             {
-                autoPlayingDoneNow = true;
+                playingWasActive = false;
+                   autoPlayingDoneNow = true;
             }
             if (autoPlayingDoneNow)
             {
