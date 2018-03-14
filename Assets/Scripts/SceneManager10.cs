@@ -14,9 +14,10 @@ public class SceneManager10 : SManager
     public bool autoPlayingDoneNow = false;
     public bool playingWasActive = false;
     bool imageClicked = false;
+
     // Use this for initialization
-    void Start()
-    {
+	 public override void Start() {
+		base.Start ();
         Rbutton.SetActive(false);
         animatorTap = tap.GetComponent<Animator>();
         animatorMe = me.GetComponent<Animator>();

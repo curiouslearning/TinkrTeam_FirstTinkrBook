@@ -208,7 +208,6 @@ public class StanzaManager : MonoBehaviour {
 
     public void OnMouseUp(TinkerGraphic tinkerGraphic)
     {
-        
         tinkerGraphic.MyOnMouseUp();
     }
 

@@ -10,7 +10,7 @@ public class SceneManager13 : SManager {
 	public GameObject dive;
 
 	// Use this for initialization
-	void Start () {
+	public override void Start () {
 		if (duckParent != null) {
 			duckParent.GetComponent<TinkerGraphic>().SetDraggable (true);
 		}
