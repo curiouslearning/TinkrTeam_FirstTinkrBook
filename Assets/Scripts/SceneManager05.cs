@@ -12,17 +12,22 @@ public class SceneManager05 : SManager
     }
     public override void OnPairedMouseDown(TinkerText tinkerText)
     {
-        tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>()[0].material.color = tinkerText.pairedGraphic.highlightColor;
-        tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>()[1].material.color = tinkerText.pairedGraphic.highlightColor;
-        tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>()[2].material.color = tinkerText.pairedGraphic.highlightColor;
+        int len = tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>().Length;
+        for (int i = 0; i < len; i++)
+        {
+            tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>()[i].material.color = tinkerText.pairedGraphic.highlightColor;
+
+        }
+     
     }
     public override void OnPairedMouseUp(TinkerText tinkerText)
     {
-        tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>()[0].material.color = tinkerText.pairedGraphic.resetColor;
+        int len = tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>().Length;
+        for (int i = 0; i < len; i++) {
+            tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>()[i].material.color = tinkerText.pairedGraphic.resetColor;
 
-        tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>()[1].material.color = tinkerText.pairedGraphic.resetColor;
-
-        tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>()[2].material.color = tinkerText.pairedGraphic.resetColor;
+        }
+       
 
 
     }
