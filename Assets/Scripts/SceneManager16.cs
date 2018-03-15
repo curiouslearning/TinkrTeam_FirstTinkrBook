@@ -26,6 +26,7 @@ public class SceneManager16 : SManager {
 
 	// Use this for initialization
 	public override void Start () {
+        base.Start();
 		if (worm1 != null ) {
 			worm1.SetDraggable (true);
 			currentPos = worm1.GetCoordinates ();
