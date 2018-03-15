@@ -26,6 +26,7 @@ public class SceneManager16 : SManager {
 
 	// Use this for initialization
 	public override void Start () {
+        base.Start();
 		if (worm1 != null ) {
 			worm1.SetDraggable (true);
 			currentPos = worm1.GetCoordinates ();
@@ -56,6 +57,7 @@ public class SceneManager16 : SManager {
 			t.text= ""+DuckBugFeedSwitching.bugCounter;
 		}
 
+
 	}
 
 	public override void OnMouseCurrentlyDown(TinkerGraphic tinkerGraphic)
@@ -82,6 +84,7 @@ public class SceneManager16 : SManager {
 			duckIdle.SetActive (true);
 			duckMouthOpen.SetActive (false);
 			duckChew.SetActive (false);
+
 		}
 		if(tinkerGraphic.gameObject.name=="duck_parent")
 		duckParent.GetComponent<DuckBugFeedSwitching> ().FeedDuckOnMouseUp();
