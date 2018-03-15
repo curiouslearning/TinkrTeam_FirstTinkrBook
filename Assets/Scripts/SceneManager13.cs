@@ -11,6 +11,8 @@ public class SceneManager13 : SManager {
 
 	// Use this for initialization
 	public override void Start () {
+        base.Start();
+
 		if (duckParent != null) {
 			duckParent.GetComponent<TinkerGraphic>().SetDraggable (true);
 		}

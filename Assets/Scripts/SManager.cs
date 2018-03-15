@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -33,7 +33,19 @@ public class SManager :  MonoBehaviour {
 	[HideInInspector]
 	public bool dragActive = false;
 
+	private int countDownEvent = 0;
+
 	public virtual void Start () { 
+		Color c= Lbutton.gameObject.GetComponent<Image> ().color;
+		c.a = 0.6f;
+		Lbutton.gameObject.GetComponent<Image> ().color=c;
+
+		c= Rbutton.gameObject.GetComponent<Image> ().color;
+		c.a = 0.6f;
+		Rbutton.gameObject.GetComponent<Image> ().color=c;
+
+		Lbutton.GetComponent<Button> ().interactable = false;
+		Rbutton.GetComponent<Button> ().interactable = false;
 	}
 
 	//override me
@@ -81,6 +93,9 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global GameObject mouse down events
 	public virtual void OnMouseDown(GameObject go)
 	{
+		countDownEvent++;
+		if(countDownEvent==2)
+		    EnableButtons ();
 		// Lock out other input during auto play?
 		if (IsInputAllowed())
 		{
@@ -279,5 +294,15 @@ public class SManager :  MonoBehaviour {
 		return false;
 	}
 
+	private void EnableButtons(){
+		Color c= Lbutton.gameObject.GetComponent<Image> ().color;
+		c.a = 1.0f;
+		Lbutton.gameObject.GetComponent<Image> ().color=c;
 
+		c= Rbutton.gameObject.GetComponent<Image> ().color;
+		c.a = 1.0f;
+		Rbutton.gameObject.GetComponent<Image> ().color=c;
+		Lbutton.GetComponent<Button> ().interactable = true;
+		Rbutton.GetComponent<Button> ().interactable = true;
+	}
 }

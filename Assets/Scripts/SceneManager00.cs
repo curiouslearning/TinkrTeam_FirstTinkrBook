@@ -14,7 +14,7 @@ public class SceneManager00 : SManager {
 
     }
 
-    public void Start()
+    public override void Start()
     {
         // base.Update();
         StartCoroutine(waitForTime());

@@ -57,6 +57,7 @@ public class SceneManager07 : SManager
     }
     public override void OnMouseDown(GameObject go)
     {
+        base.OnMouseDown(go);
         Color duckcolor = getDuckColor();
         if (duckcolor == Color.white)
             SingleColor(go);
