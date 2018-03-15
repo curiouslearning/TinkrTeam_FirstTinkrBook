@@ -34,6 +34,7 @@ public class SceneManager01 : SManager {
 
 	public override void OnMouseDown(GameObject go)
 	{
+        base.OnMouseDown(go);
 		if (go.GetComponent<TinkerText>() != null)
 		{
 			stanzaManager.OnMouseDown (go.GetComponent<TinkerText> ());
