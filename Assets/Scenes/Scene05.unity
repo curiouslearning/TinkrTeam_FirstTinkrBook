@@ -3790,6 +3790,7 @@ GameObject:
   - component: {fileID: 1952363436}
   - component: {fileID: 1952363435}
   - component: {fileID: 1952363437}
+  - component: {fileID: 1952363438}
   m_Layer: 0
   m_Name: babyd
   m_TagString: Untagged
@@ -3869,12 +3870,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e465b898a74d5f64dbaeab969faf1f97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pairedText1: {fileID: 0}
+  pairedText1: {fileID: 161582344}
   pairedText2: {fileID: 0}
   sceneManager: {fileID: 1767070438}
   myCanvas: {fileID: 412370062}
   resetColor: {r: 1, g: 1, b: 1, a: 1}
   highlightColor: {r: 0.92941177, g: 0.9607843, b: 0.32941177, a: 1}
+--- !u!136 &1952363438
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1952363434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.3022728
+  m_Height: 4.8519187
+  m_Direction: 1
+  m_Center: {x: 0.03686893, y: -0.12904046, z: 0}
 --- !u!1 &1988521915
 GameObject:
   m_ObjectHideFlags: 0

@@ -45,8 +45,8 @@ public class SceneManager07 : SManager
 
   
     // Use this for initialization
-    void Start()
-    {
+	public override void Start() {
+		base.Start ();
         ChangeColor(GameManager.white);
 
 

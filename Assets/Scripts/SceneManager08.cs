@@ -3,11 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneManager08 :  SManager {
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 
 }
