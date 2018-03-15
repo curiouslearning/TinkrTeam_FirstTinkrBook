@@ -72,8 +72,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene21.unity
     guid: f374618ef7b3504488f3f98bc95bfd9c
   - enabled: 1
-    path: Assets/Scenes/Scene23.unity
+    path: Assets/Scenes/Scene24.unity
     guid: 233cc0d5c28ee2c479a02a09c3a19785
   - enabled: 1
-    path: Assets/Scenes/Scene24.unity
+    path: Assets/Scenes/END.unity
     guid: a0752765938d0af40bcb2e7c8c5b7257
