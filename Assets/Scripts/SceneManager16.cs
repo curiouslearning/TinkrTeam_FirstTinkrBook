@@ -56,7 +56,6 @@ public class SceneManager16 : SManager {
 			t.text= ""+DuckBugFeedSwitching.bugCounter;
 		}
 
-
 	}
 
 	public override void OnMouseCurrentlyDown(TinkerGraphic tinkerGraphic)
@@ -83,7 +82,6 @@ public class SceneManager16 : SManager {
 			duckIdle.SetActive (true);
 			duckMouthOpen.SetActive (false);
 			duckChew.SetActive (false);
-
 		}
 		if(tinkerGraphic.gameObject.name=="duck_parent")
 		duckParent.GetComponent<DuckBugFeedSwitching> ().FeedDuckOnMouseUp();

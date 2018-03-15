@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SceneManager10 : SManager
 {
-
     public GameObject frogAnim;
     public GameObject tap;
     public GameObject me;
@@ -14,7 +13,6 @@ public class SceneManager10 : SManager
     public bool autoPlayingDoneNow = false;
     public bool playingWasActive = false;
     bool imageClicked = false;
-
     // Use this for initialization
 	 public override void Start() {
 		base.Start ();
@@ -31,9 +29,7 @@ public class SceneManager10 : SManager
     IEnumerator WaitTime()
     {
         yield return new WaitForSeconds(0.33f);
-
         sync();
-
     }
     IEnumerator Shake()
     {
@@ -73,7 +69,7 @@ public class SceneManager10 : SManager
 
                 if (animatorMe.GetCurrentAnimatorStateInfo(0).IsName("idle") && animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
                 {
-                    Debug.Log("shake start");
+                   
                     shakeStart();
                 }
             }

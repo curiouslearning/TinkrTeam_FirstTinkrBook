@@ -32,12 +32,7 @@ public class SceneManager02 : SManager
         sync();
 
     }   
-    void Start()
-    {
-        animatorTap = tap.GetComponent<Animator>();
-        animatorMe = me.GetComponent<Animator>();
-        StartCoroutine(Shake());
-    }
+
 
     IEnumerator Shake()
     {

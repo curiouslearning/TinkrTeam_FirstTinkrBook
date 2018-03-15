@@ -5124,7 +5124,7 @@ GameObject:
   - component: {fileID: 1812326795}
   - component: {fileID: 1812326794}
   m_Layer: 0
-  m_Name: help
+  m_Name: helpshake
   m_TagString: text
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
