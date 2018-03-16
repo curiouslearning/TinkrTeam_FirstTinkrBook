@@ -57,6 +57,7 @@ public class SceneManager07 : SManager
     }
     public override void OnMouseDown(GameObject go)
     {
+        base.OnMouseDown(go);
         Color duckcolor = getDuckColor();
         if (duckcolor == Color.white)
             SingleColor(go);
@@ -88,6 +89,7 @@ public class SceneManager07 : SManager
         bubbleSprite4.color = color;
         bubbleSprite5.color = color;
         bubbleSprite6.color = color;
+        GameManager.duckColor = color;
 
     }
     public void MixColor(GameObject go)
