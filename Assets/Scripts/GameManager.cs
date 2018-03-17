@@ -82,7 +82,7 @@ public class GameManager : MonoBehaviour
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
 
-				// Pass the go along to the current scene manager (if any) to let it respond
+				// Pass the game object along to the current scene manager (if any) to let it respond
 			if (sceneManager != null && gos.Count!=0) {
 				sceneManager.OnMouseDown (gos[0]);
 			}
@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
 		{
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
-				// Pass the go along to the current scene manager (if any) to let it respond
+				// Pass the game object along to the current scene manager (if any) to let it respond
 			if (sceneManager != null && gos.Count!=0)
 				{
 					sceneManager.OnMouseCurrentlyDown(gos[0]);
@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
 
-				// Pass the go along to the current scene manager (if any) to let it respond
+				// Pass the game object along to the current scene manager (if any) to let it respond
 			if (sceneManager != null && gos.Count!=0) {
 					sceneManager.OnMouseUp (gos[0]);
 				}
@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
 			// Anytime there is a mouse up event, update applicable lists in scene manager
 			sceneManager.ResetInputStates(MouseEvents.MouseUp);
 		} 
+
 		else if (Input.GetKeyDown(KeyCode.Escape)) // quit game on exit
 		{
 			System.Diagnostics.Process.GetCurrentProcess().Kill();

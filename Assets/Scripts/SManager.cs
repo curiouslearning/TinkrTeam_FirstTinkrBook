@@ -284,6 +284,12 @@ public class SManager :  MonoBehaviour {
 		{
 			stanzaManager.ResetInputStates(mouseEvent);
 		}
+
+		TinkerGraphic[] list;
+		list = this.GetComponentsInChildren<TinkerGraphic> ();
+		foreach (TinkerGraphic tinkerGraphic in list) {
+			tinkerGraphic.MyOnMouseUp ();
+		}
 	}
 
 	public bool CheckFar(Vector2 start, Vector2 end, float requiredDistance){

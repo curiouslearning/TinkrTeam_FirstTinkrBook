@@ -105,6 +105,7 @@ public class TinkerText : MonoBehaviour {
         if (anim2 != null)
             anim2.SetActive(true);
 	}
+
     void graphicResume()
 	{if (anim2 != null)
 		anim2.SetActive(false);
@@ -221,6 +222,7 @@ public class TinkerText : MonoBehaviour {
 
 		if (pairedGraphic != null)
 		{
+
 			Renderer[] list;
 			list = this.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>();
 			foreach(Renderer item in list){   //color all the components
