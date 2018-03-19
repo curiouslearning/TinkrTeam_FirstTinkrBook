@@ -11,19 +11,14 @@ public class SceneManager11 : SManager
 		base.Start ();
         frog.GetComponent<SpriteRenderer>().color = GameManager.red;
     }
-
-
     public override void OnPairedMouseDown(TinkerText tinkerText)
     {
 
         tinkerText.pairedGraphic.gameObject.GetComponent<SpriteRenderer>().color = GameManager.yellow;
 
-
     }
     public override void OnPairedMouseUp(TinkerText tinkerText)
     {
-        frog.GetComponent<SpriteRenderer>().color = GameManager.red;
-
-        
+        frog.GetComponent<SpriteRenderer>().color = GameManager.red;    
     }
 }

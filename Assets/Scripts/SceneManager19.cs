@@ -6,8 +6,8 @@ public class SceneManager19 : SManager {
 
 
 	// Use this for initialization
-	public void Start () {
-        StartCoroutine(PlayNonLoopSound(0,0.03f,0f));
+	public override void Start () {
+        StartCoroutine(Playnonloopsound(0.03f,0f));
     }
 	
 

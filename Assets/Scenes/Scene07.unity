@@ -1392,6 +1392,7 @@ GameObject:
   - component: {fileID: 340570466}
   - component: {fileID: 340570465}
   - component: {fileID: 340570467}
+  - component: {fileID: 340570468}
   m_Layer: 0
   m_Name: yellow_leaf
   m_TagString: Untagged
@@ -1489,6 +1490,23 @@ CapsuleCollider:
   m_Height: 1.7313359
   m_Direction: 0
   m_Center: {x: -3.2508075, y: 0.52687687, z: 0}
+--- !u!114 &340570468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 340570463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e465b898a74d5f64dbaeab969faf1f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pairedText1: {fileID: 726711150}
+  pairedText2: {fileID: 0}
+  sceneManager: {fileID: 392475523}
+  myCanvas: {fileID: 412370062}
+  resetColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 0.9411765, g: 1, b: 0, a: 1}
 --- !u!1001 &382623284
 Prefab:
   m_ObjectHideFlags: 0
@@ -3698,6 +3716,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114209332643440358, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
+        type: 2}
+      propertyPath: pairedGraphic
+      value: 
+      objectReference: {fileID: 340570468}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
   m_IsPrefabParent: 0
@@ -4060,6 +4083,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114209332643440358, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
+        type: 2}
+      propertyPath: pairedGraphic
+      value: 
+      objectReference: {fileID: 1000988617}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
   m_IsPrefabParent: 0
@@ -4158,6 +4186,7 @@ GameObject:
   - component: {fileID: 1000988615}
   - component: {fileID: 1000988614}
   - component: {fileID: 1000988616}
+  - component: {fileID: 1000988617}
   m_Layer: 0
   m_Name: blue_leaf
   m_TagString: Untagged
@@ -4251,10 +4280,27 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.57954675
-  m_Height: 2.5536578
+  m_Radius: 0.74001783
+  m_Height: 2.473422
   m_Direction: 0
-  m_Center: {x: -1.9855585, y: -1.5882695, z: 0.0000053896097}
+  m_Center: {x: -1.9454405, y: -1.53478, z: 0.0000053896097}
+--- !u!114 &1000988617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000988612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e465b898a74d5f64dbaeab969faf1f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pairedText1: {fileID: 872029764}
+  pairedText2: {fileID: 0}
+  sceneManager: {fileID: 392475523}
+  myCanvas: {fileID: 412370062}
+  resetColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 1, g: 1, b: 0.62352943, a: 0.972549}
 --- !u!1001 &1009857001
 Prefab:
   m_ObjectHideFlags: 0
@@ -4918,7 +4964,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1683261481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 0, z: 0}
+  m_LocalPosition: {x: 19, y: 0, z: 0}
   m_LocalScale: {x: 1.2, y: 1.2, z: 1}
   m_Children:
   - {fileID: 510221134}
@@ -6119,6 +6165,7 @@ GameObject:
   - component: {fileID: 1669129932}
   - component: {fileID: 1669129931}
   - component: {fileID: 1669129933}
+  - component: {fileID: 1669129934}
   m_Layer: 0
   m_Name: red_leaf
   m_TagString: Untagged
@@ -6216,6 +6263,23 @@ CapsuleCollider:
   m_Height: 1.6690372
   m_Direction: 0
   m_Center: {x: -1.5847898, y: -1.4546479, z: 0}
+--- !u!114 &1669129934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1669129929}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e465b898a74d5f64dbaeab969faf1f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pairedText1: {fileID: 1825099136}
+  pairedText2: {fileID: 0}
+  sceneManager: {fileID: 392475523}
+  myCanvas: {fileID: 412370062}
+  resetColor: {r: 1, g: 1, b: 1, a: 1}
+  highlightColor: {r: 0.9411765, g: 1, b: 0, a: 1}
 --- !u!1 &1683261481
 GameObject:
   m_ObjectHideFlags: 0
@@ -7001,6 +7065,11 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114209332643440358, guid: a4bcf48eb1f60e64995d82db8f2d6d97,
+        type: 2}
+      propertyPath: pairedGraphic
+      value: 
+      objectReference: {fileID: 1669129934}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a4bcf48eb1f60e64995d82db8f2d6d97, type: 2}
   m_IsPrefabParent: 0

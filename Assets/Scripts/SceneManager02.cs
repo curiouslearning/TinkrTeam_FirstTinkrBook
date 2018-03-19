@@ -46,12 +46,8 @@ public class SceneManager02 : SManager
     //    animatorTap.Play("nmscale");
     //}
     public override void  Start()
-=======
-    }   
-    void Start()
->>>>>>> 4984f7d12ccd08c3173044596a7d32776d775e36
-    {
-        base.Start();
+{
+           base.Start();
         animatorTap = tap.GetComponent<Animator>();
         animatorMe = me.GetComponent<Animator>();
         StartCoroutine(Shake());

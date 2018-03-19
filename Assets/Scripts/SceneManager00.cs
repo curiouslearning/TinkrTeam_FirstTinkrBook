@@ -1,9 +1,12 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneManager00 : SManager {
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> master
     public override void Start()
     {
         base.Start();
@@ -16,16 +19,8 @@ public class SceneManager00 : SManager {
             StartCoroutine(PlayNonLoopSound(1,0f, 0f));
 			StartCoroutine(NextSceneCoroutine());
 		}
-
-
     }
 
-    public void Start()
-    {
-        // base.Update();
-        StartCoroutine(waitForTime());
-
-    }
     IEnumerator waitForTime()
     {
         while (true)

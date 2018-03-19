@@ -1,8 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
 public class SceneManager01 : SManager {
 	public GameObject graphicEgg;
 	public GameObject eggCrackLastClip;
@@ -12,7 +9,6 @@ public class SceneManager01 : SManager {
 	public override void Start() {
 		base.Start ();
 		noOfTaps = 0;
-
 	}
 	public override void Update() {
 		if (eggCrack.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("removed"))
@@ -58,7 +54,6 @@ public class SceneManager01 : SManager {
             StartCoroutine(PlayNonLoopSound(0));
             if (noOfTaps < 2)
 			{
-
 				noOfTaps++;
 				tinkerGraphic.pairedText1.clipPlay();
 				graphicEgg.GetComponent<Animator>().SetTrigger("crack" + noOfTaps);
