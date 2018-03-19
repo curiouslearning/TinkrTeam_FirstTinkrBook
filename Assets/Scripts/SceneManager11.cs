@@ -5,17 +5,18 @@ using UnityEngine;
 public class SceneManager11 : SManager
 {
     public GameObject frog;
+
     // Use this for initialization
-    void Start()
-    {
+	public override void Start() {
+		base.Start ();
         frog.GetComponent<SpriteRenderer>().color = GameManager.red;
     }
 
 
     public override void OnPairedMouseDown(TinkerText tinkerText)
     {
-        
-            tinkerText.pairedGraphic.gameObject.GetComponent<SpriteRenderer>().color = tinkerText.pairedGraphic.highlightColor;
+
+        tinkerText.pairedGraphic.gameObject.GetComponent<SpriteRenderer>().color = GameManager.yellow;
 
 
     }
