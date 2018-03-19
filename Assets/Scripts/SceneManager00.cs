@@ -2,11 +2,7 @@
 using UnityEngine;
 
 public class SceneManager00 : SManager {
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> master
     public override void Start()
     {
         base.Start();
@@ -17,7 +13,7 @@ public class SceneManager00 : SManager {
 		if (go.name == "egg_anim")
 		{
             StartCoroutine(PlayNonLoopSound(1,0f, 0f));
-			StartCoroutine(NextSceneCoroutine());
+			NextScene();
 		}
     }
 
