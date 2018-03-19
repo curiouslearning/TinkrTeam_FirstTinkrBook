@@ -45,8 +45,9 @@ public class SceneManager07 : SManager
 
   
     // Use this for initialization
-    void Start()
+    public override void Start()
     {
+        base.Start();
         ChangeColor(GameManager.white);
 
 
@@ -69,11 +70,27 @@ public class SceneManager07 : SManager
 
         Color duckcolor = getDuckColor();
         //if (duckcolor!= Color.red&& duckcolor != Color.blue&& duckcolor != Color.yellow)
+        Debug.Log(".........."+go.name);
+        PlayAudioOfLeafs(go);
         if (duckcolor == Color.white)
             SingleColor(go);
         else
         {
             MixColor(go);
+        }
+    }
+    public void PlayAudioOfLeafs(GameObject go)
+    {
+        Debug.Log("------"+go.name);
+        if (go.name=="water_leaf")
+        {
+            Debug.Log("------" + go.name);
+            StartCoroutine(PlayNonLoopSound(0));
+        }
+        else if(go.name =="red_leaf" || go.name =="blue_leaf" || go.name =="yellow_leaf")
+        {
+
+            StartCoroutine(PlayNonLoopSound(1));
         }
     }
 

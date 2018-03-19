@@ -15,8 +15,9 @@ public class SceneManager10 : SManager
     public bool playingWasActive = false;
     bool imageClicked = false;
     // Use this for initialization
-    void Start()
+    public override void Start()
     {
+        base.Start();
         Rbutton.SetActive(false);
         animatorTap = tap.GetComponent<Animator>();
         animatorMe = me.GetComponent<Animator>();
@@ -141,11 +142,13 @@ public class SceneManager10 : SManager
         if (go.name == "redFrog")
         {
             Destroy(go);
+            StartCoroutine(PlayNonLoopSound(0));
             frogAnim.SetActive(true);
             StartCoroutine(StartSceneTransitionListener());
         }
         else if (go.name == "yellowFrog" || go.name == "greenFrog")
         {
+            StartCoroutine(PlayNonLoopSound(1));
             Destroy(go);
         }
 

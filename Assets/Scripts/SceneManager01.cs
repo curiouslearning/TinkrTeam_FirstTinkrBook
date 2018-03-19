@@ -9,7 +9,8 @@ public class SceneManager01 : SManager {
 	public GameObject eggCrack;
 	private int noOfTaps;
 
-	void Start() {
+	public override void  Start() {
+        base.Start();
 		noOfTaps = 0;
 
 	}
@@ -37,6 +38,7 @@ public class SceneManager01 : SManager {
 		{
 			stanzaManager.OnMouseDown (go.GetComponent<TinkerText> ());
 			if (go.name == "tap") {
+                StartCoroutine(PlayNonLoopSound(0));
 				if (noOfTaps < 3) {
 					noOfTaps++;
 					graphicEgg.GetComponent<Animator> ().SetTrigger ("crack"+noOfTaps);
@@ -53,7 +55,8 @@ public class SceneManager01 : SManager {
 	{
 		if (tinkerGraphic.name == "eggcrack")
 		{
-			if (noOfTaps < 2)
+            StartCoroutine(PlayNonLoopSound(0));
+            if (noOfTaps < 2)
 			{
 
 				noOfTaps++;

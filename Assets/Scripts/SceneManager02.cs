@@ -38,8 +38,9 @@ public class SceneManager02 : SManager
     //    animatorMe.Play("nmscale");
     //    animatorTap.Play("nmscale");
     //}
-    void Start()
+    public override void  Start()
     {
+        base.Start();
         animatorTap = tap.GetComponent<Animator>();
         animatorMe = me.GetComponent<Animator>();
         StartCoroutine(Shake());
@@ -146,6 +147,7 @@ public class SceneManager02 : SManager
         {
             imageClicked = true;
             eggCrack.SetActive(false);
+            StartCoroutine(PlayNonLoopSound(0));
             eggCrackLastClip.SetActive(true);
             animatorMe.ResetTrigger("shake");
             animatorTap.ResetTrigger("shake");
