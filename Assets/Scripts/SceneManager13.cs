@@ -112,6 +112,7 @@ public class SceneManager13 : SManager {
 
 	public override void OnMouseUp(TinkerGraphic tinkerGraphic)
 	{
+		Debug.Log ("called");
 		base.OnMouseUp(tinkerGraphic);
 		if (dragActive && tinkerGraphic.GetDraggable() )
 		{
@@ -145,13 +146,6 @@ public class SceneManager13 : SManager {
         }
     }
 
-	/*
-	 * TinkerGraphic[] list;
-				list = tinkerGraphic.gameObject.GetComponentsInChildren<TinkerGraphic>();
-				foreach(TinkerGraphic item in list){
-					item.OnMouseDown ();
-				}
-				*/
 	public IEnumerator SetIdleAfterSplash(){
 
 		yield return new WaitForSeconds (1.0f);
