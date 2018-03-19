@@ -32,34 +32,36 @@ public class SManager :  MonoBehaviour {
 	// Drag event active?
 	[HideInInspector]
 	public bool dragActive = false;
-
-	public virtual void Start () { 
-	}
-
+    public AudioSource[] sounds;
+     public virtual void Start () {
+       sounds = gameObject.GetComponents<AudioSource>();
+       // Debug.Log("HELLLLLO"+sounds.Length);
+}
 	//override me
 	public virtual void Update() {
 		
 	}
 
-    public IEnumerator Playloopingsound(float startdelay, float enddelay)
+    public IEnumerator PlayLoopingSound(int index,float startdelay=0f, float enddelay=0f)
     {
         while (true)
         {
             yield return new WaitForSeconds(startdelay);
-            if (!GetComponent<AudioSource>().isPlaying)
+            if (!sounds[index].isPlaying)
             {
-                GetComponent<AudioSource>().Play();
+                sounds[index].Play();
             }
             yield return new WaitForSeconds(enddelay);
         }
     }
-    public IEnumerator Playnonloopsound(float startdelay, float enddelay)
+    public IEnumerator PlayNonLoopSound(int index,float startdelay=0f, float enddelay=0f)
     {
+        Debug.Log("ajsghss");
         
             yield return new WaitForSeconds(startdelay);
-            if (!GetComponent<AudioSource>().isPlaying)
+            if (!sounds[index].isPlaying)
             {
-                GetComponent<AudioSource>().Play();
+                sounds[index].Play();
             }
             yield return new WaitForSeconds(enddelay);
     }

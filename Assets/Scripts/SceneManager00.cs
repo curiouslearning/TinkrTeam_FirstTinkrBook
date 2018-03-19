@@ -2,16 +2,22 @@
 using UnityEngine;
 
 public class SceneManager00 : SManager {
+<<<<<<< HEAD
+    
+=======
 
+>>>>>>> master
     public override void Start()
     {
-        StartCoroutine(Playloopingsound(0.49f,0.5f));
+        base.Start();
+        StartCoroutine(PlayLoopingSound(0,0.49f,0.5f));
     }
     public override void OnMouseDown(GameObject go)
     {
 		if (go.name == "egg_anim")
 		{
-			NextScene();
+            StartCoroutine(PlayNonLoopSound(1,0f, 0f));
+			StartCoroutine(NextSceneCoroutine());
 		}
     }
 

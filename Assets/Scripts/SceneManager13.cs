@@ -11,6 +11,10 @@ public class SceneManager13 : SManager {
 
 	// Use this for initialization
 	public override void Start () {
+<<<<<<< HEAD
+        base.Start();
+=======
+>>>>>>> 4984f7d12ccd08c3173044596a7d32776d775e36
 		if (duckParent != null) {
 			duckParent.GetComponent<TinkerGraphic>().SetDraggable (true);
 		}
@@ -46,8 +50,10 @@ public class SceneManager13 : SManager {
 				//splash
 				duckParent.transform.GetChild (0).gameObject.SetActive (false); 
 				duckParent.transform.GetChild (1).gameObject.SetActive (false);   
-				duckParent.transform.GetChild (2).gameObject.SetActive (false);   
-				duckParent.transform.GetChild (3).gameObject.SetActive (true);  //splash active
+				duckParent.transform.GetChild (2).gameObject.SetActive (false);
+                duckParent.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(true);  //splash active
+                duckParent.transform.GetChild(3).gameObject.transform.GetChild(1).gameObject.SetActive(false); //splash active
+                duckParent.transform.GetChild(3).gameObject.SetActive(true);
 				duckParent.transform.GetChild (4).gameObject.SetActive (false);  
 				dive.gameObject.SetActive (false);  
 				duckParent.transform.GetChild (3).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
@@ -77,8 +83,29 @@ public class SceneManager13 : SManager {
 				}
 				duckParent.GetComponent<TinkerGraphic>().MoveObject ();
 			}
+            Vector2 pos;
+            if (tinkerGraphic.name == "pond_and_grass")
+            {
 
-			if (tinkerGraphic == duckParent) {
+                RectTransformUtility.ScreenPointToLocalPointInRectangle(tinkerGraphic.myCanvas.transform as RectTransform, Input.mousePosition, tinkerGraphic.myCanvas.worldCamera, out pos);
+                pos = tinkerGraphic.myCanvas.transform.TransformPoint(pos);
+                if ((duckParent.gameObject.GetComponent<DuckAnimSwitching>().insideWater) && (pos.x < 0.6f))
+                {
+                    //splash
+                    duckParent.transform.GetChild(0).gameObject.SetActive(false);
+                    duckParent.transform.GetChild(1).gameObject.SetActive(false);
+                    duckParent.transform.GetChild(2).gameObject.SetActive(false);
+                    duckParent.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(true);  //splash active
+                    duckParent.transform.GetChild(3).gameObject.transform.GetChild(1).gameObject.SetActive(false); //splash active
+                    //duckParent.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.GetComponentInChildren<Animation>().
+                    duckParent.transform.GetChild(3).gameObject.SetActive(true);
+                    duckParent.transform.GetChild(4).gameObject.SetActive(false);
+                    dive.gameObject.SetActive(false);
+                    duckParent.transform.GetChild(3).gameObject.GetComponent<TinkerGraphic>().OnMouseDown();
+                    StartCoroutine(SetIdleAfterSplash());
+                }
+            }
+            if (tinkerGraphic == duckParent) {
 				
 				duckParent.GetComponent<DuckAnimSwitching> ().DuckOnMouseCurrentlyDown ();
 
@@ -97,7 +124,29 @@ public class SceneManager13 : SManager {
 
 			duckParent.GetComponent<DuckAnimSwitching> ().DuckOnMouseUp ();
 		}
-	}
+        Vector2 pos;
+        if (tinkerGraphic.name == "pond_and_grass")
+        {
+
+            RectTransformUtility.ScreenPointToLocalPointInRectangle(tinkerGraphic.myCanvas.transform as RectTransform, Input.mousePosition, tinkerGraphic.myCanvas.worldCamera, out pos);
+            pos = tinkerGraphic.myCanvas.transform.TransformPoint(pos);
+            if ((duckParent.gameObject.GetComponent<DuckAnimSwitching>().insideWater) && (pos.x < 0.6f))
+            {
+                //splash
+                duckParent.transform.GetChild(0).gameObject.SetActive(false);
+                duckParent.transform.GetChild(1).gameObject.SetActive(false);
+                duckParent.transform.GetChild(2).gameObject.SetActive(false);
+                
+                duckParent.transform.GetChild(3).gameObject.transform.GetChild(1).gameObject.SetActive(true);  //splash active
+                duckParent.transform.GetChild(3).gameObject.transform.GetChild(0).gameObject.SetActive(false); //splash active
+                duckParent.transform.GetChild(3).gameObject.SetActive(true);
+                duckParent.transform.GetChild(4).gameObject.SetActive(false);
+                dive.gameObject.SetActive(false);
+                duckParent.transform.GetChild(3).gameObject.GetComponent<TinkerGraphic>().OnMouseDown();
+                StartCoroutine(SetIdleAfterSplash());
+            }
+        }
+    }
 
 	/*
 	 * TinkerGraphic[] list;

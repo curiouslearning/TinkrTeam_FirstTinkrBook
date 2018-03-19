@@ -31,8 +31,27 @@ public class SceneManager02 : SManager
         yield return new WaitForSeconds(0.33f);
         sync();
 
-    }   
-
+<<<<<<< HEAD
+    IEnumerator WaitTime2()
+    {
+        yield return new WaitForSeconds(1.0f);
+       
+        animatorTap.SetTrigger("shake");
+        animatorMe.SetTrigger("shake");
+    }
+    //IEnumerator WaitTime3(float a)
+    //{
+    //    yield return new WaitForSeconds(a);
+    //    animatorMe.Play("nmscale");
+    //    animatorTap.Play("nmscale");
+    //}
+    public override void  Start()
+{
+           base.Start();
+        animatorTap = tap.GetComponent<Animator>();
+        animatorMe = me.GetComponent<Animator>();
+        StartCoroutine(Shake());
+    }
 
     IEnumerator Shake()
     {
@@ -136,6 +155,7 @@ public class SceneManager02 : SManager
         {
             imageClicked = true;
             eggCrack.SetActive(false);
+            StartCoroutine(PlayNonLoopSound(0));
             eggCrackLastClip.SetActive(true);
             animatorMe.ResetTrigger("shake");
             animatorTap.ResetTrigger("shake");

@@ -66,6 +66,20 @@ public class SceneManager07 : SManager
             MixColor(go);
         }
     }
+    public void PlayAudioOfLeafs(GameObject go)
+    {
+        Debug.Log("------"+go.name);
+        if (go.name=="water_leaf")
+        {
+            Debug.Log("------" + go.name);
+            StartCoroutine(PlayNonLoopSound(0));
+        }
+        else if(go.name =="red_leaf" || go.name =="blue_leaf" || go.name =="yellow_leaf")
+        {
+
+            StartCoroutine(PlayNonLoopSound(1));
+        }
+    }
 
 
     public Color getDuckColor()
