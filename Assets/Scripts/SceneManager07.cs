@@ -66,6 +66,13 @@ public class SceneManager07 : SManager
             MixColor(go);
         }
     }
+
+    public override void OnMouseDown(TinkerGraphic tinkerGraphic)
+    {
+        if(getDuckColor()==Color.white)
+            base.OnMouseDown(tinkerGraphic);
+    }
+
     public void PlayAudioOfLeafs(GameObject go)
     {
         Debug.Log("------"+go.name);
@@ -115,6 +122,7 @@ public class SceneManager07 : SManager
             waterLeaf.GetComponent<Animator>().SetTrigger("start");
             fallingWater.GetComponent<Animator>().SetTrigger("start");
             ChangeColor(GameManager.white);
+            StartCoroutine(PlayNonLoopSound(2));//white
 
         }
         else if (duckcolor == GameManager.orange || duckcolor == GameManager.brown
@@ -147,6 +155,7 @@ public class SceneManager07 : SManager
 
             }
             ChangeColor(GameManager.brown);
+            StartCoroutine(PlayNonLoopSound(3));
         }
 
         else if (duckcolor == GameManager.yellow)
@@ -157,6 +166,7 @@ public class SceneManager07 : SManager
                 fallingRed.GetComponent<Animator>().SetTrigger("start");
 
                 ChangeColor(GameManager.orange);
+                StartCoroutine(PlayNonLoopSound(4));
 
             }
             else if (go.name == "blue_leaf")
@@ -165,6 +175,7 @@ public class SceneManager07 : SManager
                 fallingBlue.GetComponent<Animator>().SetTrigger("start");
 
                 ChangeColor(GameManager.green);
+                StartCoroutine(PlayNonLoopSound(5));
 
             }
             else
@@ -180,12 +191,14 @@ public class SceneManager07 : SManager
                 yellowLeaf.GetComponent<Animator>().SetTrigger("start");
                 fallingYellow.GetComponent<Animator>().SetTrigger("start");
                 ChangeColor(GameManager.orange);
+                StartCoroutine(PlayNonLoopSound(4));
             }
             else if (go.name == "blue_leaf")
             {
                 blueLeaf.GetComponent<Animator>().SetTrigger("start");
                 fallingBlue.GetComponent<Animator>().SetTrigger("start");
                 ChangeColor(GameManager.purple);
+                StartCoroutine(PlayNonLoopSound(6));
             }
             else
             {
@@ -200,12 +213,14 @@ public class SceneManager07 : SManager
                 fallingYellow.GetComponent<Animator>().SetTrigger("start");
                 yellowLeaf.GetComponent<Animator>().SetTrigger("start");
                 ChangeColor(GameManager.green);
+                StartCoroutine(PlayNonLoopSound(5));
             }
             else if (go.name == "red_leaf")
             {
                 fallingRed.GetComponent<Animator>().SetTrigger("start");
                 redLeaf.GetComponent<Animator>().SetTrigger("start");
                 ChangeColor(GameManager.purple);
+                StartCoroutine(PlayNonLoopSound(6));
             }
             else
             {
@@ -228,18 +243,21 @@ public class SceneManager07 : SManager
             fallingRed.GetComponent<Animator>().SetTrigger("start");
 
             ChangeColor(GameManager.red);
+            StartCoroutine(PlayNonLoopSound(7));
         }
         if (go.name == "blue_leaf")
         {
             fallingBlue.GetComponent<Animator>().SetTrigger("start");
             blueLeaf.GetComponent<Animator>().SetTrigger("start");
             ChangeColor(GameManager.blue);
+            StartCoroutine(PlayNonLoopSound(8));
         }
         if (go.name == "yellow_leaf")
         {
             fallingYellow.GetComponent<Animator>().SetTrigger("start");
             yellowLeaf.GetComponent<Animator>().SetTrigger("start");
             ChangeColor(GameManager.yellow);
+            StartCoroutine(PlayNonLoopSound(9));
 
         }
         if (go.name == "water_leaf")
@@ -247,7 +265,7 @@ public class SceneManager07 : SManager
             fallingWater.GetComponent<Animator>().SetTrigger("start");
             waterLeaf.GetComponent<Animator>().SetTrigger("start");
             ChangeColor(GameManager.white);
-
+            StartCoroutine(PlayNonLoopSound(2));
         }
     }
 

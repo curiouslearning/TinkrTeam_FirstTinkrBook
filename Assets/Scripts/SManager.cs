@@ -32,7 +32,7 @@ public class SManager :  MonoBehaviour {
 	// Drag event active?
 	[HideInInspector]
 	public bool dragActive = false;
-    public AudioSource[] sounds;
+    public static AudioSource[] sounds;
      public virtual void Start () {
        sounds = gameObject.GetComponents<AudioSource>();
        // Debug.Log("HELLLLLO"+sounds.Length);
