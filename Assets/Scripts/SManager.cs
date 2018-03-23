@@ -59,9 +59,7 @@ public class SManager :  MonoBehaviour {
         }
     }
     public IEnumerator PlayNonLoopSound(int index,float startdelay=0f, float enddelay=0f)
-    {
-        Debug.Log("ajsghss");
-        
+    { 
             yield return new WaitForSeconds(startdelay);
             if (!sounds[index].isPlaying)
             {

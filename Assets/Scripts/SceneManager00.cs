@@ -20,7 +20,8 @@ public class SceneManager00 : SManager {
 
     IEnumerator waitForTime()
     {
-           yield return new WaitForSeconds(GetComponents<AudioSource>()[1].clip.length);
+        //play egg crack and then go to next Scene
+        yield return new WaitForSeconds(GetComponents<AudioSource>()[1].clip.length);
         NextScene();
     }
 

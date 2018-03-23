@@ -66,7 +66,7 @@ public class DuckBugFeedSwitching : MonoBehaviour {
     {
 
         AudioClip clip1 = (AudioClip)Resources.Load("Audio/VO/child_" + bugCounter);
-        gameObject.GetComponent<AudioSource>().PlayOneShot(clip1);//GameObject.Find("SceneManager").GetComponent<SManager>().PlayNonLoopSound();
+        gameObject.GetComponent<AudioSource>().PlayOneShot(clip1);
     }
 
 

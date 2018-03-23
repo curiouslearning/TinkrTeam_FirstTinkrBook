@@ -96,7 +96,6 @@ public class SceneManager07 : SManager
     {
         if (go.name=="water_leaf")
         {
-            Debug.Log("------audio of " + go.name);
             StartCoroutine(PlayNonLoopSound(0));
         }
         else if(go.name =="red_leaf" || go.name =="blue_leaf" || go.name =="yellow_leaf")
@@ -141,8 +140,6 @@ public class SceneManager07 : SManager
             fallingWater.GetComponent<Animator>().SetTrigger("start");
             ChangeColor(GameManager.white);
             PlayAudioOfLeafs(go);
-            //StartCoroutine(PlayNonLoopSound(2,getAudioLength(0)));//white
-
         }
         else if (duckcolor == GameManager.orange || duckcolor == GameManager.brown
             || duckcolor == GameManager.purple || duckcolor == GameManager.green)
@@ -192,10 +189,8 @@ public class SceneManager07 : SManager
             {
                 blueLeaf.GetComponent<Animator>().SetTrigger("start");
                 fallingBlue.GetComponent<Animator>().SetTrigger("start");
-
                 ChangeColor(GameManager.green);
                 StartCoroutine(PlayNonLoopSound(5, getAudioLength(1)));
-
             }
             else
             {
@@ -284,7 +279,6 @@ public class SceneManager07 : SManager
             fallingWater.GetComponent<Animator>().SetTrigger("start");
             waterLeaf.GetComponent<Animator>().SetTrigger("start");
             ChangeColor(GameManager.white);
-           // StartCoroutine(PlayNonLoopSound(2, getAudioLength(0)));
         }
     }
 
