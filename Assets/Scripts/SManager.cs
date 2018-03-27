@@ -32,11 +32,15 @@ public class SManager :  MonoBehaviour {
 	// Drag event active?
 	[HideInInspector]
 	public bool dragActive = false;
-    public static AudioSource[] sounds;
-     public virtual void Start () {
-       sounds = gameObject.GetComponents<AudioSource>();
-       // Debug.Log("HELLLLLO"+sounds.Length);
-}
+
+  public static AudioSource[] sounds;
+  
+	public virtual void Start () { 
+		 //auto play on start
+		stanzaManager.RequestAutoPlay (stanzaManager.stanzas[0],stanzaManager.stanzas[0].tinkerTexts[0]);
+    sounds = gameObject.GetComponents<AudioSource>();
+	}
+
 	//override me
 	public virtual void Update() {
 		
@@ -68,6 +72,7 @@ public class SManager :  MonoBehaviour {
             }
             yield return new WaitForSeconds(enddelay);
     }
+
     public virtual void Init(GameManager _gameManager)
 	{
 		gameManager = _gameManager;
