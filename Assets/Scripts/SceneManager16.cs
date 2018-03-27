@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SceneManager16 : SManager {
 
@@ -14,13 +15,18 @@ public class SceneManager16 : SManager {
 	public TinkerGraphic worm8;
 
 	public GameObject duckParent;
+	public GameObject duckIdle;
+	public GameObject duckChew;
+	public GameObject duckMouthOpen;
 
 	private Vector2 currentPos;
 
+	private Text t;
 	Vector2 pos;
 
 	// Use this for initialization
-	void Start () {
+	public override void Start () {
+        base.Start();
 		if (worm1 != null ) {
 			worm1.SetDraggable (true);
 			currentPos = worm1.GetCoordinates ();
@@ -47,6 +53,8 @@ public class SceneManager16 : SManager {
 
 		if (tinkerGraphic.GetDraggable ()) {
 			dragActive = true;
+			t= tinkerGraphic.gameObject.GetComponentInChildren<Text>();
+			t.text= ""+DuckBugFeedSwitching.bugCounter;
 		}
 
 
@@ -59,6 +67,7 @@ public class SceneManager16 : SManager {
 		{
 			if (tinkerGraphic.GetDraggable ()) {
 				tinkerGraphic.MoveObject ();
+				t.text= ""+DuckBugFeedSwitching.bugCounter;
 			}
 
 		}
@@ -71,15 +80,16 @@ public class SceneManager16 : SManager {
 
 		if (dragActive && tinkerGraphic.GetDraggable ()) {
 			dragActive = false;
+			t.text = "";
+			duckIdle.SetActive (true);
+			duckMouthOpen.SetActive (false);
+			duckChew.SetActive (false);
+
 		}
 		if(tinkerGraphic.gameObject.name=="duck_parent")
-		duckParent.GetComponent<DuckFeedSwitching> ().FeedDuckOnMouseUp();
+		duckParent.GetComponent<DuckBugFeedSwitching> ().FeedDuckOnMouseUp();
 
 	}
-
-
-
-
 
 
 		

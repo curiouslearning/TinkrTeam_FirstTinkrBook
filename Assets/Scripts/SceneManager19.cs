@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class SceneManager19 : SManager {
 
+
 	// Use this for initialization
-	void Start () {
-		
-	}
+	public override void Start () {
+        base.Start();
+        StartCoroutine(PlayNonLoopSound(0,0.03f));
+    }
 	
+
 
 }

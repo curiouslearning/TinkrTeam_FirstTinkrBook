@@ -17,7 +17,7 @@ public class StanzaManager : MonoBehaviour {
 
     void Start()
     {
-        GetComponent<AudioSource>().GetComponent<AudioSource>().volume = 0.25f;
+        GetComponent<AudioSource>().GetComponent<AudioSource>().volume = 1.0f;
     }
     // Load up the scene defined xml timing data
     public void LoadStanzaXML()
@@ -208,7 +208,6 @@ public class StanzaManager : MonoBehaviour {
 
     public void OnMouseUp(TinkerGraphic tinkerGraphic)
     {
-        
         tinkerGraphic.MyOnMouseUp();
     }
 

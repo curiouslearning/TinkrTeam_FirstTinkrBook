@@ -30,10 +30,9 @@ public class TinkerGraphic : MonoBehaviour {
 		return draggable;
 	}
 
-    public void OnMouseDown()
-    {
+	public void OnMouseDown()
+	{
 		sceneManager.OnMouseDown(this);
-     
     }
 
 	// Paired TinkerText Mouse Down Event

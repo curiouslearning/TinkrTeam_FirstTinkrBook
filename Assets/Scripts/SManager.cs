@@ -33,15 +33,47 @@ public class SManager :  MonoBehaviour {
 	[HideInInspector]
 	public bool dragActive = false;
 
-	void Start () { 
-
+  public static AudioSource[] sounds;
+  
+	public virtual void Start () { 
+		 //auto play on start
+		stanzaManager.RequestAutoPlay (stanzaManager.stanzas[0],stanzaManager.stanzas[0].tinkerTexts[0]);
+    sounds = gameObject.GetComponents<AudioSource>();
 	}
+
 	//override me
 	public virtual void Update() {
+		
 	}
+    public float getAudioLength(int i)
+    {
+        return sounds[i].clip.length;
+    }
 
+    public IEnumerator PlayLoopingSound(int index,float startdelay=0f, float enddelay=0f)
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(startdelay);
+            if (!sounds[index].isPlaying)
+            {
+                sounds[index].Play();
+            }
+            yield return new WaitForSeconds(enddelay);
+        }
+    }
+    public IEnumerator PlayNonLoopSound(int index,float startdelay=0f, float enddelay=0f)
+    { 
+            yield return new WaitForSeconds(startdelay);
+            if (!sounds[index].isPlaying)
+            {
+                sounds[index].Play();
+            Debug.Log("abcd   "+sounds[index].name);
+            }
+            yield return new WaitForSeconds(enddelay);
+    }
 
-	public virtual void Init(GameManager _gameManager)
+    public virtual void Init(GameManager _gameManager)
 	{
 		gameManager = _gameManager;
 
@@ -76,6 +108,7 @@ public class SManager :  MonoBehaviour {
 
 		return true; // stanza manager must be null
 	}
+
 	// Here we have a superclass intercept for catching global GameObject mouse down events
 	public virtual void OnMouseDown(GameObject go)
 	{
@@ -117,6 +150,7 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerGraphic mouse down events
 	public virtual void OnMouseDown(TinkerGraphic tinkerGraphic)
 	{
+		
 		if (tinkerGraphic.pairedText1 != null)
 		{
 			stanzaManager.OnPairedMouseDown(tinkerGraphic.pairedText1);
@@ -126,7 +160,14 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerText paired mouse down events
 	public virtual void OnPairedMouseDown(TinkerText tinkerText)
 	{
-		tinkerText.pairedGraphic.GetComponent<Renderer>().material.color = tinkerText.pairedGraphic.highlightColor;
+		Renderer[] list;
+		list = tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>();
+		foreach(Renderer item in list){
+			if (item.name == "ripple") //don't color ripple in scene 13 attached to BabyD.
+				continue;
+			item.material.color = tinkerText.pairedGraphic.highlightColor;
+		 }
+       
 	}
 
 	// Here we have a superclass intercept for catching global GameObject mouse currently down events
@@ -214,7 +255,11 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global TinkerText paired mouse up events
 	public virtual void OnPairedMouseUp(TinkerText tinkerText)
 	{
-		tinkerText.pairedGraphic.GetComponent<Renderer>().material.color = tinkerText.pairedGraphic.resetColor;
+		Renderer[] list;
+		list = tinkerText.pairedGraphic.gameObject.GetComponentsInChildren<Renderer>();
+		foreach(Renderer item in list){   //color all the components
+			item.material.color = tinkerText.pairedGraphic.resetColor;
+		}
 	}
 		
 
@@ -249,6 +294,12 @@ public class SManager :  MonoBehaviour {
 		{
 			stanzaManager.ResetInputStates(mouseEvent);
 		}
+
+		TinkerGraphic[] list;
+		list = this.GetComponentsInChildren<TinkerGraphic> ();
+		foreach (TinkerGraphic tinkerGraphic in list) {
+			tinkerGraphic.MyOnMouseUp ();
+		}
 	}
 
 	public bool CheckFar(Vector2 start, Vector2 end, float requiredDistance){
@@ -264,6 +315,7 @@ public class SManager :  MonoBehaviour {
 		}
 		return false;
 	}
+    
 
 
 }

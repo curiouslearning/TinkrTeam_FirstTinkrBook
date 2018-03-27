@@ -1,28 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DuckFeedSwitching : MonoBehaviour {
+public class DuckBugFeedSwitching : MonoBehaviour {
 
 	public GameObject duckIdle;
 	public GameObject duckChew;
 	public GameObject duckMouthOpen;
 	public GameObject bugInMouth;
-	public int bugCounter;
+	public GameObject handHint;
+	public static int bugCounter;
 	public SManager sceneManager;
+
+
 	// Use this for initialization
 	void Start () {
-		bugCounter = 0;
+		bugCounter = 1;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 
 	void OnTriggerEnter(Collider collider)
 	{   
-		Debug.Log ("collision called");
+		//num.text = bugCounter.ToString ();
 		duckIdle.SetActive(false);  
 		duckChew.SetActive (false);
 		duckMouthOpen.SetActive (true); //mouth open
@@ -32,29 +32,46 @@ public class DuckFeedSwitching : MonoBehaviour {
 	void OnTriggerExit(Collider collider)
 	{
 		bugInMouth = null;
-		duckIdle.SetActive (true);
-		duckMouthOpen.SetActive (false);
+		duckIdle.SetActive (false);
+		duckMouthOpen.SetActive (true);
 		duckChew.SetActive (false);
 	}
 
+
+
 	public void FeedDuckOnMouseUp()
-		{
+	{   //num.text = "";
+		
 		if (bugInMouth) {
 			Destroy (bugInMouth);
+			handHint.SetActive (false);
+			duckIdle.SetActive (false);
 			duckMouthOpen.SetActive (false);
 			duckChew.SetActive (true);
+			StartCoroutine (SetChewFalse ());
+            PlayAudioCount();
 			bugCounter++;
-			if (bugCounter == 8) {
+			if (bugCounter == 9) {
 				sceneManager.NextScene ();
 			}
-		}
-		    // chew on mouse up on gameobject
-			StartCoroutine (SetChewFalse());
-			
-		}
+		} if(bugInMouth==null)
+		  {
+			duckIdle.SetActive (true);
+			duckMouthOpen.SetActive (false);
+			duckChew.SetActive (false);}
+		    
+	}
+
+    public void PlayAudioCount()
+    {
+
+        AudioClip clip1 = (AudioClip)Resources.Load("Audio/VO/child_" + bugCounter);
+        gameObject.GetComponent<AudioSource>().PlayOneShot(clip1);
+    }
+
 
 	 public IEnumerator SetChewFalse()
-		{yield return new WaitForSeconds (1.0f);
+		{yield return new WaitForSeconds (2.0f);
 		duckChew.SetActive (false);
 		duckIdle.SetActive (true);
 			

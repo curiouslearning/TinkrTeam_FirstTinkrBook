@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SceneManager03 : SManager {
@@ -7,8 +6,8 @@ public class SceneManager03 : SManager {
 	public TinkerGraphic topShell;
 	private Vector2 initialPos, finalPos;
 	float distance, hintDelayTime, animationLength;
-	bool dragActivated = false;
-	public GameObject animObject;
+
+	public GameObject hintObject;
 
     public GameObject help;
     private static Animator animatorTap;
@@ -16,7 +15,8 @@ public class SceneManager03 : SManager {
     public bool autoPlayingDoneNow = false;
     public bool playingWasActive = false;
 
-    void Start () {
+	public override void Start () {
+		base.Start ();
 		distance = 1.0f;   //change according to your need
 		hintDelayTime = 2.0f;
 		animationLength = 2.0f;
@@ -40,44 +40,38 @@ public class SceneManager03 : SManager {
     {
         while (true)
         {
-            Debug.Log(tapActive);
-            
-
+            animatorTap.speed = 1.0f;
             if (stanzaManager.IsAutoPlaying())
             {
+                shakeStop();
                 autoPlayingDoneNow = false;
                 playingWasActive = true;
             }
             if (!stanzaManager.IsAutoPlaying() && playingWasActive)
             {
-                autoPlayingDoneNow = true;
+                animatorTap.Play("idle", 0, 0);
+                playingWasActive = false;
+                   autoPlayingDoneNow = true;
             }
             if (autoPlayingDoneNow)
             {
-                sync();
+                shakeStart();
                 autoPlayingDoneNow = false;
             }
 
             if (!tapActive && !stanzaManager.IsAutoPlaying())
             {
-
-                if (animatorTap.GetCurrentAnimatorStateInfo(0).IsName("idle"))
-                {
-                    Debug.Log("shake start");
-                    shakeStart();
-                }
+                shakeStart();
             }
 
             yield return new WaitForSeconds(0.3f);
-
-
         }
     }
     public override void OnMouseCurrentlyDown(GameObject go)
     {
         base.OnMouseCurrentlyDown(go);
 
-        if (go.name == "help")
+        if (go.name == "helpshake")
         {
             tapActive = true;
             animatorTap.SetBool("zoom", true);
@@ -88,12 +82,11 @@ public class SceneManager03 : SManager {
     {
         base.OnMouseUp(go);
 
-        if (go.name == "help")
+        if (go.name == "helpshake")
         {
             tapActive = false;
             animatorTap.SetBool("zoom", false);
         }
-        
         StartCoroutine(WaitTime());
     }
 
@@ -104,32 +97,27 @@ public class SceneManager03 : SManager {
         base.OnMouseDown(go);
         if (go.name == "help")
         {
-            Debug.Log("tapactive stage");
-            animatorTap.SetTrigger("tapme");
-
-            animatorTap.SetBool("zoom", true);
-
-            tapActive = true;
             shakeStop();
+            animatorTap.SetTrigger("tapme");
+            animatorTap.SetBool("zoom", true);
+            tapActive = true; 
             
         }
        
-      
-
-
-
     }
     
 
     public void shakeStop()
     {
-        Debug.Log("stopShake");
+        
         animatorTap.ResetTrigger("shake");
     }
+
     public void shakeStart()
     {
-        
-        animatorTap.SetTrigger("shake");
+            animatorTap.speed = 1.0f;
+
+            animatorTap.SetTrigger("shake");
     }
     public static void sync()
     {
@@ -144,7 +132,7 @@ public class SceneManager03 : SManager {
 		{
 			yield return new WaitForSeconds(hintDelayTime);
       
-			if (!(stanzaManager.IsAutoPlaying() || dragActivated))      // if drag is activated even once, don't play hints!
+			if (!(stanzaManager.IsAutoPlaying() || dragActive))      // if drag is activate, don't play hints!
 			{
 				yield return StartCoroutine(PlayHintAnimation());
 			}
@@ -153,9 +141,9 @@ public class SceneManager03 : SManager {
 
 	public override IEnumerator PlayHintAnimation()
 	{
-			animObject.SetActive (true);
+			hintObject.SetActive (true);
 			yield return new WaitForSeconds(animationLength);
-	    	animObject.SetActive (false);
+	    	hintObject.SetActive (false);
 			yield return new WaitForSeconds(hintDelayTime);
 	}
 		
@@ -166,7 +154,6 @@ public class SceneManager03 : SManager {
 		base.OnMouseDown(tinkerGraphic);
 		if (tinkerGraphic.GetDraggable ()) {
 			dragActive = true;     //active only DURING frag active
-			dragActivated = true;  //activated for even a single drag
 		} 
 	}
 

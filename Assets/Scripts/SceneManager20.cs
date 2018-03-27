@@ -9,9 +9,10 @@ public class SceneManager20 : SManager {
 	public GameObject target;
 	private Vector2 currentPos, targetPos;
 	float distance;
-	bool dragActivated = false;
 
-	void Start () {
+
+	public override void Start() {
+		base.Start ();
 		distance = 0.1f;   //change according to your need
 		if (sheet != null) {
 			sheet.SetDraggable(true);

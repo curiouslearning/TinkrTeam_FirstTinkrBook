@@ -18,7 +18,6 @@ public class SceneManager07 : SManager
     //babyd components
     public GameObject babyD;
     public GameObject water;
-    public GameObject eyesAndFeet;
     public GameObject movingArms;
     //public GameObject[] bubbles;
     public GameObject bubble1;
@@ -26,62 +25,83 @@ public class SceneManager07 : SManager
     public GameObject bubble3;
     public GameObject bubble4;
     public GameObject bubble5;
-
     public GameObject bubble6;
-    public GameObject bubble7;
-
     private SpriteRenderer spriteRenderer;
-
-    //private SpriteRenderer[] spriteRendererBubbles;
     private SpriteRenderer spriteRendererWater;
-    private SpriteRenderer spriteRendererEyesAndFeet;
     private SpriteRenderer spriteRendererMovingArms;
-
     private SpriteRenderer bubbleSprite1;
     private SpriteRenderer bubbleSprite2;
     private SpriteRenderer bubbleSprite3;
     private SpriteRenderer bubbleSprite4;
     private SpriteRenderer bubbleSprite5;
-
     private SpriteRenderer bubbleSprite6;
-
-    private SpriteRenderer bubbleSprite7;
     // Use this for initialization
-    void Start()
-    {
-
-
-
+	public override void Start() {
+       
+		base.Start ();
+        ChangeColor(GameManager.white);
         //Fetch the SpriteRenderer from the GameObject
+
         spriteRenderer = babyD.GetComponent<SpriteRenderer>();
         spriteRenderer.color = Color.white;
         spriteRendererWater = water.GetComponent<SpriteRenderer>();
-        //spriteRendererWater.color = Color.red;
+  
         bubbleSprite1 = bubble1.GetComponent<SpriteRenderer>();
         bubbleSprite2 = bubble2.GetComponent<SpriteRenderer>();
         bubbleSprite3 = bubble3.GetComponent<SpriteRenderer>();
         bubbleSprite4 = bubble4.GetComponent<SpriteRenderer>();
         bubbleSprite5 = bubble5.GetComponent<SpriteRenderer>();
         bubbleSprite6 = bubble6.GetComponent<SpriteRenderer>();
-        bubbleSprite7 = bubble7.GetComponent<SpriteRenderer>();
 
-
-
-
-        spriteRendererEyesAndFeet = eyesAndFeet.GetComponent<SpriteRenderer>();
         spriteRendererMovingArms = movingArms.GetComponent<SpriteRenderer>();
     }
     public override void OnMouseDown(GameObject go)
     {
-        //spriteRendererBubbles[0] = bubbles[0].GetComponent<SpriteRenderer>();
-
+        base.OnMouseDown(go);
         Color duckcolor = getDuckColor();
-        //if (duckcolor!= Color.red&& duckcolor != Color.blue&& duckcolor != Color.yellow)
         if (duckcolor == Color.white)
             SingleColor(go);
         else
         {
             MixColor(go);
+        }
+        PlayAudioOfLeafs(go);
+    }
+
+    public override void OnMouseDown(TinkerGraphic tinkerGraphic)
+    {
+        if(getDuckColor()==Color.white||(tinkerGraphic.gameObject.name=="red_leaf"&&getDuckColor()==GameManager.red)|| (tinkerGraphic.gameObject.name == "yellow_leaf" && getDuckColor() == GameManager.yellow)|| (tinkerGraphic.gameObject.name == "blue_leaf" && getDuckColor() == GameManager.blue))
+            base.OnMouseDown(tinkerGraphic);
+        if (tinkerGraphic.gameObject.name == "face")
+        {
+           AudioClip clip1 = (AudioClip)Resources.Load("Audio/VO/child_" + getColorName());
+           tinkerGraphic.gameObject.GetComponent<AudioSource>().PlayOneShot(clip1);
+        }
+    }
+    public  string getColorName()
+    {
+        Color c = getDuckColor();
+        if (c == GameManager.white) return "white";
+        else if (c == GameManager.red) return "red";
+        else if (c == GameManager.blue) return "blue";
+        else if (c == GameManager.green) return "green";
+        else if (c == GameManager.orange) return "orange";
+        else if (c == GameManager.purple) return "purple";
+        else if (c == GameManager.brown) return "brown";
+        else if (c == GameManager.yellow) return "yellow";
+        return null;
+    }
+
+    public void PlayAudioOfLeafs(GameObject go)
+    {
+        if (go.name=="water_leaf")
+        {
+            StartCoroutine(PlayNonLoopSound(0));
+        }
+        else if(go.name =="red_leaf" || go.name =="blue_leaf" || go.name =="yellow_leaf")
+        {
+
+            StartCoroutine(PlayNonLoopSound(1));
         }
     }
 
@@ -100,7 +120,6 @@ public class SceneManager07 : SManager
         yield return new WaitForSeconds(0.5f);
         spriteRenderer.color = color;
         spriteRendererWater.color = color;
-        spriteRendererEyesAndFeet.color = color;
         spriteRendererMovingArms.color = color;
         bubbleSprite1.color = color;
         bubbleSprite2.color = color;
@@ -108,7 +127,7 @@ public class SceneManager07 : SManager
         bubbleSprite4.color = color;
         bubbleSprite5.color = color;
         bubbleSprite6.color = color;
-        bubbleSprite6.color = color;
+        GameManager.duckColor = color;
 
     }
     public void MixColor(GameObject go)
@@ -119,8 +138,8 @@ public class SceneManager07 : SManager
         {
             waterLeaf.GetComponent<Animator>().SetTrigger("start");
             fallingWater.GetComponent<Animator>().SetTrigger("start");
-            ChangeColor(Color.white);
-
+            ChangeColor(GameManager.white);
+            PlayAudioOfLeafs(go);
         }
         else if (duckcolor == GameManager.orange || duckcolor == GameManager.brown
             || duckcolor == GameManager.purple || duckcolor == GameManager.green)
@@ -152,9 +171,10 @@ public class SceneManager07 : SManager
 
             }
             ChangeColor(GameManager.brown);
+            StartCoroutine(PlayNonLoopSound(3,getAudioLength(1)));
         }
 
-        else if (duckcolor == Color.yellow)
+        else if (duckcolor == GameManager.yellow)
         {
             if (go.name == "red_leaf")
             {
@@ -162,15 +182,15 @@ public class SceneManager07 : SManager
                 fallingRed.GetComponent<Animator>().SetTrigger("start");
 
                 ChangeColor(GameManager.orange);
+                StartCoroutine(PlayNonLoopSound(4, getAudioLength(1)));
 
             }
             else if (go.name == "blue_leaf")
             {
                 blueLeaf.GetComponent<Animator>().SetTrigger("start");
                 fallingBlue.GetComponent<Animator>().SetTrigger("start");
-
                 ChangeColor(GameManager.green);
-
+                StartCoroutine(PlayNonLoopSound(5, getAudioLength(1)));
             }
             else
             {
@@ -178,19 +198,21 @@ public class SceneManager07 : SManager
             }
 
         }
-        else if (duckcolor == Color.red)
+        else if (duckcolor == GameManager.red)
         {
             if (go.name == "yellow_leaf")
             {
                 yellowLeaf.GetComponent<Animator>().SetTrigger("start");
                 fallingYellow.GetComponent<Animator>().SetTrigger("start");
                 ChangeColor(GameManager.orange);
+                StartCoroutine(PlayNonLoopSound(4,getAudioLength(1)));
             }
             else if (go.name == "blue_leaf")
             {
                 blueLeaf.GetComponent<Animator>().SetTrigger("start");
                 fallingBlue.GetComponent<Animator>().SetTrigger("start");
                 ChangeColor(GameManager.purple);
+                StartCoroutine(PlayNonLoopSound(6, getAudioLength(1)));
             }
             else
             {
@@ -198,19 +220,21 @@ public class SceneManager07 : SManager
             }
 
         }
-        else if (duckcolor == Color.blue)
+        else if (duckcolor == GameManager.blue)
         {
             if (go.name == "yellow_leaf")
             {
                 fallingYellow.GetComponent<Animator>().SetTrigger("start");
                 yellowLeaf.GetComponent<Animator>().SetTrigger("start");
-                ChangeColor(Color.green);
+                ChangeColor(GameManager.green);
+                StartCoroutine(PlayNonLoopSound(5, getAudioLength(1)));
             }
             else if (go.name == "red_leaf")
             {
                 fallingRed.GetComponent<Animator>().SetTrigger("start");
                 redLeaf.GetComponent<Animator>().SetTrigger("start");
                 ChangeColor(GameManager.purple);
+                StartCoroutine(PlayNonLoopSound(6, getAudioLength(1)));
             }
             else
             {
@@ -232,27 +256,29 @@ public class SceneManager07 : SManager
             redLeaf.GetComponent<Animator>().SetTrigger("start");
             fallingRed.GetComponent<Animator>().SetTrigger("start");
 
-            ChangeColor(Color.red);
+            ChangeColor(GameManager.red);
+            StartCoroutine(PlayNonLoopSound(7, getAudioLength(1)));
         }
         if (go.name == "blue_leaf")
         {
             fallingBlue.GetComponent<Animator>().SetTrigger("start");
             blueLeaf.GetComponent<Animator>().SetTrigger("start");
-            ChangeColor(Color.blue);
+            ChangeColor(GameManager.blue);
+            StartCoroutine(PlayNonLoopSound(8, getAudioLength(1)));
         }
         if (go.name == "yellow_leaf")
         {
             fallingYellow.GetComponent<Animator>().SetTrigger("start");
             yellowLeaf.GetComponent<Animator>().SetTrigger("start");
-            ChangeColor(Color.yellow);
+            ChangeColor(GameManager.yellow);
+            StartCoroutine(PlayNonLoopSound(9, getAudioLength(1)));
 
         }
         if (go.name == "water_leaf")
         {
             fallingWater.GetComponent<Animator>().SetTrigger("start");
             waterLeaf.GetComponent<Animator>().SetTrigger("start");
-            ChangeColor(Color.white);
-
+            ChangeColor(GameManager.white);
         }
     }
 

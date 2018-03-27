@@ -38,8 +38,6 @@ public class GameManager : MonoBehaviour
 		Scene19,
 		Scene20,
 		Scene21,
-		Scene22,
-		Scene23,
 		Scene24,
 		END
 	}
@@ -62,8 +60,9 @@ public class GameManager : MonoBehaviour
 	static public Color green = new Color(64.0f / 255.0f, 218.0f / 255.0f, 42.0f / 255.0f, 1.0f);
 	static public Color blue = new Color(33.0f / 255.0f, 60.0f / 255.0f, 201.0f / 255.0f, 1.0f);
 
-
-	public Scenes currentScene;
+    static public Color duckColor = white;
+    static public Color frogColor = white;
+    public Scenes currentScene;
 	public static GameManager Instance
 	{
 		get { return GameManager.instance; }
@@ -83,27 +82,21 @@ public class GameManager : MonoBehaviour
 		{
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
-			foreach (GameObject go in gos)
-			{
-				// Pass the go along to the current scene manager (if any) to let it respond
-				if (sceneManager != null)
-				{
-					sceneManager.OnMouseDown(go);
-				}
+
+				// Pass the game object along to the current scene manager (if any) to let it respond
+			if (sceneManager != null && gos.Count!=0) {
+				sceneManager.OnMouseDown (gos[0]);
 			}
 		} 
 		else if (Input.GetMouseButton(0))
 		{
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
-			foreach (GameObject go in gos)
-			{
-				// Pass the go along to the current scene manager (if any) to let it respond
-				if (sceneManager != null)
+				// Pass the game object along to the current scene manager (if any) to let it respond
+			if (sceneManager != null && gos.Count!=0)
 				{
-					sceneManager.OnMouseCurrentlyDown(go);
+					sceneManager.OnMouseCurrentlyDown(gos[0]);
 				}
-			}
 
 			if (gos.Count == 0)
 			{
@@ -116,17 +109,15 @@ public class GameManager : MonoBehaviour
 			// Check what was under mouse down (if anything)
 			List<GameObject> gos = PickGameObjects(Input.mousePosition);
 
-			foreach (GameObject go in gos)
-			{
-				// Pass the go along to the current scene manager (if any) to let it respond
-				if (sceneManager != null) {
-					sceneManager.OnMouseUp (go);
+				// Pass the game object along to the current scene manager (if any) to let it respond
+			if (sceneManager != null && gos.Count!=0) {
+					sceneManager.OnMouseUp (gos[0]);
 				}
-			}
 
 			// Anytime there is a mouse up event, update applicable lists in scene manager
 			sceneManager.ResetInputStates(MouseEvents.MouseUp);
 		} 
+
 		else if (Input.GetKeyDown(KeyCode.Escape)) // quit game on exit
 		{
 			System.Diagnostics.Process.GetCurrentProcess().Kill();
@@ -205,7 +196,7 @@ public class GameManager : MonoBehaviour
 	}
 	public void LoadNextScene()
 	{
-		if (currentScene < Scenes.END - 1)
+		if (currentScene < Scenes.END)
 		{
 			currentScene++;
 			SceneManager.LoadScene(currentScene.ToString());

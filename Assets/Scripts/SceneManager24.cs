@@ -4,10 +4,6 @@ using UnityEngine;
 
 public class SceneManager24 : SManager {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+
 
 }
