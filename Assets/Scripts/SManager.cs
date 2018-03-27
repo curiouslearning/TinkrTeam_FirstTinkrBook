@@ -41,6 +41,10 @@ public class SManager :  MonoBehaviour {
 	public virtual void Update() {
 		
 	}
+    public float getAudioLength(int i)
+    {
+        return sounds[i].clip.length;
+    }
 
     public IEnumerator PlayLoopingSound(int index,float startdelay=0f, float enddelay=0f)
     {
@@ -55,13 +59,12 @@ public class SManager :  MonoBehaviour {
         }
     }
     public IEnumerator PlayNonLoopSound(int index,float startdelay=0f, float enddelay=0f)
-    {
-        Debug.Log("ajsghss");
-        
+    { 
             yield return new WaitForSeconds(startdelay);
             if (!sounds[index].isPlaying)
             {
                 sounds[index].Play();
+            Debug.Log("abcd   "+sounds[index].name);
             }
             yield return new WaitForSeconds(enddelay);
     }

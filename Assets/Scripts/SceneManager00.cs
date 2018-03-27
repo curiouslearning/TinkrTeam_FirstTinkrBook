@@ -12,23 +12,17 @@ public class SceneManager00 : SManager {
     {
 		if (go.name == "egg_anim")
 		{
-            StartCoroutine(PlayNonLoopSound(1,0f, 0f));
-			NextScene();
+            StartCoroutine(PlayNonLoopSound(1,getAudioLength(0)));
+            StartCoroutine(waitForTime());
 		}
     }
+   
 
     IEnumerator waitForTime()
     {
-        while (true)
-        {
-            yield return new WaitForSeconds(0.5f);
-            if (!GetComponent<AudioSource>().isPlaying)
-            {
-                GetComponent<AudioSource>().Play();
-            }
-            yield return new WaitForSeconds(0.5f);
-        }
-
+        //play egg crack and then go to next Scene
+        yield return new WaitForSeconds(GetComponents<AudioSource>()[1].clip.length);
+        NextScene();
     }
 
 }
