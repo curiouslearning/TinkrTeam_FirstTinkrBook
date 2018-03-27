@@ -49,6 +49,7 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 			duckMouthOpen.SetActive (false);
 			duckChew.SetActive (true);
 			StartCoroutine (SetChewFalse ());
+            PlayAudioCount();
 			bugCounter++;
 			if (bugCounter == 9) {
 				sceneManager.NextScene ();
@@ -61,6 +62,12 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 		    
 	}
 
+    public void PlayAudioCount()
+    {
+
+        AudioClip clip1 = (AudioClip)Resources.Load("Audio/VO/child_" + bugCounter);
+        gameObject.GetComponent<AudioSource>().PlayOneShot(clip1);
+    }
 
 
 	 public IEnumerator SetChewFalse()

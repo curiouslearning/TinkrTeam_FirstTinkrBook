@@ -33,35 +33,42 @@ public class SManager :  MonoBehaviour {
 	[HideInInspector]
 	public bool dragActive = false;
 
+  public static AudioSource[] sounds;
+  
 	public virtual void Start () { 
 		 //auto play on start
 		stanzaManager.RequestAutoPlay (stanzaManager.stanzas[0],stanzaManager.stanzas[0].tinkerTexts[0]);
+    sounds = gameObject.GetComponents<AudioSource>();
 	}
 
 	//override me
 	public virtual void Update() {
 		
 	}
+    public float getAudioLength(int i)
+    {
+        return sounds[i].clip.length;
+    }
 
-    public IEnumerator Playloopingsound(float startdelay, float enddelay)
+    public IEnumerator PlayLoopingSound(int index,float startdelay=0f, float enddelay=0f)
     {
         while (true)
         {
             yield return new WaitForSeconds(startdelay);
-            if (!GetComponent<AudioSource>().isPlaying)
+            if (!sounds[index].isPlaying)
             {
-                GetComponent<AudioSource>().Play();
+                sounds[index].Play();
             }
             yield return new WaitForSeconds(enddelay);
         }
     }
-    public IEnumerator Playnonloopsound(float startdelay, float enddelay)
-    {
-        
+    public IEnumerator PlayNonLoopSound(int index,float startdelay=0f, float enddelay=0f)
+    { 
             yield return new WaitForSeconds(startdelay);
-            if (!GetComponent<AudioSource>().isPlaying)
+            if (!sounds[index].isPlaying)
             {
-                GetComponent<AudioSource>().Play();
+                sounds[index].Play();
+            Debug.Log("abcd   "+sounds[index].name);
             }
             yield return new WaitForSeconds(enddelay);
     }

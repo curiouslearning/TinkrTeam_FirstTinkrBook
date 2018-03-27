@@ -60,8 +60,9 @@ public class GameManager : MonoBehaviour
 	static public Color green = new Color(64.0f / 255.0f, 218.0f / 255.0f, 42.0f / 255.0f, 1.0f);
 	static public Color blue = new Color(33.0f / 255.0f, 60.0f / 255.0f, 201.0f / 255.0f, 1.0f);
 
-
-	public Scenes currentScene;
+    static public Color duckColor = white;
+    static public Color frogColor = white;
+    public Scenes currentScene;
 	public static GameManager Instance
 	{
 		get { return GameManager.instance; }

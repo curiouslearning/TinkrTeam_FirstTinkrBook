@@ -142,11 +142,13 @@ public class SceneManager10 : SManager
         if (go.name == "redFrog")
         {
             Destroy(go);
+            StartCoroutine(PlayNonLoopSound(0));
             frogAnim.SetActive(true);
             StartCoroutine(StartSceneTransitionListener());
         }
         else if (go.name == "yellowFrog" || go.name == "greenFrog")
         {
+            StartCoroutine(PlayNonLoopSound(1));
             Destroy(go);
         }
 

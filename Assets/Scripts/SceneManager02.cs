@@ -30,9 +30,7 @@ public class SceneManager02 : SManager
     {
         yield return new WaitForSeconds(0.33f);
         sync();
-
-    }   
-
+    }
 
     IEnumerator Shake()
     {
@@ -136,6 +134,7 @@ public class SceneManager02 : SManager
         {
             imageClicked = true;
             eggCrack.SetActive(false);
+            StartCoroutine(PlayNonLoopSound(0));
             eggCrackLastClip.SetActive(true);
             animatorMe.ResetTrigger("shake");
             animatorTap.ResetTrigger("shake");

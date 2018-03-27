@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DuckAnimSwitching : MonoBehaviour {
-
+public class DuckAnimSwitching:MonoBehaviour {
+    public GameObject sceneManager;
 	public static float pondStartX=-1.1f;
 	public static float pondStartY= -0.7f;
 	public static float pondEndX=1.3f;
@@ -16,8 +16,9 @@ public class DuckAnimSwitching : MonoBehaviour {
 	public bool insideWater = false;
 	bool running =false;
 	// Use this for initialization
-	void Start () {
-		//idle on land
+	public void Start () {
+       // base.Start();
+        //idle on land
 		this.transform.GetChild (0).gameObject.SetActive (true); 
 		this.transform.GetChild (1).gameObject.SetActive (false); 
 		this.transform.GetChild (2).gameObject.SetActive (false);   
@@ -85,8 +86,10 @@ public class DuckAnimSwitching : MonoBehaviour {
 	public void DuckOnMouseUp(){
 		pos = this.transform.position;
 		if ((pos.x >= diveStartX && pos.x <= diveEndX) && (pos.y >= pondStartY && pos.y <= pondEndY)) {
-			
-			//dive once
+
+            //dive once
+            Debug.Log("dive");
+            StartCoroutine(sceneManager.GetComponent<SManager>().PlayNonLoopSound(0,1f));
 			this.transform.GetChild (0).gameObject.SetActive (false); 
 			this.transform.GetChild (1).gameObject.SetActive (false);
 			this.transform.GetChild (2).gameObject.SetActive (false);
