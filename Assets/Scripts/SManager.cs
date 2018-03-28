@@ -34,6 +34,8 @@ public class SManager :  MonoBehaviour {
 	public bool dragActive = false;
 
 	public virtual void Start () { 
+		 //auto play on start
+		stanzaManager.RequestAutoPlay (stanzaManager.stanzas[0],stanzaManager.stanzas[0].tinkerTexts[0]);
 	}
 
 	//override me
@@ -63,6 +65,7 @@ public class SManager :  MonoBehaviour {
             }
             yield return new WaitForSeconds(enddelay);
     }
+
     public virtual void Init(GameManager _gameManager)
 	{
 		gameManager = _gameManager;
