@@ -33,12 +33,27 @@ public class SManager :  MonoBehaviour {
 	[HideInInspector]
 	public bool dragActive = false;
 
-  public static AudioSource[] sounds;
+    private int countDownEvent = 0;
+    public static AudioSource[] sounds;
   
-	public virtual void Start () { 
-		 //auto play on start
-		stanzaManager.RequestAutoPlay (stanzaManager.stanzas[0],stanzaManager.stanzas[0].tinkerTexts[0]);
-    sounds = gameObject.GetComponents<AudioSource>();
+	public virtual void Start () {
+        if (Lbutton != null&& Rbutton != null)
+        {
+            Color c = Lbutton.gameObject.GetComponent<Image>().color;
+            
+            c.a = 0.8f;
+            Lbutton.gameObject.GetComponent<Image>().color = c;
+            c = Rbutton.gameObject.GetComponent<Image>().color;
+            c.a = 0.8f;
+            Rbutton.gameObject.GetComponent<Image>().color = c;
+
+            Lbutton.GetComponent<Button>().interactable = false;
+            Rbutton.GetComponent<Button>().interactable = false;
+        }
+        //auto play on start
+        if (stanzaManager!=null)
+        stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
+        sounds = gameObject.GetComponents<AudioSource>();
 	}
 
 	//override me
@@ -68,7 +83,7 @@ public class SManager :  MonoBehaviour {
             if (!sounds[index].isPlaying)
             {
                 sounds[index].Play();
-            Debug.Log("abcd   "+sounds[index].name);
+            //Debug.Log("abcd   "+sounds[index].name);
             }
             yield return new WaitForSeconds(enddelay);
     }
@@ -112,8 +127,11 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global GameObject mouse down events
 	public virtual void OnMouseDown(GameObject go)
 	{
-		// Lock out other input during auto play?
-		if (IsInputAllowed())
+        countDownEvent++;
+        if (countDownEvent == 2)
+            EnableButtons();
+        // Lock out other input during auto play?
+        if (IsInputAllowed())
 		{
 			// TinkerText object 
 			if (go.GetComponent<TinkerText>() != null)
@@ -315,7 +333,22 @@ public class SManager :  MonoBehaviour {
 		}
 		return false;
 	}
-    
+    private void EnableButtons()
+    {
+        //Color c = Lbutton.gameObject.GetComponent<Image>().color;
+        //c.a = 1.0f;
+        //Lbutton.gameObject.GetComponent<Image>().color = c;
+
+        //c = Rbutton.gameObject.GetComponent<Image>().color;
+        //c.a = 1.0f;
+        //Rbutton.gameObject.GetComponent<Image>().color = c;
+        Lbutton.gameObject.GetComponent<Image>().color = GameManager.navblue;
+
+        Rbutton.gameObject.GetComponent<Image>().color = GameManager.navblue;
+
+        Lbutton.GetComponent<Button>().interactable = true;
+        Rbutton.GetComponent<Button>().interactable = true;
+    }
 
 
 }

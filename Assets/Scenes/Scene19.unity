@@ -1725,8 +1725,8 @@ MonoBehaviour:
   gameManager: {fileID: 0}
   stanzaManager: {fileID: 1026469799}
   stanzas: []
-  Lbutton: {fileID: 0}
-  Rbutton: {fileID: 0}
+  Lbutton: {fileID: 1751614411}
+  Rbutton: {fileID: 427614378}
   inputAllowedDuringAutoplay: 1
   inputInterruptsAutoplay: 1
   disableAutoplay: 0
