@@ -59,7 +59,7 @@ public class GameManager : MonoBehaviour
 	static public Color yellow = new Color(237.0f / 255.0f, 245.0f / 255.0f, 84.0f / 255.0f, 1.0f);
 	static public Color green = new Color(64.0f / 255.0f, 218.0f / 255.0f, 42.0f / 255.0f, 1.0f);
 	static public Color blue = new Color(33.0f / 255.0f, 60.0f / 255.0f, 201.0f / 255.0f, 1.0f);
-
+    static public Color navblue = new Color(33.0f / 255.0f, 60.0f / 255.0f, 221.0f / 255.0f, 0.9f);
     static public Color duckColor = white;
     static public Color frogColor = white;
     public Scenes currentScene;
