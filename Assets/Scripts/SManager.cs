@@ -14,8 +14,8 @@ public class SManager :  MonoBehaviour {
 	public List<Stanza> stanzas;
 	public GameObject Lbutton;
 	public GameObject Rbutton;
-    public GameObject nimage;
-    public GameObject nimage2;
+    public GameObject readAloudOff;
+    public GameObject readAloudOn;
     // Whether to allow input on text/graphics during autoplay
     public bool inputAllowedDuringAutoplay = true;
 
@@ -36,11 +36,21 @@ public class SManager :  MonoBehaviour {
 
     private int countDownEvent = 0;
     public static AudioSource[] sounds;
-  
+    //override me
+    public virtual void Update() {
+
+        if (!stanzaManager.IsAutoPlaying())
+        {
+            readAloudOff.SetActive(true);
+
+            readAloudOn.SetActive(false);
+
+        }
+    }
 	public virtual void Start () {
 
-        nimage = GameObject.Find("image");
-        nimage2 = GameObject.Find("image2");
+        readAloudOff = GameObject.Find("readAloudOff");
+        readAloudOn = GameObject.Find("readAloudOn");
 
         if (Lbutton != null&& Rbutton != null)
         {
@@ -60,16 +70,21 @@ public class SManager :  MonoBehaviour {
         //auto play on start
         if (stanzaManager != null)
             stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
+
         sounds = gameObject.GetComponents<AudioSource>();
 	}
     
     public void AutoNarrate() {
-        if (stanzaManager.IsAutoPlaying())
+
+        
+        
+         if (stanzaManager.IsAutoPlaying())
         { 
             //cross
-            nimage.SetActive(true);
-            nimage2.SetActive(false);
-            //autoNarrate.gameObject.GetComponent<Image>().sprite = nimage.GetComponent<Sprite>();
+            readAloudOff.SetActive(true);
+
+            readAloudOn.SetActive(false);
+            //autoNarrate.gameObject.GetComponent<Image>().sprite = readAloudOff.GetComponent<Sprite>();
             //autoNarrate.gameObject.GetComponent<Image>().color = Color.blue;
             stanzaManager.RequestCancelAutoPlay();
         }
@@ -78,12 +93,13 @@ public class SManager :  MonoBehaviour {
             //highlight the button
 
             //autoNarrate.gameObject.GetComponent<Image>().color = Color.red;
-            nimage2.SetActive(true);
+            readAloudOn.SetActive(true);
 
-            nimage.SetActive(false);
+            readAloudOff.SetActive(false);
 
             //play stanza
             stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
+            
         }
 
         
@@ -92,10 +108,8 @@ public class SManager :  MonoBehaviour {
 
 
    
-	//override me
-	public virtual void Update() {
-		
-	}
+	
+
     public float getAudioLength(int i)
     {
         return sounds[i].clip.length;
@@ -163,11 +177,9 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global GameObject mouse down events
 	public virtual void OnMouseDown(GameObject go)
 	{
-        if (go.name == "image"|| go.name == "image2")
+        if (go.name == "readAloudOff" || go.name == "readAloudOn")
         {
             AutoNarrate();
-
-
         }
         else
         {

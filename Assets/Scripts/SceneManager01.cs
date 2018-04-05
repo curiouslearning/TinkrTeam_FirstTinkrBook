@@ -11,6 +11,7 @@ public class SceneManager01 : SManager {
 		noOfTaps = 0;
 	}
 	public override void Update() {
+        base.Update();
 		if (eggCrack.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("removed"))
 		{
 			eggCrackLastClip.SetActive(true);

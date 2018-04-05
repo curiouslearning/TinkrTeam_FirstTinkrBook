@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 212745962419814036}
   - component: {fileID: 65834958015340654}
   m_Layer: 0
-  m_Name: image2
+  m_Name: readAloudOn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ GameObject:
   - component: {fileID: 212557239937628522}
   - component: {fileID: 65466265623224630}
   m_Layer: 0
-  m_Name: image
+  m_Name: readAloudOff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

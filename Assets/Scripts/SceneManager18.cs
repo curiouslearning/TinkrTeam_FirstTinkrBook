@@ -13,7 +13,9 @@ public class SceneManager18 : SManager
     public GameObject burp;
     
     public override void Update()
+        
     {
+        base.Update();
         if (chewing1.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("removed"))
         {
             chewinggo.SetActive(false);
