@@ -14,9 +14,10 @@ public class SManager :  MonoBehaviour {
 	public List<Stanza> stanzas;
 	public GameObject Lbutton;
 	public GameObject Rbutton;
-
-	// Whether to allow input on text/graphics during autoplay
-	public bool inputAllowedDuringAutoplay = true;
+    public GameObject nimage;
+    public GameObject nimage2;
+    // Whether to allow input on text/graphics during autoplay
+    public bool inputAllowedDuringAutoplay = true;
 
 	// Whether to interrupt auto play if a single word is hit
 	public bool inputInterruptsAutoplay = true;
@@ -37,25 +38,60 @@ public class SManager :  MonoBehaviour {
     public static AudioSource[] sounds;
   
 	public virtual void Start () {
+
+        nimage = GameObject.Find("image");
+        nimage2 = GameObject.Find("image2");
+
         if (Lbutton != null&& Rbutton != null)
         {
-            Color c = Lbutton.gameObject.GetComponent<Image>().color;
-            
-            c.a = 0.8f;
-            Lbutton.gameObject.GetComponent<Image>().color = c;
-            c = Rbutton.gameObject.GetComponent<Image>().color;
+            //Color c = Lbutton.gameObject.GetComponent<Image>().color;
+
+            //c.a = 0.8f;
+            //Lbutton.gameObject.GetComponent<Image>().color = c;
+            Lbutton.gameObject.GetComponent<Image>().color = GameManager.navblue;
+
+            Color c = Rbutton.gameObject.GetComponent<Image>().color;
             c.a = 0.8f;
             Rbutton.gameObject.GetComponent<Image>().color = c;
 
-            Lbutton.GetComponent<Button>().interactable = false;
+            //Lbutton.GetComponent<Button>().interactable = false;
             Rbutton.GetComponent<Button>().interactable = false;
         }
         //auto play on start
-        if (stanzaManager!=null)
-        stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
+        if (stanzaManager != null)
+            stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
         sounds = gameObject.GetComponents<AudioSource>();
 	}
+    
+    public void AutoNarrate() {
+        if (stanzaManager.IsAutoPlaying())
+        { 
+            //cross
+            nimage.SetActive(true);
+            nimage2.SetActive(false);
+            //autoNarrate.gameObject.GetComponent<Image>().sprite = nimage.GetComponent<Sprite>();
+            //autoNarrate.gameObject.GetComponent<Image>().color = Color.blue;
+            stanzaManager.RequestCancelAutoPlay();
+        }
+        else if (stanzaManager != null)
+        {
+            //highlight the button
 
+            //autoNarrate.gameObject.GetComponent<Image>().color = Color.red;
+            nimage2.SetActive(true);
+
+            nimage.SetActive(false);
+
+            //play stanza
+            stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
+        }
+
+        
+    }
+
+
+
+   
 	//override me
 	public virtual void Update() {
 		
@@ -127,42 +163,51 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global GameObject mouse down events
 	public virtual void OnMouseDown(GameObject go)
 	{
-        countDownEvent++;
-        if (countDownEvent == 2)
-            EnableButtons();
-        // Lock out other input during auto play?
-        if (IsInputAllowed())
-		{
-			// TinkerText object 
-			if (go.GetComponent<TinkerText>() != null)
-			{
-				TinkerText tinkerText = go.GetComponent<TinkerText>();
+        if (go.name == "image"|| go.name == "image2")
+        {
+            AutoNarrate();
 
-				if (tinkerText != null)
-				{
-					if (stanzaManager != null)
-					{
-						// Is an autoplay in progress? If so, see if we should interrupt
-						if (stanzaManager.IsAutoPlaying() && inputInterruptsAutoplay)
-						{
-							stanzaManager.RequestCancelAutoPlay();
-						}
 
-						stanzaManager.OnMouseDown(tinkerText);
-					}
-				}
-			}
-			// TinkerGraphic object
-			else if (go.GetComponent<TinkerGraphic>() != null)
-			{
-				TinkerGraphic tinkerGraphic = go.GetComponent<TinkerGraphic>();
+        }
+        else
+        {
+            countDownEvent++;
+            if (countDownEvent == 2)
+                EnableButtons();
+            // Lock out other input during auto play?
+            if (IsInputAllowed())
+            {
+                // TinkerText object 
+                if (go.GetComponent<TinkerText>() != null)
+                {
+                    TinkerText tinkerText = go.GetComponent<TinkerText>();
 
-				if (tinkerGraphic != null)
-				{
-					tinkerGraphic.OnMouseDown();
-				}
-			}
-		}
+                    if (tinkerText != null)
+                    {
+                        if (stanzaManager != null)
+                        {
+                            // Is an autoplay in progress? If so, see if we should interrupt
+                            if (stanzaManager.IsAutoPlaying() && inputInterruptsAutoplay)
+                            {
+                                stanzaManager.RequestCancelAutoPlay();
+                            }
+
+                            stanzaManager.OnMouseDown(tinkerText);
+                        }
+                    }
+                }
+                // TinkerGraphic object
+                else if (go.GetComponent<TinkerGraphic>() != null)
+                {
+                    TinkerGraphic tinkerGraphic = go.GetComponent<TinkerGraphic>();
+
+                    if (tinkerGraphic != null)
+                    {
+                        tinkerGraphic.OnMouseDown();
+                    }
+                }
+            }
+        }
 	}
 
 	// Here we have a superclass intercept for catching global TinkerGraphic mouse down events
@@ -346,7 +391,7 @@ public class SManager :  MonoBehaviour {
 
         Rbutton.gameObject.GetComponent<Image>().color = GameManager.navblue;
 
-        Lbutton.GetComponent<Button>().interactable = true;
+        //Lbutton.GetComponent<Button>().interactable = true;
         Rbutton.GetComponent<Button>().interactable = true;
     }
 

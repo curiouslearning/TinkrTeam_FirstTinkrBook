@@ -30,6 +30,7 @@ public class SceneManager01 : SManager {
 
 	public override void OnMouseDown(GameObject go)
 	{
+        Debug.Log("called");
         base.OnMouseDown(go);
 		if (go.GetComponent<TinkerText>() != null)
 		{
