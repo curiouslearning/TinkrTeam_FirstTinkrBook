@@ -35,6 +35,7 @@
 <phn msStart="4955" msEnd="5125" power="0">x</phn>
 <phn msStart="5125" msEnd="5315" power="0">x</phn>
 <phn msStart="5315" msEnd="6085" power="0">x</phn>
+
 <word msStart="6085" msEnd="6445">Tap</word>
 <phn msStart="6085" msEnd="6235" power="72">t</phn>
 <phn msStart="6235" msEnd="6355" power="79">AE</phn>
@@ -51,6 +52,7 @@
 <phn msStart="7795" msEnd="7825" power="61">m</phn>
 <phn msStart="7825" msEnd="8175" power="140">IY</phn>
 <phn msStart="8175" msEnd="9185" power="0">x</phn>
+
 <word msStart="9185" msEnd="9775">someone</word>
 <phn msStart="9185" msEnd="9405" power="51">s</phn>
 <phn msStart="9405" msEnd="9435" power="65">AH</phn>
@@ -58,6 +60,7 @@
 <phn msStart="9465" msEnd="9495" power="65">w</phn>
 <phn msStart="9495" msEnd="9725" power="106">AH</phn>
 <phn msStart="9725" msEnd="9775" power="51">n</phn>
+
 <word msStart="9775" msEnd="9985">is</word>
 <phn msStart="9775" msEnd="9855" power="68">IH</phn>
 <phn msStart="9855" msEnd="9985" power="41">z</phn>

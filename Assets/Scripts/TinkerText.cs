@@ -66,7 +66,7 @@ public class TinkerText : MonoBehaviour {
    
     public void clipResume()
     {
-		wordanimator.Play("textzoomin");
+        wordanimator.Play("textzoomin");
 		wordanimator.ResetTrigger("tapme");    
 	}
     public void clipPlay()
@@ -116,7 +116,8 @@ public class TinkerText : MonoBehaviour {
 	// Mouse Down Event
 	public void MyMouseDown(bool suppressAnim = false)
 	{
-		if (!stanza.stanzaManager.sceneManager.disableSounds)
+
+        if (!stanza.stanzaManager.sceneManager.disableSounds)
 		{
 			PlaySound();
 		}
@@ -189,7 +190,8 @@ public class TinkerText : MonoBehaviour {
 			// Then send the event along!
 			pairedGraphic.OnPairedMouseUp(this);
 		}
-		clipResume();
+
+        clipResume();
 		iconanimResume();
 		graphicResume();
 	}
@@ -216,8 +218,9 @@ public class TinkerText : MonoBehaviour {
 	// Resets the state
 	public void Reset()
 	{
-		// If there is an anim attached, stop it from playing and hide it
-		clipResume();
+
+        // If there is an anim attached, stop it from playing and hide it
+        clipResume();
 		iconanimResume();
 
 		if (pairedGraphic != null)

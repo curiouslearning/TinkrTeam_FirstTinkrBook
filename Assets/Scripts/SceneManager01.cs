@@ -5,6 +5,7 @@ public class SceneManager01 : SManager {
 	public GameObject eggCrackLastClip;
 	public GameObject eggCrack;
 	private int noOfTaps;
+    TinkerGraphic checkTap;
 
 	public override void Start() {
 		base.Start ();
@@ -25,14 +26,14 @@ public class SceneManager01 : SManager {
 	IEnumerator waitForTime()
 	{
 		yield return new WaitForSeconds(2.33f);
-		NextScene();
-	}
+        NextScene();
+    }
 
 
 	public override void OnMouseDown(GameObject go)
 	{
-        Debug.Log("called");
         base.OnMouseDown(go);
+        
 		if (go.GetComponent<TinkerText>() != null)
 		{
 			stanzaManager.OnMouseDown (go.GetComponent<TinkerText> ());
@@ -52,8 +53,11 @@ public class SceneManager01 : SManager {
 
 	public override void OnMouseDown(TinkerGraphic tinkerGraphic)
 	{
+       
 		if (tinkerGraphic.name == "eggcrack")
 		{
+            Debug.Log("down");
+            checkTap = tinkerGraphic;
             StartCoroutine(PlayNonLoopSound(0));
             if (noOfTaps < 2)
 			{
@@ -74,28 +78,27 @@ public class SceneManager01 : SManager {
 
 	}
 
-	public override void OnMouseUp(GameObject go)
-	{
-		base.OnMouseUp (go);
-	}
+ 
 
-
-	public override void OnMouseUp(TinkerGraphic tinkerGraphic)
+    public override void OnMouseUp(TinkerGraphic tinkerGraphic)
 	{
-		if (tinkerGraphic.name == "eggcrack")
+     
+        if (tinkerGraphic.name == "eggcrack" && checkTap!= null)
 		{
+            Debug.Log("up");
+            checkTap = null;
 			if (noOfTaps < 3)
 			{
 				if (noOfTaps == 0)
 				{
-					tinkerGraphic.pairedText2.clipResume();
+                    tinkerGraphic.pairedText2.clipResume();
 				}
 				else
 				    tinkerGraphic.pairedText1.clipResume();
 			}
 			else
-			{
-				tinkerGraphic.pairedText1.clipResume();
+            {
+                tinkerGraphic.pairedText1.clipResume();
 				noOfTaps = 0;
 			}
 		}

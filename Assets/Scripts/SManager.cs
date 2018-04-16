@@ -38,8 +38,8 @@ public class SManager :  MonoBehaviour {
     public static AudioSource[] sounds;
     //override me
     public virtual void Update() {
-
-        if (!stanzaManager.IsAutoPlaying())
+        
+        if (stanzaManager!=null&&!stanzaManager.IsAutoPlaying())
         {
             readAloudOff.SetActive(true);
 
@@ -75,28 +75,18 @@ public class SManager :  MonoBehaviour {
 	}
     
     public void AutoNarrate() {
-
-        
-        
          if (stanzaManager.IsAutoPlaying())
         { 
             //cross
             readAloudOff.SetActive(true);
-
             readAloudOn.SetActive(false);
-            //autoNarrate.gameObject.GetComponent<Image>().sprite = readAloudOff.GetComponent<Sprite>();
-            //autoNarrate.gameObject.GetComponent<Image>().color = Color.blue;
             stanzaManager.RequestCancelAutoPlay();
         }
         else if (stanzaManager != null)
         {
-            //highlight the button
-
-            //autoNarrate.gameObject.GetComponent<Image>().color = Color.red;
+            
             readAloudOn.SetActive(true);
-
             readAloudOff.SetActive(false);
-
             //play stanza
             stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
             
@@ -105,10 +95,6 @@ public class SManager :  MonoBehaviour {
         
     }
 
-
-
-   
-	
 
     public float getAudioLength(int i)
     {
@@ -215,7 +201,7 @@ public class SManager :  MonoBehaviour {
 
                     if (tinkerGraphic != null)
                     {
-                        tinkerGraphic.OnMouseDown();
+                        tinkerGraphic.MyOnMouseDown();
                     }
                 }
             }

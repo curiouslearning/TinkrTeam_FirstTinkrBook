@@ -54,7 +54,7 @@ public class SceneManager13 : SManager {
                 duckParent.transform.GetChild(3).gameObject.SetActive(true);
 				duckParent.transform.GetChild (4).gameObject.SetActive (false);  
 				dive.gameObject.SetActive (false);  
-				duckParent.transform.GetChild (3).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+				duckParent.transform.GetChild (3).gameObject.GetComponent<TinkerGraphic> ().MyOnMouseDown ();
                 StartCoroutine(PlayNonLoopSound(1));
                 //StartCoroutine (SetIdleAfterSplash());
 			} else {
@@ -100,7 +100,7 @@ public class SceneManager13 : SManager {
                     duckParent.transform.GetChild(3).gameObject.SetActive(true);
                     duckParent.transform.GetChild(4).gameObject.SetActive(false);
                     dive.gameObject.SetActive(false);
-                    duckParent.transform.GetChild(3).gameObject.GetComponent<TinkerGraphic>().OnMouseDown();
+                    duckParent.transform.GetChild(3).gameObject.GetComponent<TinkerGraphic>().MyOnMouseDown();
                     StartCoroutine(SetIdleAfterSplash());
                 }
             }

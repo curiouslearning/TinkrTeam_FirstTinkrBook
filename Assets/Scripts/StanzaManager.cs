@@ -201,7 +201,7 @@ public class StanzaManager : MonoBehaviour {
     {
         if (tinkerGraphic != null)
         {
-            tinkerGraphic.OnMouseDown();
+            tinkerGraphic.MyOnMouseDown();
         }
 
     }

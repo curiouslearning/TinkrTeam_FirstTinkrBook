@@ -417,10 +417,8 @@ MonoBehaviour:
   - {fileID: 1121447532}
   Lbutton: {fileID: 1751614411}
   Rbutton: {fileID: 427614378}
-  autoNarrate: {fileID: 0}
-  nimage: {fileID: 108559381}
-  nimage2: {fileID: 1126470955}
-  autoPlayingDoneNow: 0
+  readAloudOff: {fileID: 108559381}
+  readAloudOn: {fileID: 1126470955}
   inputAllowedDuringAutoplay: 1
   inputInterruptsAutoplay: 1
   disableAutoplay: 0
@@ -1623,7 +1621,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.4, y: 3}
+  m_Size: {x: 2.39, y: 3}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0

@@ -30,7 +30,7 @@ public class TinkerGraphic : MonoBehaviour {
 		return draggable;
 	}
 
-	public void OnMouseDown()
+	public void MyOnMouseDown()
 	{
 		sceneManager.OnMouseDown(this);
     }

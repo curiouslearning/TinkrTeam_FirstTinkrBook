@@ -37,7 +37,7 @@ public class DuckAnimSwitching:MonoBehaviour {
 			this.transform.GetChild (2).gameObject.SetActive (false);   //idle pond
 			this.transform.GetChild (3).gameObject.SetActive (false);   //splash
 			this.transform.GetChild (4).gameObject.SetActive (true);    //swim
-			this.transform.GetChild (4).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+			this.transform.GetChild (4).gameObject.GetComponent<TinkerGraphic> ().MyOnMouseDown ();
 			dive.gameObject.SetActive (false);  //dive
 			insideWater = true;
 		} else {
@@ -47,7 +47,7 @@ public class DuckAnimSwitching:MonoBehaviour {
 			this.transform.GetChild (2).gameObject.SetActive (false);
 			this.transform.GetChild (3).gameObject.SetActive (false);
 			this.transform.GetChild (4).gameObject.SetActive (false);
-			this.transform.GetChild (1).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+			this.transform.GetChild (1).gameObject.GetComponent<TinkerGraphic> ().MyOnMouseDown ();
 			dive.gameObject.SetActive (false); 
 			running = true;
 		}
@@ -66,7 +66,7 @@ public class DuckAnimSwitching:MonoBehaviour {
 			insideWater = true;
 			if (running) {
 				running = false;
-				this.transform.GetChild (4).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+				this.transform.GetChild (4).gameObject.GetComponent<TinkerGraphic> ().MyOnMouseDown ();
 			}
 		} else {
 			//run active, other inactive
@@ -78,7 +78,7 @@ public class DuckAnimSwitching:MonoBehaviour {
 			dive.gameObject.SetActive (false); 
 			if (!running) {
 				running = true;
-				this.transform.GetChild (1).gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+				this.transform.GetChild (1).gameObject.GetComponent<TinkerGraphic> ().MyOnMouseDown ();
 			}
 		}
 	}
@@ -97,7 +97,7 @@ public class DuckAnimSwitching:MonoBehaviour {
 			this.transform.GetChild (4).gameObject.SetActive (false);   
 			dive.gameObject.SetActive (true); 
 			sideLeaf.SetActive (false);
-			dive.gameObject.GetComponent<TinkerGraphic> ().OnMouseDown ();
+			dive.gameObject.GetComponent<TinkerGraphic> ().MyOnMouseDown ();
 			StartCoroutine (SetDiveFalse());
 		} else if ((pos.x >= pondStartX && pos.x <= pondEndX) && (pos.y >= pondStartY && pos.y <= pondEndY)) {
 
