@@ -14,8 +14,6 @@ public class SManager :  MonoBehaviour {
 	public List<Stanza> stanzas;
 	public GameObject Lbutton;
 	public GameObject Rbutton;
-    public GameObject readAloudOff;
-    public GameObject readAloudOn;
     // Whether to allow input on text/graphics during autoplay
     public bool inputAllowedDuringAutoplay = true;
 
@@ -39,19 +37,11 @@ public class SManager :  MonoBehaviour {
     //override me
     public virtual void Update() {
         
-        if (stanzaManager!=null&&!stanzaManager.IsAutoPlaying())
-        {
-            readAloudOff.SetActive(true);
-
-            readAloudOn.SetActive(false);
-
-        }
+       
     }
 	public virtual void Start () {
 
-        readAloudOff = GameObject.Find("readAloudOff");
-        readAloudOn = GameObject.Find("readAloudOn");
-
+       
         if (Lbutton != null&& Rbutton != null)
         {
             //Color c = Lbutton.gameObject.GetComponent<Image>().color;
@@ -74,26 +64,6 @@ public class SManager :  MonoBehaviour {
         sounds = gameObject.GetComponents<AudioSource>();
 	}
     
-    public void AutoNarrate() {
-         if (stanzaManager.IsAutoPlaying())
-        { 
-            //cross
-            readAloudOff.SetActive(true);
-            readAloudOn.SetActive(false);
-            stanzaManager.RequestCancelAutoPlay();
-        }
-        else if (stanzaManager != null)
-        {
-            
-            readAloudOn.SetActive(true);
-            readAloudOff.SetActive(false);
-            //play stanza
-            stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
-            
-        }
-
-        
-    }
 
 
     public float getAudioLength(int i)
@@ -163,12 +133,6 @@ public class SManager :  MonoBehaviour {
 	// Here we have a superclass intercept for catching global GameObject mouse down events
 	public virtual void OnMouseDown(GameObject go)
 	{
-        if (go.name == "readAloudOff" || go.name == "readAloudOn")
-        {
-            AutoNarrate();
-        }
-        else
-        {
             countDownEvent++;
             if (countDownEvent == 2)
                 EnableButtons();
@@ -205,7 +169,7 @@ public class SManager :  MonoBehaviour {
                     }
                 }
             }
-        }
+        
 	}
 
 	// Here we have a superclass intercept for catching global TinkerGraphic mouse down events
