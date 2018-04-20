@@ -34,16 +34,98 @@ public class SManager :  MonoBehaviour {
 
     private int countDownEvent = 0;
     public static AudioSource[] sounds;
+
+
+	//for menubar drop down
+	public bool isOpen=false;
+	public Sprite down;
+	public Sprite up;
+	public Sprite narrateon;
+	public Sprite narrateoff;
+	public Button but; 
+	public Button but1;
+	public Button but2;
+	public GameObject dropcontainer;
+	public GameObject menucontainer;
+	public int i = 1;
+	public static int j = 1; 
+
+
     //override me
     public virtual void Update() {
         
        
     }
+	public void downclick()
+	{   dropcontainer.SetActive (false);
+		menucontainer.SetActive (true);
+		if (i == 1) {
+			Debug.Log ("down clicked");
+			isOpen = true;
+			but.image.sprite = up;
+			i = 0;
+		}
+		else
+		{Debug.Log ("up clicked");
+			isOpen = false;
+			but.image.sprite = down;
+			i = 1;
+		}
+	}
+
+	public void menuclick()
+	{
+
+	}
+	public void autonarrate()
+	{  if (j == 1) {
+			but2.image.sprite = narrateoff;
+			j = 0;
+			stanzaManager.RequestCancelAutoPlay();
+			StartCoroutine (SetMenuContainer ());
+
+
+		}
+	else
+	{  but2.image.sprite=narrateon;
+		j = 1;
+		stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
+		StartCoroutine (SetMenuContainer ());
+	}
+}     
+
+	public void uparrowclick()
+	{ menucontainer.SetActive (false);
+		dropcontainer.SetActive(true);
+	}
+	public IEnumerator SetMenuContainer()
+	{
+		yield return new WaitForSeconds (0.5f);
+		menucontainer.SetActive (false);
+		dropcontainer.SetActive(true);
+	}
 	public virtual void Start () {
 
-       
-        if (Lbutton != null&& Rbutton != null)
-        {
+		dropcontainer.SetActive (true);
+		menucontainer.SetActive (false);
+		if(gameObject!=null)
+			sounds = gameObject.GetComponents<AudioSource>();
+		
+		isOpen = false;
+	
+
+		if (j == 1) {
+			if(but2!=null)
+			but2.image.sprite = narrateon;
+	
+
+		}
+		if (j == 0) {
+			if(but2!=null)
+			but2.image.sprite = narrateoff; 
+		
+		}
+        
             //Color c = Lbutton.gameObject.GetComponent<Image>().color;
 
             //c.a = 0.8f;
@@ -56,18 +138,19 @@ public class SManager :  MonoBehaviour {
 
             //Lbutton.GetComponent<Button>().interactable = false;
             Rbutton.GetComponent<Button>().interactable = false;
-        }
+        
         //auto play on start
-        if (stanzaManager != null)
-            stanzaManager.RequestAutoPlay(stanzaManager.stanzas[0], stanzaManager.stanzas[0].tinkerTexts[0]);
+		if (stanzaManager != null && but2.image.sprite == narrateon) 
 
-        sounds = gameObject.GetComponents<AudioSource>();
-	}
+			stanzaManager.RequestAutoPlay (stanzaManager.stanzas [0], stanzaManager.stanzas [0].tinkerTexts [0]);
+		
+		}
     
 
 
     public float getAudioLength(int i)
     {
+		
         return sounds[i].clip.length;
     }
 

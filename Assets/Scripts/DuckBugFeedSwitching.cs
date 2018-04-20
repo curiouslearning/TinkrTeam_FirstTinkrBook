@@ -27,6 +27,7 @@ public class DuckBugFeedSwitching : MonoBehaviour {
 		duckChew.SetActive (false);
 		duckMouthOpen.SetActive (true); //mouth open
 		bugInMouth = collider.gameObject;
+		Debug.Log (bugInMouth);
 	}
 
 	void OnTriggerExit(Collider collider)
